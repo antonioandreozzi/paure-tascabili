@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { blogPosts as posts } from "@/lib/blog-posts";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.pauretascabili.com";
 

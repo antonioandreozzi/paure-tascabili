@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0A0F"/>
+      <stop offset="60%" stop-color="#3D2B4F"/>
+      <stop offset="100%" stop-color="#8B1A1A"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#E8D5B0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E8D5B0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="576" fill="url(#sky3)"/>
+  <g fill="#E8D5B0" opacity="0.8">
+    <circle cx="120" cy="80" r="2"/><circle cx="220" cy="120" r="1.5"/><circle cx="340" cy="60" r="2"/>
+    <circle cx="700" cy="90" r="1.5"/><circle cx="850" cy="60" r="2"/><circle cx="920" cy="140" r="1.5"/>
+    <circle cx="500" cy="50" r="2"/><circle cx="600" cy="130" r="1.5"/>
+  </g>
+  <ellipse cx="512" cy="430" rx="280" ry="80" fill="url(#glow3)"/>
+  <!-- group silhouettes holding hands -->
+  <g fill="#15101c">
+    <g transform="translate(330,400)"><ellipse cx="0" cy="-46" rx="17" ry="19"/><path d="M-22 50 Q-22 0 0 0 Q22 0 22 50Z"/></g>
+    <g transform="translate(420,415)"><ellipse cx="0" cy="-52" rx="19" ry="21"/><path d="M-25 56 Q-25 0 0 0 Q25 0 25 56Z"/></g>
+    <g transform="translate(512,420)"><ellipse cx="0" cy="-54" rx="20" ry="22"/><path d="M-26 58 Q-26 0 0 0 Q26 0 26 58Z"/></g>
+    <g transform="translate(604,415)"><ellipse cx="0" cy="-52" rx="19" ry="21"/><path d="M-25 56 Q-25 0 0 0 Q25 0 25 56Z"/></g>
+    <g transform="translate(694,400)"><ellipse cx="0" cy="-46" rx="17" ry="19"/><path d="M-22 50 Q-22 0 0 0 Q22 0 22 50Z"/></g>
+  </g>
+  <rect x="320" y="448" width="384" height="6" fill="#15101c"/>
+  <text x="512" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#E8D5B0" letter-spacing="2">Racconti Horror: La Forza del Gruppo</text>
+</svg>

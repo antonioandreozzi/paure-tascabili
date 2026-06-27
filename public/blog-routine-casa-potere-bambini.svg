@@ -1,0 +1,25 @@
+<svg viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D2B4F"/>
+      <stop offset="55%" stop-color="#6B4A6E"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <radialGradient id="ripple1" cx="50%" cy="78%" r="45%">
+      <stop offset="0%" stop-color="#E8D5B0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#E8D5B0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="576" fill="url(#sky1)"/>
+  <circle cx="512" cy="432" r="60" fill="none" stroke="#E8D5B0" stroke-width="2" opacity="0.5"/>
+  <circle cx="512" cy="432" r="120" fill="none" stroke="#E8D5B0" stroke-width="2" opacity="0.35"/>
+  <circle cx="512" cy="432" r="190" fill="none" stroke="#E8D5B0" stroke-width="2" opacity="0.2"/>
+  <ellipse cx="512" cy="460" rx="420" ry="116" fill="url(#ripple1)"/>
+  <circle cx="512" cy="420" r="10" fill="#E8D5B0"/>
+  <!-- child silhouette -->
+  <g transform="translate(512,250)" fill="#1A1320">
+    <ellipse cx="0" cy="-10" rx="22" ry="24"/>
+    <path d="M-30 70 Q-30 10 0 10 Q30 10 30 70 L20 70 L20 30 L-20 30 L-20 70 Z"/>
+  </g>
+  <text x="512" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#E8D5B0" letter-spacing="2">Cambiare la Routine di Casa</text>
+</svg>

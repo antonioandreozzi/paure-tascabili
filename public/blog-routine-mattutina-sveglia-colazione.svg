@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D2B4F"/>
+      <stop offset="45%" stop-color="#C0392B"/>
+      <stop offset="100%" stop-color="#E8D5B0"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="55%" r="35%">
+      <stop offset="0%" stop-color="#FFF6DF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFF6DF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="576" fill="url(#sky2)"/>
+  <circle cx="512" cy="320" r="200" fill="url(#sun)"/>
+  <circle cx="512" cy="320" r="70" fill="#FCEFC7"/>
+  <!-- table line -->
+  <rect x="0" y="470" width="1024" height="106" fill="#1A1320" opacity="0.55"/>
+  <!-- cup -->
+  <g transform="translate(420,440)">
+    <rect x="-26" y="0" width="52" height="40" rx="6" fill="#E8D5B0"/>
+    <path d="M26 8 q22 0 22 14 q0 14 -22 14" fill="none" stroke="#E8D5B0" stroke-width="6"/>
+  </g>
+  <!-- alarm clock -->
+  <g transform="translate(610,430)">
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#E8D5B0" stroke-width="6"/>
+    <circle cx="-26" cy="-30" r="8" fill="#E8D5B0"/>
+    <circle cx="26" cy="-30" r="8" fill="#E8D5B0"/>
+    <line x1="0" y1="0" x2="0" y2="-18" stroke="#E8D5B0" stroke-width="4"/>
+    <line x1="0" y1="0" x2="14" y2="6" stroke="#E8D5B0" stroke-width="4"/>
+  </g>
+  <text x="512" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#1A1320" letter-spacing="2">Routine Mattutina con i Bambini</text>
+</svg>

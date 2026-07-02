@@ -1,0 +1,22 @@
+<svg viewBox="0 0 1024 576" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D2B4F"/>
+      <stop offset="100%" stop-color="#8B1A1A"/>
+    </linearGradient>
+    <radialGradient id="heartglow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#E8D5B0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E8D5B0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="576" fill="url(#sky5)"/>
+  <ellipse cx="512" cy="290" rx="220" ry="180" fill="url(#heartglow)"/>
+  <!-- heart -->
+  <path d="M512 350 C440 280 360 300 360 360 C360 420 460 460 512 500 C564 460 664 420 664 360 C664 300 584 280 512 350 Z" fill="#E8D5B0"/>
+  <!-- two small hands silhouettes -->
+  <g fill="#1A1320" opacity="0.9">
+    <ellipse cx="420" cy="380" rx="16" ry="20"/>
+    <ellipse cx="604" cy="380" rx="16" ry="20"/>
+  </g>
+  <text x="512" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#E8D5B0" letter-spacing="2">Educare alla Gentilezza</text>
+</svg>

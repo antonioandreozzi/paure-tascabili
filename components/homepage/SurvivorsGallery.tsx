@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import GrainOverlay from "@/components/shared/GrainOverlay";
 import CTAButton from "@/components/shared/CTAButton";
 import SectionTitle from "@/components/shared/SectionTitle";
@@ -27,19 +27,25 @@ const survivors = [
 ];
 
 export default function SurvivorsGallery() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
   const prefersReduced = useReducedMotion();
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
+  const goTo = (index: number) => {
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    prefersReduced ? ["0%", "0%"] : ["10%", "-30%"]
-  );
+  const prev = () => goTo((current - 1 + survivors.length) % survivors.length);
+  const next = () => goTo((current + 1) % survivors.length);
+
+  const survivor = survivors[current];
+
+  const variants = {
+    enter: (dir: number) => ({ opacity: 0, x: prefersReduced ? 0 : dir * 80 }),
+    center: { opacity: 1, x: 0 },
+    exit: (dir: number) => ({ opacity: 0, x: prefersReduced ? 0 : dir * -80 }),
+  };
 
   return (
     <section
@@ -56,20 +62,35 @@ export default function SurvivorsGallery() {
           subtitle="Solo chi è riuscito a sfuggire può raccontare la sua storia… Ma a quale prezzo?"
         />
 
-        {/* Horizontal scroll container */}
-        <div ref={containerRef} className="overflow-hidden">
-          <motion.div
-            style={{ x }}
-            className="flex gap-8 w-max"
+        <div className="relative flex items-center justify-center gap-4">
+          {/* Freccia sinistra */}
+          <button
+            onClick={prev}
+            aria-label="Sopravvissuto precedente"
+            className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid rgba(139,26,26,0.4)",
+              color: "var(--accent-moon)",
+            }}
           >
-            {survivors.map((survivor, i) => (
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M13 4L7 10L13 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          {/* Card con animazione */}
+          <div className="relative w-full max-w-xl overflow-hidden" style={{ minHeight: 380 }}>
+            <AnimatePresence custom={direction} mode="wait">
               <motion.article
                 key={survivor.name}
-                initial={prefersReduced ? false : { opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: i * 0.2 }}
-                className="relative flex flex-col gap-6 p-10 rounded-sm w-[80vw] max-w-xl flex-shrink-0"
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="relative flex flex-col gap-6 p-10 rounded-sm w-full"
                 style={{
                   background: "var(--bg-card)",
                   border: "1px solid rgba(139,26,26,0.2)",
@@ -77,14 +98,10 @@ export default function SurvivorsGallery() {
                 }}
                 aria-label={`Testimonianza di ${survivor.name}`}
               >
-                {/* Pulsing glow */}
+                {/* Glow */}
                 <motion.div
                   className="absolute inset-0 rounded-sm pointer-events-none"
-                  animate={
-                    prefersReduced
-                      ? {}
-                      : { opacity: [0.3, 0.7, 0.3] }
-                  }
+                  animate={prefersReduced ? {} : { opacity: [0.3, 0.7, 0.3] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   style={{
                     background: `radial-gradient(ellipse at center, ${survivor.glowColor} 0%, transparent 70%)`,
@@ -96,7 +113,10 @@ export default function SurvivorsGallery() {
                 <div className="flex items-center gap-4 relative z-10">
                   <div
                     className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0"
-                    style={{ boxShadow: `0 0 20px ${survivor.glowColor}`, border: "1px solid rgba(184,134,11,0.3)" }}
+                    style={{
+                      boxShadow: `0 0 20px ${survivor.glowColor}`,
+                      border: "1px solid rgba(184,134,11,0.3)",
+                    }}
                   >
                     <Image
                       src={survivor.image}
@@ -107,29 +127,19 @@ export default function SurvivorsGallery() {
                     />
                   </div>
                   <div>
-                    <h3
-                      className="font-cinzel font-bold text-lg"
-                      style={{ color: "var(--accent-moon)" }}
-                    >
+                    <h3 className="font-cinzel font-bold text-lg" style={{ color: "var(--accent-moon)" }}>
                       {survivor.name}
                     </h3>
-                    <p
-                      className="font-cinzel text-xs tracking-wider uppercase"
-                      style={{ color: "var(--accent-ghost)" }}
-                    >
+                    <p className="font-cinzel text-xs tracking-wider uppercase" style={{ color: "var(--accent-ghost)" }}>
                       {survivor.role}
                     </p>
                   </div>
                 </div>
 
-                {/* Quote with typewriter effect */}
-                <motion.blockquote
+                {/* Quote */}
+                <blockquote
                   className="relative z-10 font-crimson text-lg leading-relaxed italic"
                   style={{ color: "var(--accent-ghost)" }}
-                  initial={prefersReduced ? false : { opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: i * 0.3 + 0.5 }}
                 >
                   <span
                     className="absolute -top-2 -left-2 text-5xl font-cinzel leading-none"
@@ -139,10 +149,43 @@ export default function SurvivorsGallery() {
                     &ldquo;
                   </span>
                   {survivor.quote}
-                </motion.blockquote>
+                </blockquote>
               </motion.article>
-            ))}
-          </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Freccia destra */}
+          <button
+            onClick={next}
+            aria-label="Sopravvissuto successivo"
+            className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid rgba(139,26,26,0.4)",
+              color: "var(--accent-moon)",
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Indicatori punto */}
+        <div className="flex justify-center gap-3" aria-label="Navigazione sopravvissuti">
+          {survivors.map((s, i) => (
+            <button
+              key={s.name}
+              onClick={() => goTo(i)}
+              aria-label={`Vai a ${s.name}`}
+              aria-current={i === current ? "true" : undefined}
+              className="w-2 h-2 rounded-full transition-all duration-300"
+              style={{
+                background: i === current ? "var(--accent-blood)" : "rgba(139,26,26,0.3)",
+                transform: i === current ? "scale(1.4)" : "scale(1)",
+              }}
+            />
+          ))}
         </div>
 
         <div className="flex justify-center">

@@ -14,28 +14,36 @@ export const metadata: Metadata = {
 
 const resources = [
   {
-    icon: "📋",
-    title: "Guida alla Lettura",
-    desc: "Una guida completa per genitori e insegnanti su come usare i libri Paure Tascabili per stimolare la discussione e l'analisi critica.",
-    tag: "In arrivo",
+    icon: "📔",
+    title: "Il Diario del Coraggio",
+    desc: "Una guida pratica per aiutare bambini e ragazzi a trasformare le paure in forza. Esercizi, riflessioni e strumenti concreti per crescere con coraggio ogni giorno.",
+    tag: "Scarica Gratis",
+    href: "/diario-del-coraggio-guida.pdf",
+    available: true,
   },
   {
-    icon: "🎯",
-    title: "Schede Attività",
-    desc: "Attività creative da fare dopo la lettura: disegnare i personaggi, scrivere un finale alternativo, costruire la mappa dell'avventura.",
-    tag: "In arrivo",
+    icon: "🌱",
+    title: "La Forza delle Piccole Cose",
+    desc: "Una guida per genitori e insegnanti sulla potenza dei piccoli gesti quotidiani. Come le abitudini sane costruiscono la resilienza nei bambini.",
+    tag: "Scarica Gratis",
+    href: "/la-forza-delle-piccole-cose-guida.pdf",
+    available: true,
   },
   {
-    icon: "📚",
-    title: "Lista di Lettura",
-    desc: "Una selezione di libri consigliati da Antonio Andreozzi per i giovani amanti del genere horror e fantasy.",
-    tag: "In arrivo",
+    icon: "📖",
+    title: "Guida allo Storytelling Educativo",
+    desc: "Come usare le storie per insegnare valori, stimolare l'empatia e sviluppare il pensiero critico nei ragazzi. Tecniche e consigli pratici per genitori e insegnanti.",
+    tag: "Scarica Gratis",
+    href: "/guida-storytelling-educativo.pdf",
+    available: true,
   },
   {
-    icon: "🎙️",
-    title: "Episodi Podcast",
-    desc: "Approfondimenti audio sulle tematiche educative dietro i libri Paure Tascabili.",
-    tag: "In arrivo",
+    icon: "💛",
+    title: "Educare alla Gentilezza",
+    desc: "Storie e attività per insegnare ai bambini il valore della gentilezza, dell'empatia e del rispetto verso gli altri. Una risorsa completa per famiglie e classi.",
+    tag: "Scarica Gratis",
+    href: "/educare-alla-gentilezza-guida.pdf",
+    available: true,
   },
 ];
 
@@ -83,23 +91,42 @@ export default function RisorseGratuitePage() {
                 <article
                   key={r.title}
                   className="flex flex-col gap-5 p-8 rounded-sm"
-                  style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.15)" }}
+                  style={{
+                    background: "var(--bg-card)",
+                    border: r.available
+                      ? "1px solid rgba(139,26,26,0.35)"
+                      : "1px solid rgba(139,26,26,0.15)",
+                  }}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <span className="text-4xl" aria-hidden="true">{r.icon}</span>
                     <span
                       className="font-cinzel text-[10px] tracking-[0.3em] uppercase px-3 py-1 rounded-sm flex-shrink-0"
-                      style={{
-                        background: "rgba(155,155,176,0.1)",
-                        color: "var(--accent-ghost)",
-                        border: "1px solid rgba(155,155,176,0.2)",
-                      }}
+                      style={
+                        r.available
+                          ? { background: "rgba(139,26,26,0.2)", color: "var(--accent-blood)", border: "1px solid rgba(139,26,26,0.4)" }
+                          : { background: "rgba(155,155,176,0.1)", color: "var(--accent-ghost)", border: "1px solid rgba(155,155,176,0.2)" }
+                      }
                     >
                       {r.tag}
                     </span>
                   </div>
                   <h2 className="font-cinzel font-bold text-xl" style={{ color: "var(--accent-moon)" }}>{r.title}</h2>
-                  <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>{r.desc}</p>
+                  <p className="font-crimson text-lg leading-relaxed flex-1" style={{ color: "var(--accent-ghost)" }}>{r.desc}</p>
+                  {r.available && r.href && (
+                    <a
+                      href={r.href}
+                      download
+                      className="inline-flex items-center gap-2 self-start font-cinzel text-sm tracking-widest uppercase px-6 py-3 rounded-sm transition-all duration-200 hover:opacity-80"
+                      style={{
+                        background: "var(--accent-blood)",
+                        color: "var(--accent-moon)",
+                      }}
+                      aria-label={`Scarica gratis: ${r.title}`}
+                    >
+                      ⬇ Scarica Gratis
+                    </a>
+                  )}
                 </article>
               ))}
             </div>

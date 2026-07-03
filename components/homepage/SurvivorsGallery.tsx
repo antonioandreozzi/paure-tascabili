@@ -190,12 +190,11 @@ export default function SurvivorsGallery() {
 
         <div className="flex justify-center">
           <CTAButton
-            href="https://amzn.to/4iFM7TY"
+            href="/collana-paure-tascabili"
             variant="primary"
-            external
-            aria-label="Scopri la storia su Amazon"
+            aria-label="Scopri la collana Paure Tascabili"
           >
-            Scopri la Storia Completa
+            Scopri le Storie Complete
           </CTAButton>
         </div>
       </div>

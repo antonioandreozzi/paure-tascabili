@@ -132,7 +132,7 @@ export default function ChiSonoPage() {
 
               <div className="flex flex-wrap gap-4">
                 <CTAButton
-                  href="https://amzn.to/4iFM7TY"
+                  href="https://www.amazon.it/dp/B0D8ZPN48N?binding=paperback&qid=1783118947&sr=8-1&ref=dbs_dp_rwt_sb_pc_tpbk"
                   variant="primary"
                   external
                   aria-label="Acquista i libri di Antonio Andreozzi su Amazon"

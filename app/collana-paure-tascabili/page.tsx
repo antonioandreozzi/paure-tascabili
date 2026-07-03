@@ -116,6 +116,7 @@ export default function CollanaPaureTascabiliPage() {
               Elenco dei Volumi
             </h2>
 
+            {/* Vol. 1 */}
             <article
               className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"
               style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
@@ -131,7 +132,7 @@ export default function CollanaPaureTascabiliPage() {
                 >
                   <Image
                     src="/quaderno-incubi-incompleti-cover.png"
-                    alt="Copertina de Il Quaderno degli Incubi Incompleti — Antonio Andreozzi"
+                    alt="Copertina de Il Quaderno degli Incubi Incompleti — James Valentino"
                     fill
                     className="object-contain p-2"
                     sizes="224px"
@@ -140,10 +141,7 @@ export default function CollanaPaureTascabiliPage() {
               </div>
 
               <div className="lg:col-span-3 flex flex-col gap-4">
-                <span
-                  className="font-cinzel text-xs tracking-[0.3em] uppercase"
-                  style={{ color: "var(--accent-blood)" }}
-                >
+                <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
                   Volume 1
                 </span>
                 <h3 className="font-cinzel font-black text-2xl" style={{ color: "var(--accent-moon)" }}>
@@ -157,12 +155,65 @@ export default function CollanaPaureTascabiliPage() {
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <CTAButton
-                    href="https://amzn.to/4iFM7TY"
+                    href="https://www.amazon.it/Quaderno-degli-Incubi-Incompleti-incompleti/dp/B0GX1MMY1D/ref=sr_1_3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11JMU2GLTBTN6&dib=eyJ2IjoiMSJ9.azb1pTbN8FDhFzUu2klilTLCWH0Z0pXrkR_YC7EkEYzV7oCzO90uh2GFujix-kdxg0seMnRjPSmmyHCus8ruhZPB2cJFFm8eCP1t8rK5P34h_a8mZmASGjQqr4xNI0bji4UIBoL9-Khl1T7DhKy2sehPKKVjUiVIlNbqEvZcI2RoWP-Bph-UXfEHcOx7fRUeWyX-esxZVG1GHUzcruI2gMID7_FokrLDAWku9XdiBsOvdfqKWHUZhe4y02JHg1UwXBnzOTzgZHv5uD6AmZo7GwyY0p5B9xhRTjA6QFnujg8.wj_FBV_2KhPqcLF5o1IAWnErUhQQdyrIrL3-8rBP0kQ&dib_tag=se&keywords=james+valentino&qid=1783119161&sprefix=james+valentin%2Caps%2C185&sr=8-3"
                     variant="primary"
                     external
-                    aria-label="Acquista ora Il Quaderno degli Incubi Incompleti su Amazon"
+                    aria-label="Acquista Il Quaderno degli Incubi Incompleti su Amazon"
                   >
                     📚 Acquista Ora
+                  </CTAButton>
+                  <CTAButton href="/singoli-volumi" variant="secondary">
+                    Scopri di Più
+                  </CTAButton>
+                </div>
+              </div>
+            </article>
+
+            {/* Vol. 2 */}
+            <article
+              className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              <div className="lg:col-span-2 flex justify-center">
+                <div
+                  className="relative w-48 h-64 lg:w-56 lg:h-72 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #0d1a0d 0%, #0a120a 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/vendetta-nel-pollaio-cover.png"
+                    alt="Copertina di Vendetta nel Pollaio — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="224px"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 flex flex-col gap-4">
+                <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                  Volume 2
+                </span>
+                <h3 className="font-cinzel font-black text-2xl" style={{ color: "var(--accent-moon)" }}>
+                  Vendetta nel Pollaio
+                </h3>
+                <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  Leo e Giulia non volevano passare l&apos;estate nella fattoria di zio Remo. Ma il
+                  pollaio — blindato come una prigione, con catene e filo spinato — nasconde qualcosa
+                  di oscuro. Quella notte, una gallina parla:{" "}
+                  <em style={{ color: "var(--accent-blood)" }}>&ldquo;Anche tu morirai.&rdquo;</em>
+                </p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <CTAButton
+                    href="https://www.amazon.it/gp/product/B0GX94GY2C"
+                    variant="primary"
+                    external
+                    aria-label="Acquista Vendetta nel Pollaio su Amazon"
+                  >
+                    🐔 Acquista Ora
                   </CTAButton>
                   <CTAButton href="/singoli-volumi" variant="secondary">
                     Scopri di Più

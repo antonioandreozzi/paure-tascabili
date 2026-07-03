@@ -20,7 +20,7 @@ const bookSchema = {
   author: { "@type": "Person", name: "Antonio Andreozzi" },
   genre: ["Horror", "Fantasy", "Mistero"],
   audience: { "@type": "Audience", audienceType: "Ragazzi 8-12 anni" },
-  url: "https://amzn.to/4iFM7TY",
+  url: "https://www.amazon.it/Quaderno-degli-Incubi-Incompleti-incompleti/dp/B0GX1MMY1D/ref=sr_1_3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11JMU2GLTBTN6&dib=eyJ2IjoiMSJ9.azb1pTbN8FDhFzUu2klilTLCWH0Z0pXrkR_YC7EkEYzV7oCzO90uh2GFujix-kdxg0seMnRjPSmmyHCus8ruhZPB2cJFFm8eCP1t8rK5P34h_a8mZmASGjQqr4xNI0bji4UIBoL9-Khl1T7DhKy2sehPKKVjUiVIlNbqEvZcI2RoWP-Bph-UXfEHcOx7fRUeWyX-esxZVG1GHUzcruI2gMID7_FokrLDAWku9XdiBsOvdfqKWHUZhe4y02JHg1UwXBnzOTzgZHv5uD6AmZo7GwyY0p5B9xhRTjA6QFnujg8.wj_FBV_2KhPqcLF5o1IAWnErUhQQdyrIrL3-8rBP0kQ&dib_tag=se&keywords=james+valentino&qid=1783119161&sprefix=james+valentin%2Caps%2C185&sr=8-3",
   publisher: { "@type": "Organization", name: "Paure Tascabili" },
 };
 
@@ -190,7 +190,7 @@ export default function SingoliVolumiPage() {
                 </div>
 
                 <CTAButton
-                  href="https://amzn.to/4iFM7TY"
+                  href="https://www.amazon.it/Quaderno-degli-Incubi-Incompleti-incompleti/dp/B0GX1MMY1D/ref=sr_1_3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11JMU2GLTBTN6&dib=eyJ2IjoiMSJ9.azb1pTbN8FDhFzUu2klilTLCWH0Z0pXrkR_YC7EkEYzV7oCzO90uh2GFujix-kdxg0seMnRjPSmmyHCus8ruhZPB2cJFFm8eCP1t8rK5P34h_a8mZmASGjQqr4xNI0bji4UIBoL9-Khl1T7DhKy2sehPKKVjUiVIlNbqEvZcI2RoWP-Bph-UXfEHcOx7fRUeWyX-esxZVG1GHUzcruI2gMID7_FokrLDAWku9XdiBsOvdfqKWHUZhe4y02JHg1UwXBnzOTzgZHv5uD6AmZo7GwyY0p5B9xhRTjA6QFnujg8.wj_FBV_2KhPqcLF5o1IAWnErUhQQdyrIrL3-8rBP0kQ&dib_tag=se&keywords=james+valentino&qid=1783119161&sprefix=james+valentin%2Caps%2C185&sr=8-3"
                   variant="primary"
                   external
                   aria-label="Inizia l'avventura — acquista Il Quaderno degli Incubi Incompleti su Amazon"

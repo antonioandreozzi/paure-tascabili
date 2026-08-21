@@ -104,6 +104,101 @@ const chapter2 = {
   ],
 };
 
+const chapter3 = {
+  number: "1",
+  title: "Qualcuno Abita Lì Sotto",
+  paragraphs: [
+    "Napoli.",
+    "Ecco dove stavo andando a passare tutta l'estate.",
+    "Tutta.",
+    "Due mesi senza le mie amiche. Senza la piscina condominiale di Roma. Senza internet decente; mia madre lo aveva stabilito con la sua voce da “discussione chiusa”: il palazzo della nonna Assunta non aveva il wifi, e no, non mi avrebbero comprato il router portatile.",
+    "Ero disperata.",
+    "“Vedrai che ti divertirai,” disse papà dallo specchietto retrovisore.",
+    "Papà diceva sempre cose del genere. Le diceva quando mi aveva portato al museo di arte moderna. Quando mi aveva portato al saggio di violino di mia cugina. Quando mi aveva portato dal dentista.",
+    "Non mi ero mai divertita.",
+    "“Napoli è bellissima,” aggiunse mia madre.",
+    "“Napoli è calda,” risposi.",
+    "“È luglio, Sofia.”",
+    "“Esatto.”",
+    "Mio fratello Filippo, sette anni, il peggior sette anni della storia del mondo, si addormentò sul mio spallaccio esattamente mentre stavo per toglierlo. La sua bava mi inzuppò la maglietta preferita.",
+    "Sì. Non vedevo l'ora.",
+    "Il palazzo della nonna Assunta era nel centro storico di Napoli, in un vicolo così stretto che la macchina ci passava a malapena. Le case si alzavano così alte da entrambi i lati che il cielo diventava una striscia blu lontanissima, come se stessi guardando su dal fondo di un pozzo.",
+    "Dal fondo di un pozzo.",
+    "Quella sensazione, capii più tardi, non era casuale.",
+    "Il portone era di legno scuro, incrostato di antichità, con un martello a forma di testa di leone che aveva le fauci spalancate. Filippo lo scosse tre volte prima che mia madre riuscisse a fermarlo.",
+    "“Ma è pesante!” si lamentò lui.",
+    "“Non toccare le cose degli altri,” disse mia madre.",
+    "“È un martello, è fatto per essere toccato.”",
+    "Non gli si poteva dare torto.",
+    "Nonna Assunta aprì il portone prima ancora che suonassimo.",
+    "Era piccola, pelle scura di sole, capelli bianchi raccolti in uno chignon strettissimo. Aveva occhi nerissimi che sembravano sapere sempre tutto, come quegli insegnanti che capiscono quando hai copiato anche se non si girano mai.",
+    "Mi abbracciò forte. Sapeva di caffè e di qualcosa di dolce che non riuscii a identificare.",
+    "“Sofi'!” disse, a Napoli aggiungono un apostrofo alla fine di tutto, l'avevo imparato da mio padre. “Finalmente! Sei alta, sei alta! Tieni fame?”",
+    "“Non ancora, ma…”",
+    "“Mangi qualcosa.”",
+    "Non era una domanda.",
+    "Il palazzo era grande e buio e fresco — finalmente, fresco — con soffitti altissimi e pavimenti di maiolica a disegni blu e bianchi. C'erano quadri ovunque, soprammobili ovunque, una credenza enorme piena di piatti che non si usavano mai. Il tipo di posto dove i bambini di solito non toccano niente perché tutto sembra sul punto di rompersi.",
+    "Filippo toccò subito tutto.",
+    "La cosa più strana del palazzo era il cortile interno.",
+    "Ci arrivai seguendo Filippo, che aveva deciso di esplorare senza chiedere permesso, cosa che faceva sempre, perché aveva sette anni e non capiva che il permesso esisteva. Spingendo una porta sul retro della cucina si apriva su un cortile piccolo e ombroso, pavimentato di sampietrini grigi, circondato da muri alti coperti di edera scura.",
+    "Al centro del cortile c'era un pozzo.",
+    "Non uno di quei pozzi decorativi finti che trovi nei giardini dei nonni ricchi. Un pozzo vero, di pietra vecchia e annerita, con la carrucola arrugginita e una corda che spariva nell'oscurità.",
+    "Mi avvicinai al bordo e guardai giù.",
+    "Buio.",
+    "Un buio fitto, totale, che sembrava quasi solido. Come se laggiù non ci fosse il fondo, ma solo notte.",
+    "“Non avvicinarti troppo al pozzo,” disse la voce della nonna Assunta alle mie spalle.",
+    "Feci un salto di mezzo metro.",
+    "Mi girai. La nonna era ferma sulla soglia della porta, con le braccia conserte e quell'espressione da-insegnante-che-sa-tutto. Non aveva fatto nessun rumore avvicinandosi. Nessuno.",
+    "“Mi hai spaventata!” dissi.",
+    "“Lo so.” Sorrise. Ma non era un sorriso normale. Era il tipo di sorriso che nasconde qualcosa in più, come quando i grandi sanno una cosa e decidono di non dirtela ancora. “Il pozzo è molto vecchio. Non ci si affaccia mai.”",
+    "“Perché?”",
+    "La nonna mi guardò per un momento lungo, lunghissimo.",
+    "Poi disse, con una voce leggerissima, quasi distratta, come se stesse parlando del tempo: “Perché qualcuno abita lì sotto.”",
+    "Filippo spalancò gli occhi. “Un fantasma?!”",
+    "“Qualcosa del genere,” disse la nonna. Poi rientrò in cucina come se non avesse detto niente di strano. Come se avesse detto fuori piove o la pasta è pronta.",
+    "Io e Filippo ci scambiammo uno sguardo.",
+    "“Qualcosa. Del. Genere,” ripeté lui, in tono drammatico, con le pause.",
+    "“Smettila,” dissi.",
+    "Ma mentre rientravo, gettai un'ultima occhiata al pozzo.",
+    "E giurai, giurai, di aver sentito qualcosa.",
+    "Un respiro.",
+    "Leggero. Caldissimo. Come l'alito di qualcuno che stava in piedi esattamente accanto a me.",
+    "Mi voltai di scatto.",
+    "Non c'era nessuno.",
+    "Solo il pozzo, e il buio dentro.",
+    "Quella notte, nel letto della stanza degli ospiti, cercai di dormire.",
+    "Non era facile. Il materasso era duro come una tavola di legno. Dal vicolo saliva un rumore continuo: motorini, voci, una televisione accesa da qualche parte. Napoli non dormiva mai, sembrava.",
+    "Chiusi gli occhi.",
+    "Li riaprii.",
+    "Chiusi gli occhi di nuovo.",
+    "Dormi, mi ordinai.",
+    "Li riaprii ancora.",
+    "Okay. Non funzionava.",
+    "Mi girai sul fianco. Guardai il soffitto. Contai le crepe nell'intonaco. Ce n'erano undici, e la dodicesima era a forma di tartaruga se la guardavi di lato con un occhio semichiuso.",
+    "Alla fine, non so dopo quanto, scivolai nel sonno.",
+    "Mi svegliai di notte.",
+    "La stanza era buia. Il vicolo era silenzioso, finalmente. La luna disegnava una striscia di luce sul pavimento di maiolica.",
+    "Non sapevo cosa mi avesse svegliata.",
+    "Rimasi immobile ad ascoltare. Nessun rumore. Nessun motorino. Niente.",
+    "Poi lo sentii.",
+    "Qualcosa sotto il guanciale.",
+    "Mi irrigidii. Rimasi senza muovermi, con gli occhi spalancati nel buio, il cuore che mi batteva fortissimo nelle orecchie.",
+    "Cosa c'era sotto il mio guanciale?",
+    "Lentamente, lentamente, infilai la mano.",
+    "Le dita toccarono qualcosa di piccolo. Di duro. Di tondo.",
+    "Lo tirai fuori.",
+    "Nella luce della luna, tenni la cosa sul palmo aperto e la guardai.",
+    "Una moneta.",
+    "Poi un'altra.",
+    "Poi un'altra ancora.",
+    "Tre monete dorate, antiche, che non avevo mai visto prima in vita mia.",
+    "E da qualche parte, vicinissimo, quasi dentro il mio orecchio, sentii il suono di un respiro.",
+    "Caldo.",
+    "Soddisfatto.",
+    "Come se qualcuno, nell'oscurità della stanza, stesse sorridendo.",
+  ],
+};
+
 const PARAGRAPHS_PER_PAGE = 3;
 
 const bookPages: BookPage[] = (() => {
@@ -128,6 +223,20 @@ const bookPages2: BookPage[] = (() => {
       paragraphs: slice,
       ...(i === 0
         ? { chapterLabel: `Capitolo ${chapter2.number}`, chapterTitle: chapter2.title }
+        : {}),
+    });
+  }
+  return pages;
+})();
+
+const bookPages3: BookPage[] = (() => {
+  const pages: BookPage[] = [];
+  for (let i = 0; i < chapter3.paragraphs.length; i += PARAGRAPHS_PER_PAGE) {
+    const slice = chapter3.paragraphs.slice(i, i + PARAGRAPHS_PER_PAGE);
+    pages.push({
+      paragraphs: slice,
+      ...(i === 0
+        ? { chapterLabel: `Capitolo ${chapter3.number}`, chapterTitle: chapter3.title }
         : {}),
     });
   }
@@ -303,6 +412,79 @@ export default function AnteprimeePage() {
                 variant="primary"
                 external
                 aria-label="Acquista Vendetta nel Pollaio su Amazon per leggere il seguito"
+              >
+                Continua a Leggere su Amazon
+              </CTAButton>
+            </div>
+          </div>
+        </section>
+
+        {/* Separatore */}
+        <div
+          className="w-full h-px"
+          style={{ background: "linear-gradient(to right, transparent, rgba(184,134,11,0.3), transparent)" }}
+          aria-hidden="true"
+        />
+
+        {/* — Vol.4 Intro + copertina — */}
+        <section className="relative section-padding" style={{ background: "var(--bg-void)" }}>
+          <GrainOverlay />
+          <div className="relative z-10 max-w-4xl mx-auto px-6 grid sm:grid-cols-3 gap-8 items-center">
+            <div className="flex justify-center">
+              <div
+                className="relative w-40 sm:w-full rounded-sm overflow-hidden"
+                style={{
+                  aspectRatio: "1160 / 1754",
+                  border: "1px solid rgba(184,134,11,0.3)",
+                  boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                }}
+              >
+                <Image
+                  src="/non-guardare-nel-pozzo-cover.jpg"
+                  alt="Copertina di Non Guardare nel Pozzo — Sofia e il pozzo oscuro nel cortile di Napoli"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 160px, 280px"
+                />
+              </div>
+            </div>
+            <div className="sm:col-span-2 flex flex-col gap-3">
+              <span className="font-cinzel text-xs tracking-[0.4em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                Anteprima — Volume 4
+              </span>
+              <h2 className="font-cinzel font-black text-3xl sm:text-4xl" style={{ color: "var(--accent-moon)" }}>
+                Non Guardare nel Pozzo
+              </h2>
+              <p className="font-crimson italic text-xl" style={{ color: "var(--accent-gold)" }}>
+                Qualcuno Abita Lì Sotto
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Vol.4 — Il libro sfogliabile */}
+        <section className="relative section-padding" style={{ background: "var(--bg-dark)" }}>
+          <GrainOverlay />
+          <div className="relative z-10 max-w-4xl mx-auto px-6 flex flex-col gap-10">
+            <div className="flex flex-col items-center gap-2 text-center">
+              <span
+                className="font-cinzel text-xs tracking-[0.4em] uppercase"
+                style={{ color: "var(--accent-blood)" }}
+              >
+                Sfoglia l&apos;Anteprima
+              </span>
+              <p className="font-crimson italic text-base" style={{ color: "var(--accent-ghost)", opacity: 0.7 }}>
+                Usa le freccette ← → della tastiera, i bottoni o lo slider per girare pagina.
+              </p>
+            </div>
+            <BookReader pages={bookPages3} title="Non Guardare nel Pozzo" />
+
+            <div className="flex justify-center mt-4">
+              <CTAButton
+                href="https://www.amazon.it/dp/B0HFYGYHZ2/"
+                variant="primary"
+                external
+                aria-label="Acquista Non Guardare nel Pozzo su Amazon per leggere il seguito"
               >
                 Continua a Leggere su Amazon
               </CTAButton>

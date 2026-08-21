@@ -116,7 +116,7 @@ export default function AnteprimeePage() {
                 }}
               >
                 <Image
-                  src="/anteprima-quaderno-cover.jpeg"
+                  src="/quaderno-incubi-incompleti-cover.png"
                   alt="Copertina de Il Quaderno degli Incubi Incompleti — due bambini spaventati davanti a un quaderno aperto in soffitta, con una mano d'ombra dietro una porta"
                   fill
                   className="object-contain"

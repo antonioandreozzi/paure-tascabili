@@ -278,23 +278,58 @@ export default function LegendaryMap() {
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <span className="text-4xl" aria-hidden="true">🔒</span>
-              <h3 className="font-cinzel font-bold text-xl" style={{ color: "var(--accent-moon)" }}>
-                La Leggenda di {selected.name}
-              </h3>
-              <p className="font-crimson italic text-lg" style={{ color: "var(--accent-ghost)" }}>
-                Questa leggenda sarà svelata presto.
-              </p>
-              <p className="font-crimson text-base" style={{ color: "var(--accent-ghost)", opacity: 0.7 }}>
-                Ogni mese una nuova creatura della Terra di Lavoro prenderà vita su questa mappa.
-              </p>
-              <button
-                onClick={() => setSelected(null)}
-                className="mt-2 font-cinzel text-xs tracking-widest uppercase px-6 py-3 rounded-sm transition-all hover:bg-[var(--accent-blood)]/10"
-                style={{ border: "1px solid rgba(139,26,26,0.4)", color: "var(--accent-moon)" }}
-              >
-                Chiudi
-              </button>
+              {selected.id === 22 ? (
+                <>
+                  <span className="text-4xl" aria-hidden="true">🕳️</span>
+                  <h3 className="font-cinzel font-bold text-xl" style={{ color: "var(--accent-moon)" }}>
+                    Il Munaciello
+                  </h3>
+                  <p className="font-crimson italic text-lg" style={{ color: "var(--accent-ghost)" }}>
+                    Napoli nasconde qualcosa nel pozzo del cortile.
+                  </p>
+                  <p className="font-crimson text-base leading-relaxed" style={{ color: "var(--accent-ghost)", opacity: 0.85 }}>
+                    I napoletani lo chiamano il Munaciello. Se lo tratti bene porta fortuna.
+                    Se lo fai arrabbiare, il cappuccio diventa nero.
+                  </p>
+                  <a
+                    href="https://www.amazon.it/dp/B0HFYGYHZ2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 font-cinzel text-xs tracking-widest uppercase px-6 py-3 rounded-sm transition-all"
+                    style={{ background: "var(--accent-blood)", color: "var(--accent-moon)" }}
+                    onClick={() => setSelected(null)}
+                  >
+                    Scopri la Leggenda →
+                  </a>
+                  <button
+                    onClick={() => setSelected(null)}
+                    className="font-cinzel text-xs tracking-widest uppercase px-6 py-3 rounded-sm transition-all hover:bg-[var(--accent-blood)]/10"
+                    style={{ border: "1px solid rgba(139,26,26,0.4)", color: "var(--accent-moon)" }}
+                  >
+                    Chiudi
+                  </button>
+                </>
+              ) : (
+                <>
+                  <span className="text-4xl" aria-hidden="true">🔒</span>
+                  <h3 className="font-cinzel font-bold text-xl" style={{ color: "var(--accent-moon)" }}>
+                    La Leggenda di {selected.name}
+                  </h3>
+                  <p className="font-crimson italic text-lg" style={{ color: "var(--accent-ghost)" }}>
+                    Questa leggenda sarà svelata presto.
+                  </p>
+                  <p className="font-crimson text-base" style={{ color: "var(--accent-ghost)", opacity: 0.7 }}>
+                    Ogni mese una nuova creatura prenderà vita su questa mappa.
+                  </p>
+                  <button
+                    onClick={() => setSelected(null)}
+                    className="mt-2 font-cinzel text-xs tracking-widest uppercase px-6 py-3 rounded-sm transition-all hover:bg-[var(--accent-blood)]/10"
+                    style={{ border: "1px solid rgba(139,26,26,0.4)", color: "var(--accent-moon)" }}
+                  >
+                    Chiudi
+                  </button>
+                </>
+              )}
             </motion.div>
           </motion.div>
         )}

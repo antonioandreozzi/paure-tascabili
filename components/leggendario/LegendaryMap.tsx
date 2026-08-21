@@ -68,29 +68,36 @@ const pointsCaserta: LegendPoint[] = [
   { id: 21, x: 178.8, y: 140.8, name: "Caiazzo", icon: "occhio" },
 ];
 
-// Comuni della provincia di Napoli (21 punti)
+// Comuni della provincia di Napoli (21 punti) — distribuiti sull'intera provincia
 const pointsNapoli: LegendPoint[] = [
-  { id: 22, x: 168.0, y: 268.0, name: "Napoli — Il Munaciello", icon: "occhio" },
-  { id: 23, x: 126.0, y: 264.0, name: "Pozzuoli", icon: "fiamma" },
-  { id: 24, x: 200.0, y: 290.0, name: "Ercolano", icon: "corvo" },
-  { id: 25, x: 196.0, y: 308.0, name: "Torre del Greco", icon: "lupo" },
-  { id: 26, x: 200.0, y: 338.0, name: "Castellammare di Stabia", icon: "occhio" },
-  { id: 27, x: 191.0, y: 283.0, name: "Portici", icon: "fiamma" },
-  { id: 28, x: 176.0, y: 240.0, name: "Afragola", icon: "lupo" },
-  { id: 29, x: 140.0, y: 248.0, name: "Giugliano in Campania", icon: "corvo" },
-  { id: 30, x: 148.0, y: 256.0, name: "Marano di Napoli", icon: "occhio" },
-  { id: 31, x: 197.0, y: 235.0, name: "Acerra", icon: "fiamma" },
-  { id: 32, x: 228.0, y: 256.0, name: "Nola", icon: "lupo" },
-  { id: 33, x: 212.0, y: 262.0, name: "Somma Vesuviana", icon: "corvo" },
-  { id: 34, x: 194.0, y: 278.0, name: "San Giorgio a Cremano", icon: "occhio" },
-  { id: 35, x: 108.0, y: 274.0, name: "Bacoli", icon: "fiamma" },
-  { id: 36, x: 164.0, y: 238.0, name: "Casoria", icon: "lupo" },
-  { id: 37, x: 202.0, y: 320.0, name: "Torre Annunziata", icon: "corvo" },
-  { id: 38, x: 210.0, y: 328.0, name: "Pompei", icon: "occhio" },
-  { id: 39, x: 195.0, y: 355.0, name: "Sorrento", icon: "fiamma" },
-  { id: 40, x: 185.0, y: 362.0, name: "Massa Lubrense", icon: "lupo" },
-  { id: 41, x: 57.0, y: 322.0, name: "Ischia", icon: "corvo" },
-  { id: 42, x: 147.0, y: 394.0, name: "Capri", icon: "occhio" },
+  // Fascia nord (y 218-232)
+  { id: 31, x: 208.0, y: 222.0, name: "Acerra",                  icon: "fiamma" },
+  { id: 36, x: 182.0, y: 226.0, name: "Afragola",                icon: "lupo"   },
+  { id: 28, x: 158.0, y: 230.0, name: "Casoria",                 icon: "corvo"  },
+  { id: 29, x: 128.0, y: 236.0, name: "Giugliano in Campania",   icon: "occhio" },
+  // Fascia centro-nord (y 246-260)
+  { id: 32, x: 242.0, y: 250.0, name: "Nola",                    icon: "lupo"   },
+  { id: 33, x: 220.0, y: 254.0, name: "Somma Vesuviana",         icon: "corvo"  },
+  { id: 30, x: 144.0, y: 252.0, name: "Marano di Napoli",        icon: "fiamma" },
+  // Fascia centro (y 264-280)
+  { id: 22, x: 170.0, y: 266.0, name: "Napoli — Il Munaciello",  icon: "occhio" },
+  { id: 23, x: 112.0, y: 268.0, name: "Pozzuoli",                icon: "fiamma" },
+  { id: 34, x: 198.0, y: 274.0, name: "San Giorgio a Cremano",   icon: "occhio" },
+  { id: 35, x:  92.0, y: 276.0, name: "Bacoli",                  icon: "lupo"   },
+  // Fascia centro-sud (y 284-304)
+  { id: 27, x: 188.0, y: 286.0, name: "Portici",                 icon: "corvo"  },
+  { id: 24, x: 214.0, y: 296.0, name: "Ercolano",                icon: "lupo"   },
+  // Fascia sud (y 314-350)
+  { id: 25, x: 206.0, y: 316.0, name: "Torre del Greco",         icon: "fiamma" },
+  { id: 37, x: 215.0, y: 332.0, name: "Torre Annunziata",        icon: "corvo"  },
+  { id: 38, x: 224.0, y: 346.0, name: "Pompei",                  icon: "occhio" },
+  { id: 26, x: 210.0, y: 352.0, name: "Castellammare di Stabia", icon: "lupo"   },
+  // Fascia meridionale (y 358-376)
+  { id: 39, x: 198.0, y: 360.0, name: "Sorrento",                icon: "fiamma" },
+  { id: 40, x: 184.0, y: 374.0, name: "Massa Lubrense",          icon: "corvo"  },
+  // Isole
+  { id: 41, x:  57.0, y: 322.0, name: "Ischia",                  icon: "occhio" },
+  { id: 42, x: 148.0, y: 394.0, name: "Capri",                   icon: "fiamma" },
 ];
 
 const lockedProvinces = ["Benevento", "Avellino", "Salerno"];
@@ -106,7 +113,7 @@ export default function LegendaryMap() {
     <div className="flex flex-col items-center gap-8 w-full">
       {/* Parchment map frame */}
       <div
-        className="relative w-full max-w-3xl rounded-sm overflow-hidden"
+        className="relative w-full max-w-5xl rounded-sm overflow-hidden"
         style={{
           border: "1px solid rgba(184,134,11,0.35)",
           boxShadow: "0 0 60px rgba(61,43,79,0.3), 0 30px 80px rgba(0,0,0,0.6)",

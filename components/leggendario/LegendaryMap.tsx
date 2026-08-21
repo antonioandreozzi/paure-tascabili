@@ -43,9 +43,8 @@ const provincePaths: Record<string, string[]> = {
   ],
 };
 
-// I 21 punti sono comuni reali della provincia di Caserta (Terra di Lavoro).
-// Le leggende vere e proprie verranno inserite man mano che saranno pronte.
-const points: LegendPoint[] = [
+// Comuni della provincia di Caserta (21 punti)
+const pointsCaserta: LegendPoint[] = [
   { id: 1, x: 178.3, y: 179.9, name: "Caserta", icon: "occhio" },
   { id: 2, x: 140.9, y: 166.4, name: "Capua", icon: "corvo" },
   { id: 3, x: 152.7, y: 175.2, name: "Santa Maria Capua Vetere", icon: "fiamma" },
@@ -69,7 +68,34 @@ const points: LegendPoint[] = [
   { id: 21, x: 178.8, y: 140.8, name: "Caiazzo", icon: "occhio" },
 ];
 
-const lockedProvinces = ["Benevento", "Napoli", "Avellino", "Salerno"];
+// Comuni della provincia di Napoli (21 punti)
+const pointsNapoli: LegendPoint[] = [
+  { id: 22, x: 168.0, y: 268.0, name: "Napoli — Il Munaciello", icon: "occhio" },
+  { id: 23, x: 126.0, y: 264.0, name: "Pozzuoli", icon: "fiamma" },
+  { id: 24, x: 200.0, y: 290.0, name: "Ercolano", icon: "corvo" },
+  { id: 25, x: 196.0, y: 308.0, name: "Torre del Greco", icon: "lupo" },
+  { id: 26, x: 200.0, y: 338.0, name: "Castellammare di Stabia", icon: "occhio" },
+  { id: 27, x: 191.0, y: 283.0, name: "Portici", icon: "fiamma" },
+  { id: 28, x: 176.0, y: 240.0, name: "Afragola", icon: "lupo" },
+  { id: 29, x: 140.0, y: 248.0, name: "Giugliano in Campania", icon: "corvo" },
+  { id: 30, x: 148.0, y: 256.0, name: "Marano di Napoli", icon: "occhio" },
+  { id: 31, x: 197.0, y: 235.0, name: "Acerra", icon: "fiamma" },
+  { id: 32, x: 228.0, y: 256.0, name: "Nola", icon: "lupo" },
+  { id: 33, x: 212.0, y: 262.0, name: "Somma Vesuviana", icon: "corvo" },
+  { id: 34, x: 194.0, y: 278.0, name: "San Giorgio a Cremano", icon: "occhio" },
+  { id: 35, x: 108.0, y: 274.0, name: "Bacoli", icon: "fiamma" },
+  { id: 36, x: 164.0, y: 238.0, name: "Casoria", icon: "lupo" },
+  { id: 37, x: 202.0, y: 320.0, name: "Torre Annunziata", icon: "corvo" },
+  { id: 38, x: 210.0, y: 328.0, name: "Pompei", icon: "occhio" },
+  { id: 39, x: 195.0, y: 355.0, name: "Sorrento", icon: "fiamma" },
+  { id: 40, x: 185.0, y: 362.0, name: "Massa Lubrense", icon: "lupo" },
+  { id: 41, x: 57.0, y: 322.0, name: "Ischia", icon: "corvo" },
+  { id: 42, x: 147.0, y: 394.0, name: "Capri", icon: "occhio" },
+];
+
+const lockedProvinces = ["Benevento", "Avellino", "Salerno"];
+
+const allPoints = [...pointsCaserta, ...pointsNapoli];
 
 export default function LegendaryMap() {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -90,7 +116,7 @@ export default function LegendaryMap() {
           viewBox="0 0 640 627"
           className="w-full h-auto"
           role="img"
-          aria-label="Mappa della Campania con le province; i 21 punti leggendari si trovano nella provincia di Caserta"
+          aria-label="Mappa della Campania con le province; 21 punti leggendari nella provincia di Caserta e 21 nella provincia di Napoli"
         >
           <defs>
             <radialGradient id="parchment" cx="50%" cy="40%" r="75%">
@@ -120,7 +146,7 @@ export default function LegendaryMap() {
             ))
           )}
 
-          {/* Provincia attiva: Caserta */}
+          {/* Province attive: Caserta e Napoli */}
           {provincePaths.Caserta.map((d, i) => (
             <path
               key={`caserta-${i}`}
@@ -129,6 +155,16 @@ export default function LegendaryMap() {
               stroke="#8B1A1A"
               strokeWidth="2.5"
               opacity="0.95"
+            />
+          ))}
+          {provincePaths.Napoli.map((d, i) => (
+            <path
+              key={`napoli-${i}`}
+              d={d}
+              fill="#BFA06E"
+              stroke="#8B1A1A"
+              strokeWidth="2.5"
+              opacity="0.92"
             />
           ))}
 
@@ -140,11 +176,13 @@ export default function LegendaryMap() {
             opacity="0.6"
           >
             <text x="345" y="115" fontSize="13" textAnchor="middle">Benevento</text>
-            <text x="170" y="345" fontSize="13" textAnchor="middle">Napoli</text>
             <text x="455" y="205" fontSize="13" textAnchor="middle">Avellino</text>
             <text x="450" y="450" fontSize="13" textAnchor="middle">Salerno</text>
             <text x="120" y="160" fontSize="14" textAnchor="middle" fill="#8B1A1A" opacity="0.9" fontWeight="bold">
               CASERTA
+            </text>
+            <text x="162" y="315" fontSize="14" textAnchor="middle" fill="#8B1A1A" opacity="0.9" fontWeight="bold">
+              NAPOLI
             </text>
           </g>
 
@@ -155,8 +193,8 @@ export default function LegendaryMap() {
             <path d="M -20 0 L 0 -4 L 20 0 L 0 4 Z" fill="#5a4a32" />
           </g>
 
-          {/* legend points — solo provincia di Caserta */}
-          {points.map((p) => (
+          {/* legend points — Caserta e Napoli */}
+          {allPoints.map((p) => (
             <g
               key={p.id}
               transform={`translate(${p.x}, ${p.y})`}

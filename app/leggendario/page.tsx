@@ -8,12 +8,14 @@ import LegendaryMap from "@/components/leggendario/LegendaryMap";
 export const metadata: Metadata = {
   title: "Il Leggendario",
   description:
-    "Il Leggendario di Paure Tascabili: una mappa interattiva della Terra di Lavoro con 21 creature e luoghi leggendari, svelati uno al mese.",
+    "Il Leggendario di Paure Tascabili: una mappa interattiva della Campania con 42 creature e luoghi leggendari di Caserta e Napoli, svelati uno al mese.",
   alternates: { canonical: "https://www.pauretascabili.com/leggendario" },
 };
 
-const TOTAL_LEGGENDE = 21;
-const LEGGENDE_DISPONIBILI = 0;
+const TOTAL_CASERTA = 21;
+const TOTAL_NAPOLI = 21;
+const DISPONIBILI_CASERTA = 0;
+const DISPONIBILI_NAPOLI = 0;
 
 export default function LeggendarioPage() {
   return (
@@ -55,7 +57,7 @@ export default function LeggendarioPage() {
               IL LEGGENDARIO
             </h1>
             <p className="mt-6 font-crimson text-xl italic max-w-2xl" style={{ color: "var(--accent-ghost)" }}>
-              21 luoghi. 21 creature. Una Terra di Lavoro che nasconde più di quanto racconta.
+              42 luoghi. 42 creature. Caserta e Napoli nascondono più di quanto raccontano.
             </p>
           </div>
         </section>
@@ -70,21 +72,57 @@ export default function LeggendarioPage() {
               mouse, e segui il calendario delle rivelazioni: una nuova leggenda ogni mese.
             </p>
 
-            <div className="w-full flex flex-col items-center gap-3">
-              <div
-                className="w-full max-w-md h-3 rounded-full overflow-hidden"
-                style={{ background: "var(--bg-card)", border: "1px solid rgba(184,134,11,0.3)" }}
-              >
+            <div className="w-full flex flex-col items-center gap-6">
+              {/* Caserta */}
+              <div className="w-full max-w-md flex flex-col gap-2">
+                <div className="flex justify-between items-center">
+                  <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Caserta
+                  </span>
+                  <span className="font-cinzel text-xs tracking-[0.2em] uppercase" style={{ color: "var(--accent-gold)" }}>
+                    {DISPONIBILI_CASERTA} di {TOTAL_CASERTA} leggende
+                  </span>
+                </div>
                 <div
-                  className="h-full rounded-full"
-                  style={{
-                    width: `${(LEGGENDE_DISPONIBILI / TOTAL_LEGGENDE) * 100}%`,
-                    background: "linear-gradient(to right, var(--accent-blood), var(--accent-gold))",
-                  }}
-                />
+                  className="w-full h-3 rounded-full overflow-hidden"
+                  style={{ background: "var(--bg-card)", border: "1px solid rgba(184,134,11,0.3)" }}
+                >
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${(DISPONIBILI_CASERTA / TOTAL_CASERTA) * 100}%`,
+                      background: "linear-gradient(to right, var(--accent-blood), var(--accent-gold))",
+                    }}
+                  />
+                </div>
               </div>
+
+              {/* Napoli */}
+              <div className="w-full max-w-md flex flex-col gap-2">
+                <div className="flex justify-between items-center">
+                  <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Napoli
+                  </span>
+                  <span className="font-cinzel text-xs tracking-[0.2em] uppercase" style={{ color: "var(--accent-gold)" }}>
+                    {DISPONIBILI_NAPOLI} di {TOTAL_NAPOLI} leggende
+                  </span>
+                </div>
+                <div
+                  className="w-full h-3 rounded-full overflow-hidden"
+                  style={{ background: "var(--bg-card)", border: "1px solid rgba(184,134,11,0.3)" }}
+                >
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${(DISPONIBILI_NAPOLI / TOTAL_NAPOLI) * 100}%`,
+                      background: "linear-gradient(to right, var(--accent-blood), var(--accent-gold))",
+                    }}
+                  />
+                </div>
+              </div>
+
               <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-gold)" }}>
-                {LEGGENDE_DISPONIBILI} di {TOTAL_LEGGENDE} leggende disponibili
+                {DISPONIBILI_CASERTA + DISPONIBILI_NAPOLI} di {TOTAL_CASERTA + TOTAL_NAPOLI} leggende disponibili · Caserta &amp; Napoli
               </span>
             </div>
           </div>
@@ -116,7 +154,7 @@ export default function LeggendarioPage() {
             </h2>
             <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
               Il Leggendario non finisce qui. Anno dopo anno, la mappa si espanderà verso nuove province —
-              Napoli, Avellino, Benevento, Salerno — fino ad abbracciare tutto il Sud Italia, in quello che
+              Avellino, Benevento, Salerno — fino ad abbracciare tutto il Sud Italia, in quello che
               diventerà l&apos;Atlante delle Paure Italiane.
             </p>
           </div>

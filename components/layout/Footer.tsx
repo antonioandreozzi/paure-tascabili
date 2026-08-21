@@ -146,26 +146,22 @@ export default function Footer() {
             </h3>
             <ul className="flex flex-col gap-3" role="list">
               <li>
-                <a
-                  href="https://www.iubenda.com/privacy-policy/pauretascabili"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy-policy"
                   className="font-crimson text-base animated-underline transition-colors hover:text-[var(--accent-moon)]"
                   style={{ color: "var(--accent-ghost)" }}
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.iubenda.com/privacy-policy/pauretascabili/cookie-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/cookie-policy"
                   className="font-crimson text-base animated-underline transition-colors hover:text-[var(--accent-moon)]"
                   style={{ color: "var(--accent-ghost)" }}
                 >
                   Cookie Policy
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="mt-8">

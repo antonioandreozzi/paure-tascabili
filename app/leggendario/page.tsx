@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const TOTAL_CASERTA = 21;
 const TOTAL_NAPOLI = 21;
 const DISPONIBILI_CASERTA = 0;
-const DISPONIBILI_NAPOLI = 0;
+const DISPONIBILI_NAPOLI = 1;
 
 export default function LeggendarioPage() {
   return (

@@ -62,12 +62,13 @@ export default function SurvivorsGallery() {
           subtitle="Solo chi è riuscito a sfuggire può raccontare la sua storia… Ma a quale prezzo?"
         />
 
+        {/* Card — full-width on mobile, with side arrows on desktop */}
         <div className="relative flex items-center justify-center gap-4">
-          {/* Freccia sinistra */}
+          {/* Freccia sinistra — nascosta su mobile */}
           <button
             onClick={prev}
             aria-label="Sopravvissuto precedente"
-            className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
+            className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
             style={{
               background: "var(--bg-card)",
               border: "1px solid rgba(139,26,26,0.4)",
@@ -80,7 +81,7 @@ export default function SurvivorsGallery() {
           </button>
 
           {/* Card con animazione */}
-          <div className="relative w-full max-w-xl overflow-hidden" style={{ minHeight: 380 }}>
+          <div className="relative w-full max-w-xl overflow-hidden">
             <AnimatePresence custom={direction} mode="wait">
               <motion.article
                 key={survivor.name}
@@ -90,7 +91,7 @@ export default function SurvivorsGallery() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="relative flex flex-col gap-6 p-10 rounded-sm w-full"
+                className="relative flex flex-col gap-5 p-6 sm:p-10 rounded-sm w-full"
                 style={{
                   background: "var(--bg-card)",
                   border: "1px solid rgba(139,26,26,0.2)",
@@ -112,7 +113,7 @@ export default function SurvivorsGallery() {
                 {/* Avatar */}
                 <div className="flex items-center gap-4 relative z-10">
                   <div
-                    className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0"
+                    className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex-shrink-0"
                     style={{
                       boxShadow: `0 0 20px ${survivor.glowColor}`,
                       border: "1px solid rgba(184,134,11,0.3)",
@@ -127,7 +128,7 @@ export default function SurvivorsGallery() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-cinzel font-bold text-lg" style={{ color: "var(--accent-moon)" }}>
+                    <h3 className="font-cinzel font-bold text-base sm:text-lg" style={{ color: "var(--accent-moon)" }}>
                       {survivor.name}
                     </h3>
                     <p className="font-cinzel text-xs tracking-wider uppercase" style={{ color: "var(--accent-ghost)" }}>
@@ -138,11 +139,11 @@ export default function SurvivorsGallery() {
 
                 {/* Quote */}
                 <blockquote
-                  className="relative z-10 font-crimson text-lg leading-relaxed italic"
+                  className="relative z-10 font-crimson text-base sm:text-lg leading-relaxed italic"
                   style={{ color: "var(--accent-ghost)" }}
                 >
                   <span
-                    className="absolute -top-2 -left-2 text-5xl font-cinzel leading-none"
+                    className="absolute -top-2 -left-1 text-4xl sm:text-5xl font-cinzel leading-none"
                     style={{ color: "var(--accent-blood)", opacity: 0.4 }}
                     aria-hidden="true"
                   >
@@ -154,11 +155,11 @@ export default function SurvivorsGallery() {
             </AnimatePresence>
           </div>
 
-          {/* Freccia destra */}
+          {/* Freccia destra — nascosta su mobile */}
           <button
             onClick={next}
             aria-label="Sopravvissuto successivo"
-            className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
+            className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-full items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blood)]"
             style={{
               background: "var(--bg-card)",
               border: "1px solid rgba(139,26,26,0.4)",
@@ -171,21 +172,56 @@ export default function SurvivorsGallery() {
           </button>
         </div>
 
-        {/* Indicatori punto */}
-        <div className="flex justify-center gap-3" aria-label="Navigazione sopravvissuti">
-          {survivors.map((s, i) => (
-            <button
-              key={s.name}
-              onClick={() => goTo(i)}
-              aria-label={`Vai a ${s.name}`}
-              aria-current={i === current ? "true" : undefined}
-              className="w-2 h-2 rounded-full transition-all duration-300"
-              style={{
-                background: i === current ? "var(--accent-blood)" : "rgba(139,26,26,0.3)",
-                transform: i === current ? "scale(1.4)" : "scale(1)",
-              }}
-            />
-          ))}
+        {/* Navigazione mobile: frecce + indicatori in riga */}
+        <div className="flex items-center justify-center gap-6" aria-label="Navigazione sopravvissuti">
+          {/* Freccia sinistra mobile */}
+          <button
+            onClick={prev}
+            aria-label="Sopravvissuto precedente"
+            className="sm:hidden w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid rgba(139,26,26,0.4)",
+              color: "var(--accent-moon)",
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M13 4L7 10L13 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          {/* Dots */}
+          <div className="flex gap-3">
+            {survivors.map((s, i) => (
+              <button
+                key={s.name}
+                onClick={() => goTo(i)}
+                aria-label={`Vai a ${s.name}`}
+                aria-current={i === current ? "true" : undefined}
+                className="w-2 h-2 rounded-full transition-all duration-300"
+                style={{
+                  background: i === current ? "var(--accent-blood)" : "rgba(139,26,26,0.3)",
+                  transform: i === current ? "scale(1.4)" : "scale(1)",
+                }}
+              />
+            ))}
+          </div>
+
+          {/* Freccia destra mobile */}
+          <button
+            onClick={next}
+            aria-label="Sopravvissuto successivo"
+            className="sm:hidden w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid rgba(139,26,26,0.4)",
+              color: "var(--accent-moon)",
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         </div>
 
         <div className="flex justify-center">

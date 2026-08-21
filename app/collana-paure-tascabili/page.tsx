@@ -222,6 +222,59 @@ export default function CollanaPaureTascabiliPage() {
               </div>
             </article>
 
+            {/* Vol. 4 */}
+            <article
+              className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              <div className="lg:col-span-2 flex justify-center">
+                <div
+                  className="relative w-48 h-64 lg:w-56 lg:h-72 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #0d0d1c 0%, #080812 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/non-guardare-nel-pozzo-cover.jpg"
+                    alt="Copertina di Non Guardare nel Pozzo — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="224px"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 flex flex-col gap-4">
+                <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                  Volume 4
+                </span>
+                <h3 className="font-cinzel font-black text-2xl" style={{ color: "var(--accent-moon)" }}>
+                  Non Guardare nel Pozzo
+                </h3>
+                <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  La prima notte a Napoli, Sofia trova tre monete d&apos;oro sotto il guanciale.
+                  Qualcosa abita nel pozzo del cortile. I napoletani lo chiamano il Munaciello.
+                  Se lo tratti bene porta fortuna. Se lo fai arrabbiare, il cappuccio diventa nero.
+                  Sofia lo ha fatto arrabbiare.
+                </p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <CTAButton
+                    href="https://www.amazon.it/dp/B0HFYGYHZ2/"
+                    variant="primary"
+                    external
+                    aria-label="Acquista Non Guardare nel Pozzo su Amazon"
+                  >
+                    🕳️ Acquista Ora
+                  </CTAButton>
+                  <CTAButton href="/singoli-volumi" variant="secondary">
+                    Scopri di Più
+                  </CTAButton>
+                </div>
+              </div>
+            </article>
+
             <p
               className="font-crimson italic text-lg text-center"
               style={{ color: "var(--accent-ghost)", opacity: 0.7 }}

@@ -9,7 +9,7 @@ import CTAButton from "@/components/shared/CTAButton";
 export const metadata: Metadata = {
   title: "Singoli Volumi",
   description:
-    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti e Vendetta nel Pollaio. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
+    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti, Vendetta nel Pollaio e Non Guardare nel Pozzo. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
   alternates: { canonical: "https://www.pauretascabili.com/singoli-volumi" },
 };
 
@@ -25,6 +25,13 @@ const temi2 = [
   { title: "Fiducia e Segreti", desc: "Zio Remo sa qualcosa. Ma perché non parla?" },
   { title: "Istinto di Sopravvivenza", desc: "Leo e Giulia devono capire in fretta, prima che sia troppo tardi." },
   { title: "Identità", desc: "Quando la tua voce non sembra più solo la tua, chi sei davvero?" },
+];
+
+const temi4 = [
+  { title: "Folklore Autentico", desc: "Il Munaciello e i cunicoli sotto Napoli: leggende reali che diventano incubo." },
+  { title: "Coraggio nell'Ignoto", desc: "Sofia deve scendere nel buio. Prima che sia troppo tardi per lei e la sua famiglia." },
+  { title: "Legami Familiari", desc: "Un fratellino di sette anni che ruba ogni scena. La famiglia come ancora nel terrore." },
+  { title: "Responsabilità", desc: "Sofia ha fatto arrabbiare il Munaciello. Deve fare i conti con le conseguenze." },
 ];
 
 export default function SingoliVolumiPage() {
@@ -277,6 +284,121 @@ export default function SingoliVolumiPage() {
                   aria-label="Acquista Vendetta nel Pollaio su Amazon"
                 >
                   🐔 Scopri la Vendetta!
+                </CTAButton>
+              </div>
+            </article>
+
+            {/* ── Vol. 4 ── */}
+            <article
+              className="grid lg:grid-cols-5 gap-12 items-start p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              {/* Cover */}
+              <div className="lg:col-span-2 flex justify-center lg:sticky lg:top-32">
+                <div
+                  className="relative w-56 h-72 lg:w-64 lg:h-80 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #0d0d1c 0%, #080812 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/non-guardare-nel-pozzo-cover.jpg"
+                    alt="Copertina di Non Guardare nel Pozzo — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="256px"
+                  />
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="lg:col-span-3 flex flex-col gap-8">
+                <div>
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-2" style={{ color: "var(--accent-blood)" }}>
+                    Vol. 4
+                  </span>
+                  <h2 className="font-cinzel font-black text-3xl" style={{ color: "var(--accent-moon)" }}>
+                    Non Guardare nel Pozzo
+                  </h2>
+                  <p className="font-crimson text-base mt-2" style={{ color: "var(--accent-gold)" }}>
+                    James Valentino · Paure Tascabili
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  <p>
+                    Il quarto volume della collana <strong style={{ color: "var(--accent-moon)" }}>Paure Tascabili</strong> porta
+                    Sofia nel cuore oscuro di Napoli, tra vicoli antichi, cisterne romane e una creatura
+                    del folklore partenopeo che i napoletani conoscono da secoli: il Munaciello.
+                  </p>
+                  <p>
+                    Una storia di mistero e avventura soprannaturale costruita sul folklore napoletano autentico,
+                    con atmosfere inquietanti mai eccessive e un ritmo incalzante capitolo dopo capitolo.
+                  </p>
+                </div>
+
+                <div
+                  className="relative p-8 rounded-sm"
+                  style={{ background: "var(--bg-void)", border: "1px solid rgba(139,26,26,0.2)" }}
+                >
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-4" style={{ color: "var(--accent-blood)" }}>
+                    Sinossi
+                  </span>
+                  <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                    Sofia non voleva passare l&apos;estate a Napoli. Niente amiche, niente piscina, niente
+                    wi-fi. Solo un vecchio palazzo nel centro storico, un cortile ombroso e una nonna che
+                    sorride troppo quando parla del pozzo. La prima notte, trova tre monete d&apos;oro antiche
+                    sotto il guanciale. Qualcosa gliele ha lasciate. Qualcosa che i napoletani chiamano
+                    il Munaciello — piccolo come un bambino, cappuccio rosso in testa. Se lo tratti bene
+                    porta fortuna. Se lo fai arrabbiare, il cappuccio diventa nero.{" "}
+                    <em style={{ color: "var(--accent-blood)" }}>Sofia lo ha fatto arrabbiare.</em>{" "}
+                    Sotto il palazzo, sotto i sampietrini del cortile, sotto il pozzo, una cisterna romana
+                    di duemila anni nasconde un segreto che nessuno avrebbe dovuto toccare.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Temi Principali
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {temi4.map((tema) => (
+                      <div
+                        key={tema.title}
+                        className="flex flex-col gap-1 p-4 rounded-sm"
+                        style={{ background: "var(--bg-void)", border: "1px solid rgba(184,134,11,0.2)" }}
+                      >
+                        <span className="font-cinzel font-bold text-sm" style={{ color: "var(--accent-moon)" }}>
+                          🕳️ {tema.title}
+                        </span>
+                        <span className="font-crimson text-base" style={{ color: "var(--accent-ghost)" }}>
+                          {tema.desc}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Horror", "Avventura", "Folklore"].map((tag) => (
+                    <span key={tag} className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(139,26,26,0.2)", color: "var(--accent-blood)", border: "1px solid rgba(139,26,26,0.3)" }}>
+                      {tag}
+                    </span>
+                  ))}
+                  <span className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(184,134,11,0.15)", color: "var(--accent-gold)", border: "1px solid rgba(184,134,11,0.3)" }}>
+                    9-14 anni
+                  </span>
+                </div>
+
+                <CTAButton
+                  href="https://www.amazon.it/dp/B0HFYGYHZ2/"
+                  variant="primary"
+                  external
+                  aria-label="Acquista Non Guardare nel Pozzo su Amazon"
+                >
+                  🕳️ Scendi nel Buio!
                 </CTAButton>
               </div>
             </article>

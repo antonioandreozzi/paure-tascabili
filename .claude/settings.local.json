@@ -1,7 +1,30 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(uipro --help)",
+      "Bash(uipro install *)",
+      "Bash(uipro init *)",
+      "WebFetch(domain:www.antonioandreozzidigital.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Read(//c/Users/SDB/Desktop/**)",
+      "Bash(npx create-next-app@latest antonio-andreozzi-digital --typescript --tailwind --eslint --app --no-src-dir --no-import-alias --turbopack)",
+      "Bash(mkdir -p \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/components/layout\" \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/components/sections\" \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/components/3d\" \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/lib\")",
+      "Bash(npm run *)",
+      "WebFetch(domain:www.sanity.io)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"animation cursor transition premium dark\" --domain ux -n 5)",
+      "Bash(python \"C:\\\\Users\\\\SDB\\\\Desktop\\\\Idee Contenuti, Routine e Obiettivi Giornalieri\\\\Contenuti Facebook - Paure Tascabili\\\\paure-tascabili\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"animation cursor transition premium dark\" --domain ux -n 5)",
+      "Bash(mv \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/public/antonio.jpg.jpg\" \"C:/Users/SDB/Desktop/antonio-andreozzi-digital/public/antonio.jpg\")",
+      "Bash(python generate_signal_to_noise.py)",
+      "Bash(python3)",
+      "Bash(mkdir -p \"/c/Users/SDB/Desktop/Signal to Noise\")",
+      "Bash(cp \"/c/Users/SDB/Desktop/Earthling MIDI Composer/output/signal-to-noise/\"*.mid \"/c/Users/SDB/Desktop/Signal to Noise/\")",
+      "WebSearch",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/openpolis/geojson-italy/master/geojson/limits_IT_provinces.geojson\" -o /tmp/it_provinces.geojson)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

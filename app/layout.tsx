@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "libri brivido giovani lettori",
   ],
   authors: [{ name: "Antonio Andreozzi" }],
+  verification: {
+    google: "09oJhk7Ma4i8bOvGBrM6ZWnNFPwfGT2qZWb3sIt20Eg",
+  },
   openGraph: {
     type: "website",
     locale: "it_IT",

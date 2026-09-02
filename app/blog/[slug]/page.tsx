@@ -42,8 +42,38 @@ export default async function BlogPostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.seoTitle,
+    description: post.metaDescription,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: "James Valentino",
+      url: "https://www.pauretascabili.com/chi-sono",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Paure Tascabili",
+      url: "https://www.pauretascabili.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.pauretascabili.com/blog/${post.slug}`,
+    },
+    keywords: post.keywords.join(", "),
+    articleSection: post.category,
+    inLanguage: "it-IT",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ScrollProgress />
       <Navbar />
       <main id="main-content">

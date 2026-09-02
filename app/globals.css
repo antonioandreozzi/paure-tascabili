@@ -140,3 +140,32 @@ body::after {
   color: var(--accent-ghost);
   opacity: 0.85;
 }
+.blog-product-box {
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(184,134,11,0.3);
+  border-radius: 2px;
+  background: rgba(184,134,11,0.05);
+}
+.blog-product-label {
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 1rem !important;
+}
+.blog-product-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.blog-product-item:last-child { margin-bottom: 0; }
+.blog-product-item a {
+  color: #D4AF37 !important;
+  font-family: var(--font-cinzel), serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none !important;
+}
+.blog-product-item a:hover { opacity: 0.75; }

@@ -1,0 +1,57 @@
+{
+  "books": [
+    {
+      "id": "vol1",
+      "volume": "Vol. 1",
+      "title": "Il Quaderno degli Incubi Incompleti",
+      "author": "James Valentino",
+      "series": "Paure Tascabili",
+      "audience": "Ragazzi 8-14 anni",
+      "description": "Il primo volume della collana. Coraggio, legami familiari, mistero e avventura: affrontare le proprie paure e superare le sfide con determinazione.",
+      "themes": ["paure", "coraggio", "legami familiari", "mistero", "incubi", "avventura"],
+      "monsters": [],
+      "buyLink": "https://www.amazon.it/Quaderno-degli-Incubi-Incompleti-incompleti/dp/B0GX1MMY1D/",
+      "pageLink": "/singoli-volumi"
+    },
+    {
+      "id": "vol2",
+      "volume": "Vol. 2",
+      "title": "Vendetta nel Pollaio",
+      "author": "James Valentino",
+      "series": "Paure Tascabili",
+      "audience": "Ragazzi 8-14 anni",
+      "description": "Il secondo volume della collana. Istinto di sopravvivenza, identità, fiducia e segreti in una storia che mescola folklore e terrore.",
+      "themes": ["sopravvivenza", "identità", "segreti", "fiducia", "folklore"],
+      "monsters": [],
+      "buyLink": "https://www.amazon.it/gp/product/B0GX94GY2C",
+      "pageLink": "/singoli-volumi"
+    },
+    {
+      "id": "vol4",
+      "volume": "Vol. 4",
+      "title": "Non Guardare nel Pozzo",
+      "author": "James Valentino",
+      "series": "Paure Tascabili",
+      "audience": "Ragazzi 8-14 anni",
+      "description": "Il quarto volume della collana. Protagonista: il Munaciello, creatura del folklore napoletano. Una storia di mistero e avventura soprannaturale costruita sul folklore partenopeo autentico.",
+      "themes": ["folklore napoletano", "Munaciello", "mistero", "Napoli", "soprannaturale", "responsabilità", "coraggio"],
+      "monsters": ["Munaciello"],
+      "buyLink": "https://www.amazon.it/dp/B0HFYGYHZ2/",
+      "pageLink": "/singoli-volumi"
+    }
+  ],
+  "digitalProducts": [
+    {
+      "id": "codice-delle-paure",
+      "title": "Il Codice delle Paure",
+      "type": "Kit digitale stampabile",
+      "price": "14,90 €",
+      "audience": "Genitori con figli 8-15 anni",
+      "description": "42 pagine A4 stampabili. Otto creature del folklore italiano come chiave per conversazioni vere su ansia, bullismo, inadeguatezza e paura del futuro. Script pronti, 30 domande per tema, segnali comportamentali per età.",
+      "themes": ["paure bambini", "folklore italiano", "genitori figli", "ansia", "bullismo", "educazione emotiva", "conversazione"],
+      "monsters": ["L'Ombra", "La Janara", "Il Munaciello", "Il Cane Gigante", "La Befana Oscura", "Il Basilisco", "Il Folletto", "L'Uomo Nero"],
+      "buyLink": "https://gumroad.com",
+      "pageLink": "/kit-segreti"
+    }
+  ]
+}

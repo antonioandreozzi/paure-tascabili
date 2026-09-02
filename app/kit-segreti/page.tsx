@@ -30,7 +30,7 @@ const kits = [
     price: "14,90 €",
     tag: "Disponibile ora",
     available: true,
-    gumroadUrl: "https://gumroad.com",
+    gumroadUrl: "https://pauretascabili.gumroad.com/l/codice-delle-paure",
     icon: "🌑",
     badge: "BESTSELLER",
   },

@@ -17,6 +17,7 @@ const navLinks = [
   },
   { label: "Blog", href: "/blog" },
   { label: "Il Leggendario", href: "/leggendario" },
+  { label: "Kit Segreti", href: "/kit-segreti" },
   { label: "Risorse Gratuite", href: "/risorse-gratuite" },
   { label: "Anteprime", href: "/anteprime" },
   { label: "FAQ", href: "/faq" },

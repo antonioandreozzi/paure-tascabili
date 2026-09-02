@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogPosts as posts } from "@/lib/blog-posts";
+import { getAllPosts } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
@@ -12,18 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/collana-paure-tascabili`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/singoli-volumi`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${baseUrl}/kit-segreti`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/risorse-gratuite`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/anteprime`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/le-stanze`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${baseUrl}/leggendario`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/faq`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/contatti`, priority: 0.6, changeFrequency: "yearly" as const },
   ];
 
-  const blogPages = posts.map((post) => ({
+  const blogPages = getAllPosts().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     priority: 0.7,
     changeFrequency: "monthly" as const,
+    lastModified: new Date(post.publishedAt),
   }));
 
   return [...staticPages, ...blogPages];

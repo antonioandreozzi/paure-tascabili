@@ -1,0 +1,11 @@
+# Redirect vecchie URL WordPress → sito nuovo
+/filosofia/                              /blog                301
+/storytelling-educativo-per-bambini/     /blog                301
+/category/storie-educative/              /blog                301
+/category/*                              /blog                301
+/tag/scrittura-nei-bambini/              /blog                301
+/tag/*                                   /blog                301
+/2025/08/02/                             /blog                301
+/2025/*                                  /blog                301
+/2026/*                                  /blog                301
+/il-leggendario/                         /                    301

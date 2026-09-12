@@ -1,0 +1,42 @@
+name: Pubblica Carosello su Meta
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/carousels/**.json'
+      - '!content/carousels/used-hooks.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installa dipendenze Python
+        run: pip install pillow requests -q
+
+      - name: Pubblica caroselli nuovi su Facebook e Instagram
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: "680037628515928"
+          GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
+        run: |
+          # Trova tutti i JSON carosello aggiunti in questo push
+          NEW_JSON=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/carousels/*.json' | grep -v used-hooks.json || true)
+          if [ -z "$NEW_JSON" ]; then
+            echo "Nessun nuovo carosello JSON trovato in questo push."
+            exit 0
+          fi
+          for f in $NEW_JSON; do
+            echo "Pubblicazione: $f"
+            python scripts/publish_to_meta.py "$f"
+          done
+
+      - name: Commit immagini generate
+        run: |
+          git config user.name "Carousel Publisher"
+          git config user.email "carousel@pauretascabili.it"
+          git add public/carousels/ content/carousels/*.publish_log.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Immagini carosello generate da GitHub Actions"
+          git push origin main || true

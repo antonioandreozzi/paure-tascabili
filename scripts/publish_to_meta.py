@@ -226,6 +226,11 @@ def ig_publish_carousel(page_token, ig_user_id, image_urls, caption):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
+    # Modalità: "all" (default), "fb-only", "ig-only"
+    # ig-only: salta generazione immagini e FB, pubblica solo IG usando URL GitHub
+    # Le immagini DEVONO già essere su GitHub prima di chiamare ig-only
+    mode = os.environ.get("PUBLISH_MODE", "all")
+
     page_token = os.environ.get("FB_PAGE_TOKEN", "")
     page_id    = os.environ.get("FB_PAGE_ID", "680037628515928")
     github_raw_base = os.environ.get("GITHUB_RAW_BASE",
@@ -249,55 +254,67 @@ def main():
     date_str = carousel.get("date", "")
     slug     = carousel.get("slug", json_path.stem)
 
-    # Cartella immagini
     img_dir = Path("public/carousels") / f"{date_str}-{slug}"
-    img_dir.mkdir(parents=True, exist_ok=True)
+    fb_post_id = None
+    ig_post_id = None
 
-    # Genera immagini
-    image_paths = []
-    total = len(slides)
-    print(f"Generazione {total} slide...")
-    for i, slide in enumerate(slides, 1):
-        img = make_slide(slide, i, total)
-        path = img_dir / f"slide-{i:02d}.png"
-        img.save(str(path), "PNG")
-        image_paths.append(path)
-        print(f"  slide {i}/{total} → {path}")
+    if mode in ("all", "fb-only"):
+        # Genera immagini
+        img_dir.mkdir(parents=True, exist_ok=True)
+        image_paths = []
+        total = len(slides)
+        print(f"Generazione {total} slide...")
+        for i, slide in enumerate(slides, 1):
+            img = make_slide(slide, i, total)
+            path = img_dir / f"slide-{i:02d}.png"
+            img.save(str(path), "PNG")
+            image_paths.append(path)
+            print(f"  slide {i}/{total} → {path}")
 
-    # ── Facebook ──
-    print("\nPubblicazione su Facebook...")
-    photo_ids = []
-    for path in image_paths:
-        pid = fb_upload_photo(page_token, page_id, str(path))
-        photo_ids.append(pid)
-        print(f"  foto caricata: {pid}")
-
-    fb_post_id = fb_publish_carousel(page_token, page_id, photo_ids, caption)
-    print(f"✅ Facebook: post pubblicato — ID: {fb_post_id}")
-
-    # ── Instagram (se collegato) ──
-    ig_id = ig_get_account_id(page_token, page_id)
-    if ig_id:
-        print(f"\nInstagram Business Account trovato: {ig_id}")
-        image_urls = [
-            f"{github_raw_base}/public/carousels/{date_str}-{slug}/slide-{i:02d}.png"
-            for i in range(1, len(image_paths)+1)
-        ]
-        ig_post_id = ig_publish_carousel(page_token, ig_id, image_urls, caption)
-        print(f"✅ Instagram: carosello pubblicato — ID: {ig_post_id}")
+        # Facebook (carica file locali direttamente)
+        print("\nPubblicazione su Facebook...")
+        photo_ids = []
+        for path in image_paths:
+            pid = fb_upload_photo(page_token, page_id, str(path))
+            photo_ids.append(pid)
+            print(f"  foto caricata: {pid}")
+        fb_post_id = fb_publish_carousel(page_token, page_id, photo_ids, caption)
+        print(f"✅ Facebook: post pubblicato — ID: {fb_post_id}")
     else:
-        print("⚠️  Nessun Instagram Business Account collegato alla pagina. Salto IG.")
-        print("   → Collega l'account Instagram alla Pagina Facebook per abilitare IG.")
+        # ig-only: conta le immagini già presenti nella cartella
+        image_paths = sorted(img_dir.glob("slide-*.png")) if img_dir.exists() else []
+        print(f"Modalità ig-only: trovate {len(image_paths)} immagini in {img_dir}")
+
+    if mode in ("all", "ig-only"):
+        # Instagram usa URL GitHub — le immagini devono già essere pushate
+        ig_id = ig_get_account_id(page_token, page_id)
+        if ig_id:
+            print(f"\nInstagram Business Account trovato: {ig_id}")
+            n = len(image_paths)
+            image_urls = [
+                f"{github_raw_base}/public/carousels/{date_str}-{slug}/slide-{i:02d}.png"
+                for i in range(1, n + 1)
+            ]
+            ig_post_id = ig_publish_carousel(page_token, ig_id, image_urls, caption)
+            print(f"✅ Instagram: carosello pubblicato — ID: {ig_post_id}")
+        else:
+            print("⚠️  Nessun Instagram Business Account collegato. Salto IG.")
 
     # Log risultati
+    log_path = json_path.with_suffix(".publish_log.json")
+    existing = {}
+    if log_path.exists():
+        try:
+            existing = json.loads(log_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
     log = {
         "date": date_str, "slug": slug, "hook": carousel.get("hook"),
-        "slides_count": total,
-        "fb_post_id": fb_post_id,
-        "ig_post_id": ig_post_id if ig_id else None,
+        "slides_count": len(slides),
+        "fb_post_id": fb_post_id or existing.get("fb_post_id"),
+        "ig_post_id": ig_post_id or existing.get("ig_post_id"),
         "images": [str(p) for p in image_paths],
     }
-    log_path = json_path.with_suffix(".publish_log.json")
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nLog salvato: {log_path}")
 

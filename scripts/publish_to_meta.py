@@ -46,7 +46,7 @@ AU   = hex_to_rgb(GOLD)
 CR   = hex_to_rgb(MOON_CREAM)
 
 # ── Font ─────────────────────────────────────────────────────────────────────
-FONT_DIR = Path("/tmp/pt_fonts")
+FONT_DIR = Path(os.environ.get("TEMP", "/tmp")) / "pt_fonts"
 FONT_DIR.mkdir(exist_ok=True)
 
 FONT_URLS = {
@@ -188,6 +188,8 @@ def ig_publish_carousel(page_token, ig_user_id, image_urls, caption):
     Pubblica un carosello su Instagram.
     image_urls: lista di URL PUBBLICI (es. raw.githubusercontent.com)
     """
+    # Instagram accetta max 10 slide per carosello
+    image_urls = image_urls[:10]
     # 1. Container per ogni immagine
     children_ids = []
     for url in image_urls:

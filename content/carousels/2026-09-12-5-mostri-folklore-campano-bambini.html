@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 mostri del folklore campano che ogni bambino dovrebbe conoscere — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Munaciello: contenuto interno /content/posts/munaciello-il-folletto-di-napoli.json
+    + https://ilcaudino.it/dai-lupi-mannari-ai-munacielli-le-creature-leggendarie-del-folclore-campano-uid-5/
+  - Janara: contenuto interno /content/posts/la-janara-strega-benevento-leggenda-campana.json
+  - Bella 'Mbriana: https://napoliparlando.altervista.org/bella-mbriana-storia-e-leggenda/
+  - Mazzamauriello / Scazzamauriello (variante irpina): https://it.wikipedia.org/wiki/Mazzamurello
+    + https://www.talesofplaces.com/tale-of-lauro-il-dispettoso-folletto-salentino/
+  - Basilisco (versione popolare napoletana, uovo di gallo, sconfitta con lo specchio):
+    https://www.mitiemisteri.it/storia-leggende-creature-mitologiche/basilisco
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:540px;
+    max-width:88vw;
+    max-height:88vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:540px;
+    max-width:88vw;
+    max-height:88vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1080px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:90px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:120px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:120px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:48px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:36px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    font-size:26px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:64px;
+    line-height:1.25;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:32px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:48px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 12/09/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">5 mostri del folklore campano<br>che ogni bambino<br>dovrebbe conoscere</h2>
+          <p class="cover-subtitle">Leggende di Napoli e del Sannio,<br>tramandate ancora oggi di nonna in nipote</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — CONTENUTO: intro -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Prima di iniziare</div>
+          <p class="content-text">Per secoli le famiglie del Sud hanno usato queste creature per dare un nome alle paure della notte. Scopriamole insieme, una per una.</p>
+          <div class="slide-num">2/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Munaciello -->
+        <!-- Fonte: content/posts/munaciello-il-folletto-di-napoli.json; ilcaudino.it -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">1 · Il Munaciello</div>
+          <p class="content-text">Piccolo come un bambino di sei anni, vestito da monaco con cappuccio scuro. A Napoli porta <strong>fortuna</strong> a chi lo rispetta, dispetti a chi lo deride.</p>
+          <div class="slide-num">3/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — Munaciello leggenda -->
+        <!-- Fonte: content/posts/munaciello-il-folletto-di-napoli.json (leggenda di Stefano Mariconda) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">1 · Il Munaciello</div>
+          <p class="content-text">La leggenda più diffusa racconta di <strong>Stefano Mariconda</strong>, bambino del Quattrocento cresciuto in convento, mai riconosciuto dal padre nobile.</p>
+          <div class="slide-num">4/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Janara -->
+        <!-- Fonte: content/posts/la-janara-strega-benevento-leggenda-campana.json -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">2 · La Janara</div>
+          <p class="content-text">La strega di Benevento. Ogni notte di <strong>luna piena</strong> vola verso un noce sacro sul fiume Sabato, pronunciando una formula segreta.</p>
+          <div class="slide-num">5/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Janara difesa -->
+        <!-- Fonte: content/posts/la-janara-strega-benevento-leggenda-campana.json -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">2 · La Janara</div>
+          <p class="content-text">Per tenerla lontana, le famiglie lasciavano <strong>sale</strong> o una scopa sulla soglia. La Janara resta a contare i granelli fino all'alba.</p>
+          <div class="slide-num">6/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Bella 'Mbriana -->
+        <!-- Fonte: napoliparlando.altervista.org/bella-mbriana-storia-e-leggenda/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">3 · La Bella 'Mbriana</div>
+          <p class="content-text">Lo spirito <strong>buono</strong> della casa napoletana. Porta fortuna a chi la accoglie e lascia sempre una sedia libera per lei.</p>
+          <div class="slide-num">7/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Mazzamauriello -->
+        <!-- Fonte: it.wikipedia.org/wiki/Mazzamurello; talesofplaces.com (variante irpina Scazzamauriello) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">4 · Il Mazzamauriello</div>
+          <p class="content-text">Chiamato <strong>Scazzamauriello</strong> in Irpinia: folletto con cappello rosso e riccioli d'oro, custode geloso di un anello magico.</p>
+          <div class="slide-num">8/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Basilisco -->
+        <!-- Fonte: mitiemisteri.it/storia-leggende-creature-mitologiche/basilisco -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">5 · Il Basilisco</div>
+          <p class="content-text">Nella leggenda popolare napoletana è figlio illegittimo di una nobildonna, costretto a vivere nei sotterranei con un <strong>saio nero</strong>.</p>
+          <div class="slide-num">9/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — Basilisco sconfitta -->
+        <!-- Fonte: mitiemisteri.it/storia-leggende-creature-mitologiche/basilisco -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">5 · Il Basilisco</div>
+          <p class="content-text">Per sconfiggerlo bastava uno <strong>specchio</strong>: davanti alla propria immagine riflessa, cade vittima del suo stesso sguardo mortale.</p>
+          <div class="slide-num">10/11</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 11 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per portare sempre con te le leggende della Campania.<br><br>Condividi con chi ama il folklore italiano.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 11 slide (1080×1080px, visualizzate a 540×540px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Paure Tascabili — Meta API Publisher
-Legge un JSON di carosello, genera immagini PNG 1080x1080, pubblica su Facebook.
+Legge un JSON di carosello, genera immagini PNG 1080x1350 (4:5), pubblica su Facebook e Instagram.
 Instagram viene attivato automaticamente quando il Page ha un Instagram Business Account collegato.
 
 Usage:
@@ -34,7 +34,8 @@ VOID_BLACK  = "#0A0A0F"
 BLOOD_RED   = "#8B1A1A"
 GOLD        = "#D4AF37"
 MOON_CREAM  = "#E8D5B0"
-SIZE        = 1080
+WIDTH       = 1080
+HEIGHT      = 1350  # formato 4:5 per Facebook e Instagram
 
 def hex_to_rgb(h):
     h = h.lstrip("#")
@@ -102,17 +103,17 @@ def draw_text_wrapped(draw, text, x, y, max_width, font, fill, align="center"):
     return total_h
 
 def make_slide(slide_data, slide_num, total):
-    """Genera un'immagine PIL per una singola slide."""
-    img = Image.new("RGB", (SIZE, SIZE), BG)
+    """Genera un'immagine PIL 1080x1350 (4:5) per una singola slide."""
+    img = Image.new("RGB", (WIDTH, HEIGHT), BG)
     draw = ImageDraw.Draw(img)
 
     # Cornice rossa sottile
     border = 18
-    draw.rectangle([border, border, SIZE-border, SIZE-border], outline=RED, width=3)
+    draw.rectangle([border, border, WIDTH-border, HEIGHT-border], outline=RED, width=3)
 
-    # Riga decorativa aurea
-    draw.line([(border+30, 120), (SIZE-border-30, 120)], fill=AU, width=2)
-    draw.line([(border+30, SIZE-120), (SIZE-border-30, SIZE-120)], fill=AU, width=2)
+    # Righe decorative auree (proporzionate all'altezza maggiore)
+    draw.line([(border+30, 140), (WIDTH-border-30, 140)], fill=AU, width=2)
+    draw.line([(border+30, HEIGHT-140), (WIDTH-border-30, HEIGHT-140)], fill=AU, width=2)
 
     font_title  = get_font("cinzel_bold", 62)
     font_sub    = get_font("cinzel_bold", 38)
@@ -121,30 +122,31 @@ def make_slide(slide_data, slide_num, total):
     font_num    = get_font("crimson",     32)
 
     slide_type = slide_data.get("type", "content")
-    cx = SIZE // 2
+    cx = WIDTH // 2
+    cy = HEIGHT // 2
 
     if slide_type == "cover":
         title    = slide_data.get("title", "")
         subtitle = slide_data.get("subtitle", "")
-        draw_text_wrapped(draw, title,    cx, SIZE//2 - 60, SIZE-160, font_title, CR)
-        draw_text_wrapped(draw, subtitle, cx, SIZE//2 + 80, SIZE-200, font_sub,   AU)
+        draw_text_wrapped(draw, title,    cx, cy - 70,  WIDTH-160, font_title, CR)
+        draw_text_wrapped(draw, subtitle, cx, cy + 100, WIDTH-200, font_sub,   AU)
     elif slide_type == "cta":
         text = slide_data.get("text", "")
-        draw_text_wrapped(draw, text, cx, SIZE//2, SIZE-160, font_sub, AU)
+        draw_text_wrapped(draw, text, cx, cy, WIDTH-160, font_sub, AU)
     else:
         text = slide_data.get("text", "")
-        draw_text_wrapped(draw, text, cx, SIZE//2, SIZE-160, font_body, CR)
+        draw_text_wrapped(draw, text, cx, cy, WIDTH-160, font_body, CR)
 
     # Numero slide (es: 2/10)
     if slide_type not in ("cover",):
         num_text = f"{slide_num}/{total}"
-        draw.text((SIZE-border-70, border+30), num_text, font=font_num, fill=AU)
+        draw.text((WIDTH-border-70, border+30), num_text, font=font_num, fill=AU)
 
-    # Logo
+    # Logo (angolo in basso a destra)
     logo = "Paure Tascabili"
     bbox = draw.textbbox((0, 0), logo, font=font_logo)
     lw = bbox[2] - bbox[0]
-    draw.text((SIZE - lw - border - 20, SIZE - border - 50), logo, font=font_logo, fill=AU)
+    draw.text((WIDTH - lw - border - 20, HEIGHT - border - 55), logo, font=font_logo, fill=AU)
 
     return img
 

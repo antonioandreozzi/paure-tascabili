@@ -363,7 +363,11 @@ def main():
             print("\nPubblicazione su Threads...")
             th_user_id = threads_get_user_id(threads_token)
             site_url = "https://www.pauretascabili.com/"
-            th_caption = caption_threads or caption[:400]
+            if caption_threads:
+                th_caption = caption_threads
+            else:
+                hook = carousel.get("hook", "").strip()
+                th_caption = f"{hook}\n\nScopri di più nel carosello 👆"
             if site_url not in th_caption:
                 th_caption = th_caption.rstrip() + f"\n\n{site_url}"
             th_post_id = threads_publish_carousel(threads_token, th_user_id, image_urls, th_caption)

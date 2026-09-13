@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "slug": "test-janara-benevento",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che la Befana era originariamente una divinità pagana?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "La Janara di Benevento",
+      "subtitle": "La strega del folklore campano che vola ogni notte di luna piena"
+    },
+    {
+      "type": "content",
+      "text": "La Janara è la strega tradizionale di Benevento. Il nome deriva dal latino 'Dianara', seguace di Diana, dea della luna."
+    },
+    {
+      "type": "content",
+      "text": "Secondo la tradizione campana, ogni notte di luna piena le Janare si riunivano sotto un noce sacro sul fiume Sabato."
+    },
+    {
+      "type": "content",
+      "text": "Il Sabato è un fiume reale della Campania. Il noce di Benevento fu abbattuto nel VII secolo dal vescovo Barbato."
+    },
+    {
+      "type": "content",
+      "text": "Per proteggersi, le famiglie lasciavano sulla soglia un mucchio di sale o una scopa: la Janara doveva contare ogni granello."
+    },
+    {
+      "type": "content",
+      "text": "Il folklore delle Janare raccontava il sospetto verso le donne che vivevano sole o curavano le erbe medicinali."
+    },
+    {
+      "type": "content",
+      "text": "Le storie di streghe come la Janara aiutavano i bambini del passato a dare un nome alle paure della notte."
+    },
+    {
+      "type": "content",
+      "text": "Oggi raccontare queste leggende ai bambini sviluppa il pensiero simbolico e insegna che la paura si può nominare."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

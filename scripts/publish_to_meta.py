@@ -362,7 +362,10 @@ def main():
         if threads_token:
             print("\nPubblicazione su Threads...")
             th_user_id = threads_get_user_id(threads_token)
-            th_caption = caption_threads or caption[:500]
+            site_url = "https://www.pauretascabili.com/"
+            th_caption = caption_threads or caption[:400]
+            if site_url not in th_caption:
+                th_caption = th_caption.rstrip() + f"\n\n{site_url}"
             th_post_id = threads_publish_carousel(threads_token, th_user_id, image_urls, th_caption)
             print(f"✅ Threads: carosello pubblicato — ID: {th_post_id}")
         else:

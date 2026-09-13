@@ -9,6 +9,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,4 +58,4 @@ jobs:
           git add content/stories/
           git status
           git diff --staged --quiet || git commit -m "Log Stories pubblicate $(date +%Y-%m-%d)"
-          git push origin main
+          git push origin main && echo "PUSH OK" || echo "PUSH FALLITO (exit $?)"

@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-14",
+  "slug": "test-permission-fix",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che le api ricordano i volti umani meglio di quanto pensiamo?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Le api riconoscono i volti",
+      "subtitle": "La sorprendente intelligenza degli insetti sociali"
+    },
+    {
+      "type": "content",
+      "text": "Uno studio del 2010 (Dyer et al.) ha dimostrato che le api mellifere sono capaci di riconoscere e memorizzare volti umani."
+    },
+    {
+      "type": "content",
+      "text": "Non lo fanno come gli umani: usano la stessa tecnica olistica con cui riconoscono fiori complessi."
+    },
+    {
+      "type": "content",
+      "text": "Le api vengono addestrate con foto di volti umani abbinati a zucchero. Dopo l'addestramento, scelgono il volto corretto fino all'80% delle volte."
+    },
+    {
+      "type": "content",
+      "text": "Il cervello dell'ape ha solo 1 milione di neuroni contro i 100 miliardi del cervello umano."
+    },
+    {
+      "type": "content",
+      "text": "Questa capacita' deriva dall'evoluzione: le api devono distinguere migliaia di fiori diversi per sopravvivere."
+    },
+    {
+      "type": "content",
+      "text": "La memoria di un'ape dura circa 2-3 giorni. Abbastanza per tornare ai fiori giusti nella stessa stagione."
+    },
+    {
+      "type": "content",
+      "text": "Paura delle api? E' comprensibile, ma questi insetti ci studiano quanto noi studiamo loro."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire la scienza dietro le paure ogni giorno"
+    }
+  ]
+}

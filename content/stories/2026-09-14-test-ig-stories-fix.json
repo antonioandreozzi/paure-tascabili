@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-14",
+  "slug": "test-ig-stories-fix",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che il buio assoluto e' impossibile da trovare in natura?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Il buio che non esiste",
+      "subtitle": "Perche' l'oscurita' totale e' quasi impossibile in natura"
+    },
+    {
+      "type": "content",
+      "text": "Anche in una notte senza luna, la luce stellare e quella zodiacale illuminano il cielo con circa 0.001 lux."
+    },
+    {
+      "type": "content",
+      "text": "Il buio assoluto esiste solo in ambienti artificiali: le camere anecoiche o i laboratori ottici schermati."
+    },
+    {
+      "type": "content",
+      "text": "La paura del buio (nictofobia) colpisce il 90% dei bambini e il 10% degli adulti."
+    },
+    {
+      "type": "content",
+      "text": "Evolutivamente era vantaggioso: nell'oscurita' i predatori notturni avevano il sopravvento sui nostri antenati."
+    },
+    {
+      "type": "content",
+      "text": "Nel buio il cervello inizia ad 'allucinare' leggermente: interpreta il rumore neurale visivo come forme o movimenti."
+    },
+    {
+      "type": "content",
+      "text": "Questo spiega le ombre e le figure che 'vediamo' nell'oscurita': e' il cervello che riempie i vuoti."
+    },
+    {
+      "type": "content",
+      "text": "La terapia cognitivo-comportamentale elimina la nictofobia nel 85% dei casi in poche sessioni."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire la scienza dietro le tue paure ogni giorno"
+    }
+  ]
+}

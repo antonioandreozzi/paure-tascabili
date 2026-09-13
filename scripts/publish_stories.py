@@ -169,7 +169,7 @@ def ig_publish_story(page_token, ig_id, image_url):
     """Pubblica come Instagram Story usando URL CDN."""
     r = requests.post(
         f"https://graph.facebook.com/v26.0/{ig_id}/media",
-        data={"image_url": image_url, "media_type": "IMAGE",
+        data={"image_url": image_url, "media_type": "STORIES",
               "access_token": page_token}
     ).json()
     if "id" not in r:

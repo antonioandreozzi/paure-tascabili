@@ -35,23 +35,11 @@ jobs:
           FB_PAGE_ID: "680037628515928"
           PYTHONIOENCODING: "utf-8"
         run: |
-          LOG_OUT="content/stories/debug_last_run.txt"
-          echo "=== Run $(date -u) ===" > "$LOG_OUT"
-          echo "Files: ${{ steps.find.outputs.files }}" >> "$LOG_OUT"
           for f in ${{ steps.find.outputs.files }}; do
-            echo "" >> "$LOG_OUT"
-            echo "--- $f ---" >> "$LOG_OUT"
-            python scripts/publish_stories.py "$f" >> "$LOG_OUT" 2>&1
-            echo "EXIT: $?" >> "$LOG_OUT"
-            LOG_FILE="${f%.json}.publish_log.json"
-            if [ -f "$LOG_FILE" ]; then
-              echo "LOG_TROVATO: $LOG_FILE" >> "$LOG_OUT"
-              cat "$LOG_FILE" >> "$LOG_OUT"
-            else
-              echo "LOG_NON_TROVATO: $LOG_FILE" >> "$LOG_OUT"
-            fi
+            echo "=== Pubblicazione: $f ==="
+            python scripts/publish_stories.py "$f"
+            echo "Exit: $?"
           done
-          cat "$LOG_OUT"
 
       - name: Commit log pubblicazione
         if: steps.find.outputs.files != ''
@@ -59,8 +47,8 @@ jobs:
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git add content/stories/debug_last_run.txt
-          find content/stories -name "*.publish_log.json" -exec git add {} \;
+          git status --short
+          git add content/stories/ || true
           git status --short
           git diff --staged --quiet || git commit -m "Log Stories pubblicate $(date +%Y-%m-%d)"
-          git push origin main 2>&1
+          git push origin main || true

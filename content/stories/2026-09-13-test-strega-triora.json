@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "slug": "test-strega-triora",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che in Italia c'e' stato un processo alle streghe piu' violento di Salem?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Triora: la Salem italiana",
+      "subtitle": "Il borgo ligure dove 30 donne furono accusate di stregoneria nel 1587"
+    },
+    {
+      "type": "content",
+      "text": "Nel 1587 a Triora, in Liguria, una siccita' devastante porto' la comunita' a cercare i responsabili: le streghe."
+    },
+    {
+      "type": "content",
+      "text": "Il processo inizio' con la denuncia di alcune donne. In pochi mesi si arrivo' a 30 imputate."
+    },
+    {
+      "type": "content",
+      "text": "Le accuse includevano danze notturne con il diavolo, sortilegi contro il raccolto e cannibalismo rituale."
+    },
+    {
+      "type": "content",
+      "text": "Le torture erano violente: la maggior parte delle donne confesso' sotto pressione. Almeno 13 morirono in carcere."
+    },
+    {
+      "type": "content",
+      "text": "Il processo di Triora precede quello di Salem di oltre 100 anni. Salem (1692) e' pero' piu' famoso storicamente."
+    },
+    {
+      "type": "content",
+      "text": "Oggi Triora si chiama 'il borgo delle streghe': ha un museo della stregoneria visitabile tutto l'anno."
+    },
+    {
+      "type": "content",
+      "text": "Il mito della strega serviva a spiegare carestie, malattie e paure che la scienza dell'epoca non poteva chiarire."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "slug": "test-vampiro-nosferatu",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che Nosferatu si ispira a un principe realmente esistito?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Nosferatu: il vampiro reale",
+      "subtitle": "La storia vera dietro il mostro piu' famoso del cinema horror"
+    },
+    {
+      "type": "content",
+      "text": "Vlad III di Valacchia, detto 'l'Impalatore', visse dal 1428 al 1477 e ispiro' il mito del vampiro moderno."
+    },
+    {
+      "type": "content",
+      "text": "Il nome 'Dracula' significa 'figlio del drago': suo padre era membro dell'Ordine del Dragone."
+    },
+    {
+      "type": "content",
+      "text": "Bram Stoker si ispiro' a Vlad per il nome, ma il personaggio del romanzo e' molto diverso dalla persona storica."
+    },
+    {
+      "type": "content",
+      "text": "Il film Nosferatu (1922) fu girato senza permesso da Stoker: la vedova ottenne la distruzione delle copie."
+    },
+    {
+      "type": "content",
+      "text": "La paura dei vampiri in Europa nasceva da fenomeni reali: corpi che sembravano freschi dopo settimane di sepoltura."
+    },
+    {
+      "type": "content",
+      "text": "Questo era causato dalla decomposizione lenta in certi terreni: gonfiore, sangue dalla bocca, capelli cresciuti."
+    },
+    {
+      "type": "content",
+      "text": "Le leggende servivano a spiegare malattie contagiose e morti inspiegabili nelle comunita' rurali dell'Est Europa."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

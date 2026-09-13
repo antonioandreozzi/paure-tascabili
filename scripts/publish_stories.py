@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 """
 Paure Tascabili — Stories Publisher
-Genera immagini 9:16 (1080x1920) e pubblica come Instagram/Facebook Stories.
-
-PUBLISH_MODE:
-  fb-only  → genera immagini + pubblica su Facebook Stories (usa file locali)
-  ig-only  → pubblica su Instagram Stories (usa URL GitHub già pushati)
-  all      → entrambi (prima fb-only, poi ig-only dopo push)
+Genera immagini 9:16 (1080x1920), le pubblica come Facebook Stories
+e Instagram Stories. Usa FB CDN URL per IG (nessun GitHub commit richiesto).
 
 Usage:
-  PUBLISH_MODE=fb-only FB_PAGE_TOKEN=... python scripts/publish_stories.py content/stories/YYYY-MM-DD-slug.json
+  FB_PAGE_TOKEN=... python scripts/publish_stories.py content/stories/YYYY-MM-DD-slug.json
 """
 import json
 import os
@@ -40,15 +36,17 @@ AU  = hex_to_rgb("#D4AF37")
 CR  = hex_to_rgb("#E8D5B0")
 W, H = 1080, 1920
 
-# ── Font ─────────────────────────────────────────────────────────────────────
+# ── Font ──────────────────────────────────────────────────────────────────────
 def get_font(name, size):
     paths = {
         "cinzel": [
             "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
             "C:/Windows/Fonts/georgia.ttf",
         ],
         "crimson": [
             "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
             "C:/Windows/Fonts/georgia.ttf",
         ],
     }
@@ -84,9 +82,7 @@ def make_slide(slide, num, total, category=""):
     img = Image.new("RGB", (W, H), BG)
     d   = ImageDraw.Draw(img)
     b   = 24
-    # Cornice rossa
     d.rectangle([b, b, W-b, H-b], outline=RED, width=3)
-    # Righe dorate
     ty, by_ = 190, H - 190
     d.line([(b+40, ty), (W-b-40, ty)], fill=AU, width=2)
     d.line([(b+40, by_), (W-b-40, by_)], fill=AU, width=2)
@@ -124,11 +120,13 @@ def make_slide(slide, num, total, category=""):
     d.text((W - lw - b - 24, by_ + 18), logo, font=f_logo, fill=AU)
     return img
 
-# ── Facebook Stories API ──────────────────────────────────────────────────────
+# ── Facebook API ──────────────────────────────────────────────────────────────
 def fb_upload_photo(page_token, page_id, image_path):
+    """Carica foto su FB (non pubblicata). Restituisce photo_id."""
     url = f"https://graph.facebook.com/v26.0/{page_id}/photos"
     with open(image_path, "rb") as f:
-        r = requests.post(url,
+        r = requests.post(
+            url,
             data={"published": "false", "access_token": page_token},
             files={"source": (Path(image_path).name, f, "image/png")}
         ).json()
@@ -136,7 +134,20 @@ def fb_upload_photo(page_token, page_id, image_path):
         raise RuntimeError(f"Upload foto FB fallito: {r}")
     return r["id"]
 
+def fb_get_photo_url(page_token, photo_id):
+    """Recupera URL pubblico CDN della foto da FB. Usato per IG Stories."""
+    r = requests.get(
+        f"https://graph.facebook.com/v26.0/{photo_id}",
+        params={"fields": "images", "access_token": page_token}
+    ).json()
+    images = r.get("images", [])
+    if images:
+        # images e' ordinato dal piu' grande al piu' piccolo
+        return images[0].get("source", "")
+    return ""
+
 def fb_publish_story(page_token, page_id, photo_id):
+    """Pubblica la foto come Facebook Story."""
     r = requests.post(
         f"https://graph.facebook.com/v26.0/{page_id}/photo_stories",
         data={"photo_id": photo_id, "access_token": page_token}
@@ -145,7 +156,7 @@ def fb_publish_story(page_token, page_id, photo_id):
         raise RuntimeError(f"Story FB fallita: {r}")
     return r.get("id", "ok")
 
-# ── Instagram Stories API ─────────────────────────────────────────────────────
+# ── Instagram API ─────────────────────────────────────────────────────────────
 def ig_get_account_id(page_token, page_id):
     data = requests.get(
         f"https://graph.facebook.com/v26.0/{page_id}",
@@ -155,6 +166,7 @@ def ig_get_account_id(page_token, page_id):
     return ig["id"] if ig else None
 
 def ig_publish_story(page_token, ig_id, image_url):
+    """Pubblica come Instagram Story usando URL CDN."""
     r = requests.post(
         f"https://graph.facebook.com/v26.0/{ig_id}/media",
         data={"image_url": image_url, "media_type": "IMAGE",
@@ -162,7 +174,7 @@ def ig_publish_story(page_token, ig_id, image_url):
     ).json()
     if "id" not in r:
         raise RuntimeError(f"Container Story IG fallito: {r}")
-    time.sleep(2)
+    time.sleep(3)
     pub = requests.post(
         f"https://graph.facebook.com/v26.0/{ig_id}/media_publish",
         data={"creation_id": r["id"], "access_token": page_token}
@@ -173,11 +185,8 @@ def ig_publish_story(page_token, ig_id, image_url):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
-    mode            = os.environ.get("PUBLISH_MODE", "fb-only")
-    page_token      = os.environ.get("FB_PAGE_TOKEN", "")
-    page_id         = os.environ.get("FB_PAGE_ID", "680037628515928")
-    github_raw_base = os.environ.get("GITHUB_RAW_BASE",
-        "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main")
+    page_token = os.environ.get("FB_PAGE_TOKEN", "")
+    page_id    = os.environ.get("FB_PAGE_ID", "680037628515928")
 
     if not page_token:
         print("ERRORE: FB_PAGE_TOKEN non impostato.")
@@ -199,72 +208,61 @@ def main():
     hook     = story.get("hook", "")
     total    = len(slides)
 
-    # Usa percorso assoluto basato sul root del repo git
-    try:
-        import subprocess
-        repo_root = subprocess.check_output(
-            ["git", "rev-parse", "--show-toplevel"], text=True
-        ).strip()
-    except Exception:
-        repo_root = str(Path(__file__).resolve().parent.parent)
-    print(f"Repo root: {repo_root}")
-    print(f"CWD: {Path.cwd()}")
-    img_dir = Path(repo_root) / "public" / "stories" / f"{date_str}-{slug}"
-    print(f"img_dir (assoluto): {img_dir}")
+    # Directory temporanea per le immagini (non serve commitarle)
+    import tempfile
+    tmp_dir = Path(tempfile.mkdtemp()) / f"{date_str}-{slug}"
+    tmp_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Temp dir: {tmp_dir}")
 
-    # Genera immagini in modalità fb-only (file locali per FB)
-    if mode in ("all", "fb-only"):
-        img_dir.mkdir(parents=True, exist_ok=True)
-        image_paths = []
-        print(f"Generazione {total} slide Story 9:16...")
-        for i, slide in enumerate(slides, 1):
-            img  = make_slide(slide, i, total, category)
-            path = img_dir / f"slide-{i:02d}.png"
-            img.save(str(path), "PNG")
-            image_paths.append(path)
-            print(f"  slide {i}/{total} -> {path}")
-    else:
-        image_paths = sorted(img_dir.glob("slide-*.png")) if img_dir.exists() else []
-        print(f"ig-only: trovate {len(image_paths)} immagini in {img_dir}")
-
-    image_urls = [
-        f"{github_raw_base}/public/stories/{date_str}-{slug}/slide-{i:02d}.png"
-        for i in range(1, total + 1)
-    ]
+    # 1) Genera immagini
+    image_paths = []
+    print(f"Generazione {total} slide Story 9:16...")
+    for i, slide in enumerate(slides, 1):
+        img  = make_slide(slide, i, total, category)
+        path = tmp_dir / f"slide-{i:02d}.png"
+        img.save(str(path), "PNG")
+        image_paths.append(path)
+        print(f"  slide {i}/{total} -> {path}")
 
     fb_ids = []
     ig_ids = []
+    photo_ids = []
 
-    # Facebook Stories (file locali)
-    if mode in ("all", "fb-only"):
-        print("\nFacebook Stories...")
-        for i, path in enumerate(image_paths, 1):
+    # 2) Carica foto su FB e pubblica FB Stories
+    print("\nFacebook Stories...")
+    for i, path in enumerate(image_paths, 1):
+        try:
+            photo_id = fb_upload_photo(page_token, page_id, str(path))
+            photo_ids.append(photo_id)
+            sid = fb_publish_story(page_token, page_id, photo_id)
+            fb_ids.append(sid)
+            print(f"  FB Story {i}/{total} OK - photo_id={photo_id}")
+            time.sleep(1)
+        except Exception as e:
+            print(f"  FB Story {i} fallita: {e}")
+            photo_ids.append(None)
+
+    # 3) Pubblica IG Stories usando URL CDN di FB (no GitHub CDN!)
+    ig_id = ig_get_account_id(page_token, page_id)
+    if ig_id:
+        print(f"\nInstagram Stories (account: {ig_id})...")
+        for i, (path, photo_id) in enumerate(zip(image_paths, photo_ids), 1):
             try:
-                photo_id = fb_upload_photo(page_token, page_id, str(path))
-                sid      = fb_publish_story(page_token, page_id, photo_id)
-                fb_ids.append(sid)
-                print(f"  ✅ FB Story {i}/{total} — ID: {sid}")
+                if photo_id:
+                    image_url = fb_get_photo_url(page_token, photo_id)
+                    print(f"  CDN URL slide {i}: {image_url[:60]}...")
+                else:
+                    raise RuntimeError("photo_id mancante (upload FB fallito)")
+                sid = ig_publish_story(page_token, ig_id, image_url)
+                ig_ids.append(sid)
+                print(f"  IG Story {i}/{total} OK - ID={sid}")
                 time.sleep(1)
             except Exception as e:
-                print(f"  ⚠️  FB Story {i} fallita: {e}")
+                print(f"  IG Story {i} fallita: {e}")
+    else:
+        print("Nessun IG Business Account collegato.")
 
-    # Instagram Stories (URL GitHub)
-    if mode in ("all", "ig-only"):
-        ig_id = ig_get_account_id(page_token, page_id)
-        if ig_id:
-            print(f"\nInstagram Stories (account: {ig_id})...")
-            for i, url in enumerate(image_urls, 1):
-                try:
-                    sid = ig_publish_story(page_token, ig_id, url)
-                    ig_ids.append(sid)
-                    print(f"  ✅ IG Story {i}/{total} — ID: {sid}")
-                    time.sleep(1)
-                except Exception as e:
-                    print(f"  ⚠️  IG Story {i} fallita: {e}")
-        else:
-            print("⚠️  Nessun IG Business Account collegato.")
-
-    # Log
+    # 4) Salva log
     log_path = json_path.with_suffix(".publish_log.json")
     existing = {}
     if log_path.exists():
@@ -280,7 +278,7 @@ def main():
     }
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nLog: {log_path}")
-    print(f"✅ FB={len(fb_ids)}/{total}  IG={len(ig_ids)}/{total}")
+    print(f"RISULTATO: FB={len(fb_ids)}/{total}  IG={len(ig_ids)}/{total}")
 
 if __name__ == "__main__":
     main()

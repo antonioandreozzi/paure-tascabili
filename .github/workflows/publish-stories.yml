@@ -28,67 +28,23 @@ jobs:
             echo "Stories da pubblicare: $NEW_JSON"
           fi
 
-      - name: Genera immagini 9:16 e pubblica su Facebook Stories
+      - name: Genera e pubblica Stories (FB + IG)
         if: steps.find.outputs.files != ''
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: "680037628515928"
-          GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
-          PUBLISH_MODE: "fb-only"
           PYTHONIOENCODING: "utf-8"
         run: |
-          echo "=== CWD prima del loop: $(pwd) ==="
           for f in ${{ steps.find.outputs.files }}; do
-            echo "Elaborazione: $f"
-            python scripts/publish_stories.py "$f"
-            echo "=== File generati dopo script ==="
-            find public/stories -type f 2>&1 || echo "(public/stories non trovato)"
-          done
-
-      - name: Commit e push immagini su GitHub
-        if: steps.find.outputs.files != ''
-        run: |
-          echo "CWD: $(pwd)"
-          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-          echo "=== Struttura public/ ==="
-          ls -la public/ 2>&1 || echo "public/ non trovato"
-          echo "=== Struttura public/stories/ ==="
-          ls -la public/stories/ 2>&1 || echo "public/stories/ non trovato"
-          echo "=== Tutti i file in public/stories/ ==="
-          find public/stories -type f 2>&1 || echo "nessun file"
-          echo "=== Git status prima di add ==="
-          git status --short
-          git config user.name "Stories Publisher"
-          git config user.email "stories@pauretascabili.it"
-          git add public/stories/ 2>&1 || true
-          find content/stories/ -name "*.publish_log.json" -exec git add {} \; 2>&1 || true
-          echo "=== Git status dopo add ==="
-          git status --short
-          git diff --staged --quiet || git commit -m "Immagini Story 9:16 e log FB"
-          git push origin main 2>&1 || true
-
-      - name: Attendi propagazione GitHub CDN (20 secondi)
-        if: steps.find.outputs.files != ''
-        run: sleep 20
-
-      - name: Pubblica su Instagram Stories
-        if: steps.find.outputs.files != ''
-        env:
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-          FB_PAGE_ID: "680037628515928"
-          GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
-          PUBLISH_MODE: "ig-only"
-        run: |
-          for f in ${{ steps.find.outputs.files }}; do
-            echo "Instagram Stories: $f"
+            echo "=== Pubblicazione: $f ==="
             python scripts/publish_stories.py "$f"
           done
 
-      - name: Aggiorna log con IG story IDs
+      - name: Commit log pubblicazione
         if: steps.find.outputs.files != ''
         run: |
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
           git add content/stories/*.publish_log.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Log aggiornato con IG story IDs"
+          git diff --staged --quiet || git commit -m "Log Stories pubblicate $(date +%Y-%m-%d)"
           git push origin main || true

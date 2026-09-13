@@ -1,0 +1,27 @@
+name: Pubblica su Threads (manuale)
+
+on:
+  workflow_dispatch:
+    inputs:
+      carousel_path:
+        description: 'Path al file JSON del carosello'
+        required: true
+        default: 'content/carousels/2026-09-12-5-mostri-folklore-campano-bambini.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installa dipendenze Python
+        run: pip install pillow requests -q
+
+      - name: Pubblica solo su Threads
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: "680037628515928"
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
+          PUBLISH_MODE: "threads-only"
+        run: python scripts/publish_to_meta.py "${{ github.event.inputs.carousel_path }}"

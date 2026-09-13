@@ -342,7 +342,7 @@ def main():
         image_paths = sorted(img_dir.glob("slide-*.png")) if img_dir.exists() else []
         print(f"Modalità ig-only: trovate {len(image_paths)} immagini in {img_dir}")
 
-    if mode in ("all", "ig-only"):
+    if mode in ("all", "ig-only", "threads-only"):
         # Instagram e Threads usano URL GitHub — le immagini devono già essere pushate
         n = len(image_paths)
         image_urls = [
@@ -350,13 +350,14 @@ def main():
             for i in range(1, n + 1)
         ]
 
-        ig_id = ig_get_account_id(page_token, page_id)
-        if ig_id:
-            print(f"\nInstagram Business Account trovato: {ig_id}")
-            ig_post_id = ig_publish_carousel(page_token, ig_id, image_urls, caption)
-            print(f"✅ Instagram: carosello pubblicato — ID: {ig_post_id}")
-        else:
-            print("⚠️  Nessun Instagram Business Account collegato. Salto IG.")
+        if mode != "threads-only":
+            ig_id = ig_get_account_id(page_token, page_id)
+            if ig_id:
+                print(f"\nInstagram Business Account trovato: {ig_id}")
+                ig_post_id = ig_publish_carousel(page_token, ig_id, image_urls, caption)
+                print(f"✅ Instagram: carosello pubblicato — ID: {ig_post_id}")
+            else:
+                print("⚠️  Nessun Instagram Business Account collegato. Salto IG.")
 
         if threads_token:
             print("\nPubblicazione su Threads...")

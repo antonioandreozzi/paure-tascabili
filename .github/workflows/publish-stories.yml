@@ -35,26 +35,37 @@ jobs:
           FB_PAGE_ID: "680037628515928"
           GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
           PUBLISH_MODE: "fb-only"
+          PYTHONIOENCODING: "utf-8"
         run: |
+          echo "=== CWD prima del loop: $(pwd) ==="
           for f in ${{ steps.find.outputs.files }}; do
             echo "Elaborazione: $f"
             python scripts/publish_stories.py "$f"
+            echo "=== File generati dopo script ==="
+            find public/stories -type f 2>&1 || echo "(public/stories non trovato)"
           done
 
       - name: Commit e push immagini su GitHub
         if: steps.find.outputs.files != ''
         run: |
-          echo "=== File generati in public/stories/ ==="
-          find public/stories/ -type f 2>/dev/null || echo "(nessun file trovato)"
-          echo "=== File generati in content/stories/ ==="
-          find content/stories/ -name "*.publish_log.json" 2>/dev/null || echo "(nessun log trovato)"
+          echo "CWD: $(pwd)"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "=== Struttura public/ ==="
+          ls -la public/ 2>&1 || echo "public/ non trovato"
+          echo "=== Struttura public/stories/ ==="
+          ls -la public/stories/ 2>&1 || echo "public/stories/ non trovato"
+          echo "=== Tutti i file in public/stories/ ==="
+          find public/stories -type f 2>&1 || echo "nessun file"
+          echo "=== Git status prima di add ==="
+          git status --short
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
-          git add -f public/stories/ 2>/dev/null || true
-          git add content/stories/*.publish_log.json 2>/dev/null || true
+          git add public/stories/ 2>&1 || true
+          find content/stories/ -name "*.publish_log.json" -exec git add {} \; 2>&1 || true
+          echo "=== Git status dopo add ==="
           git status --short
           git diff --staged --quiet || git commit -m "Immagini Story 9:16 e log FB"
-          git push origin main || true
+          git push origin main 2>&1 || true
 
       - name: Attendi propagazione GitHub CDN (20 secondi)
         if: steps.find.outputs.files != ''

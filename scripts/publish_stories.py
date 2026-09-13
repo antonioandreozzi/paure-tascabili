@@ -199,7 +199,18 @@ def main():
     hook     = story.get("hook", "")
     total    = len(slides)
 
-    img_dir = Path("public/stories") / f"{date_str}-{slug}"
+    # Usa percorso assoluto basato sul root del repo git
+    try:
+        import subprocess
+        repo_root = subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], text=True
+        ).strip()
+    except Exception:
+        repo_root = str(Path(__file__).resolve().parent.parent)
+    print(f"Repo root: {repo_root}")
+    print(f"CWD: {Path.cwd()}")
+    img_dir = Path(repo_root) / "public" / "stories" / f"{date_str}-{slug}"
+    print(f"img_dir (assoluto): {img_dir}")
 
     # Genera immagini in modalità fb-only (file locali per FB)
     if mode in ("all", "fb-only"):
@@ -211,7 +222,7 @@ def main():
             path = img_dir / f"slide-{i:02d}.png"
             img.save(str(path), "PNG")
             image_paths.append(path)
-            print(f"  slide {i}/{total} → {path}")
+            print(f"  slide {i}/{total} -> {path}")
     else:
         image_paths = sorted(img_dir.glob("slide-*.png")) if img_dir.exists() else []
         print(f"ig-only: trovate {len(image_paths)} immagini in {img_dir}")

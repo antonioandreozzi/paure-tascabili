@@ -263,7 +263,8 @@ def main():
         print("Nessun IG Business Account collegato.")
 
     # 4) Salva log
-    log_path = json_path.with_suffix(".publish_log.json")
+    log_path = json_path.parent / (json_path.stem + ".publish_log.json")
+    print(f"\nLog path calcolato: {log_path} (abs: {log_path.resolve()})")
     existing = {}
     if log_path.exists():
         try:
@@ -277,7 +278,7 @@ def main():
         "ig_story_ids": ig_ids or existing.get("ig_story_ids", []),
     }
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nLog: {log_path}")
+    print(f"Log scritto: {log_path} ({log_path.stat().st_size} bytes)")
     print(f"RISULTATO: FB={len(fb_ids)}/{total}  IG={len(ig_ids)}/{total}")
 
 if __name__ == "__main__":

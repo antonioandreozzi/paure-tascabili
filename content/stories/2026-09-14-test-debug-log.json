@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-14",
+  "slug": "test-debug-log",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che il senso di cadere mentre dormi e' un riflesso evolutivo ancestrale?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Il sobbalzo che ti sveglia",
+      "subtitle": "La scienza dietro la sensazione di cadere nel sonno"
+    },
+    {
+      "type": "content",
+      "text": "Il 'sobbalzo ipnico' colpisce il 70% delle persone. E' un'involontaria contrazione muscolare durante l'addormentamento."
+    },
+    {
+      "type": "content",
+      "text": "Una teoria: il cervello interpreta il rilassamento muscolare come una caduta imminente e invia un segnale di allerta."
+    },
+    {
+      "type": "content",
+      "text": "Altra ipotesi evolutiva: i nostri antenati dormivano sugli alberi. Il sobbalzo serviva a impedire la caduta."
+    },
+    {
+      "type": "content",
+      "text": "I sobbalzi ipnici sono piu' frequenti quando si e' stanchi, stressati o si dorme in posizione scomoda."
+    },
+    {
+      "type": "content",
+      "text": "La caffeina e l'attivita' fisica intensa prima di dormire aumentano la frequenza dei sobbalzi ipnici."
+    },
+    {
+      "type": "content",
+      "text": "In rari casi, sobbalzi molto frequenti indicano disturbi del sonno come la sindrome delle gambe senza riposo."
+    },
+    {
+      "type": "content",
+      "text": "Per la maggior parte delle persone e' del tutto normale: il cervello che 'prova' i muscoli prima del sonno profondo."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire la scienza dietro le tue paure ogni giorno"
+    }
+  ]
+}

@@ -55,11 +55,12 @@ jobs:
         if: steps.find.outputs.files != ''
         run: sleep 15
 
-      - name: Pubblica su Instagram (usando URL GitHub già aggiornati)
+      - name: Pubblica su Instagram e Threads (usando URL GitHub già aggiornati)
         if: steps.find.outputs.files != ''
         env:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: "680037628515928"
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
           GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
           PUBLISH_MODE: "ig-only"
         run: |

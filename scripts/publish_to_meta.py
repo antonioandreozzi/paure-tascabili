@@ -224,6 +224,60 @@ def ig_publish_carousel(page_token, ig_user_id, image_urls, caption):
         raise RuntimeError(f"Pubblicazione IG fallita: {result}")
     return result["id"]
 
+# ── Threads API ───────────────────────────────────────────────────────────────
+THREADS_BASE = "https://graph.threads.net/v1.0"
+
+def threads_get_user_id(threads_token):
+    """Recupera il Threads User ID associato al token."""
+    data = requests.get(f"{THREADS_BASE}/me",
+                        params={"fields": "id,username", "access_token": threads_token}).json()
+    if "id" not in data:
+        raise RuntimeError(f"Threads user ID non trovato: {data}")
+    return data["id"]
+
+def threads_publish_carousel(threads_token, threads_user_id, image_urls, caption):
+    """
+    Pubblica un carosello su Threads.
+    caption: max 500 caratteri.
+    image_urls: lista di URL pubblici (max 20 per Threads, ma usiamo max 10).
+    """
+    image_urls = image_urls[:10]
+    caption = caption[:500]  # limite Threads
+
+    # 1. Container per ogni immagine
+    children_ids = []
+    for url in image_urls:
+        resp = requests.post(
+            f"{THREADS_BASE}/{threads_user_id}/threads",
+            data={"media_type": "IMAGE", "image_url": url,
+                  "is_carousel_item": "true", "access_token": threads_token}
+        ).json()
+        if "id" not in resp:
+            raise RuntimeError(f"Container Threads immagine fallito: {resp}")
+        children_ids.append(resp["id"])
+        time.sleep(0.5)
+
+    # 2. Container carosello
+    carousel = requests.post(
+        f"{THREADS_BASE}/{threads_user_id}/threads",
+        data={"media_type": "CAROUSEL",
+              "children":    ",".join(children_ids),
+              "text":        caption,
+              "access_token": threads_token}
+    ).json()
+    if "id" not in carousel:
+        raise RuntimeError(f"Container carosello Threads fallito: {carousel}")
+
+    # 3. Pubblica (attendi qualche secondo per processing)
+    time.sleep(3)
+    result = requests.post(
+        f"{THREADS_BASE}/{threads_user_id}/threads_publish",
+        data={"creation_id": carousel["id"], "access_token": threads_token}
+    ).json()
+    if "id" not in result:
+        raise RuntimeError(f"Pubblicazione Threads fallita: {result}")
+    return result["id"]
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     # Modalità: "all" (default), "fb-only", "ig-only"
@@ -231,8 +285,9 @@ def main():
     # Le immagini DEVONO già essere su GitHub prima di chiamare ig-only
     mode = os.environ.get("PUBLISH_MODE", "all")
 
-    page_token = os.environ.get("FB_PAGE_TOKEN", "")
-    page_id    = os.environ.get("FB_PAGE_ID", "680037628515928")
+    page_token      = os.environ.get("FB_PAGE_TOKEN", "")
+    page_id         = os.environ.get("FB_PAGE_ID", "680037628515928")
+    threads_token   = os.environ.get("THREADS_TOKEN", "")
     github_raw_base = os.environ.get("GITHUB_RAW_BASE",
         "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main")
 
@@ -250,13 +305,15 @@ def main():
 
     carousel = json.loads(json_path.read_text(encoding="utf-8"))
     slides   = carousel["slides"]
-    caption  = carousel.get("caption", carousel.get("hook", ""))
+    caption         = carousel.get("caption", carousel.get("hook", ""))
+    caption_threads = carousel.get("caption_threads", "")  # max 500 caratteri
     date_str = carousel.get("date", "")
     slug     = carousel.get("slug", json_path.stem)
 
     img_dir = Path("public/carousels") / f"{date_str}-{slug}"
     fb_post_id = None
     ig_post_id = None
+    th_post_id = None
 
     if mode in ("all", "fb-only"):
         # Genera immagini
@@ -286,19 +343,29 @@ def main():
         print(f"Modalità ig-only: trovate {len(image_paths)} immagini in {img_dir}")
 
     if mode in ("all", "ig-only"):
-        # Instagram usa URL GitHub — le immagini devono già essere pushate
+        # Instagram e Threads usano URL GitHub — le immagini devono già essere pushate
+        n = len(image_paths)
+        image_urls = [
+            f"{github_raw_base}/public/carousels/{date_str}-{slug}/slide-{i:02d}.png"
+            for i in range(1, n + 1)
+        ]
+
         ig_id = ig_get_account_id(page_token, page_id)
         if ig_id:
             print(f"\nInstagram Business Account trovato: {ig_id}")
-            n = len(image_paths)
-            image_urls = [
-                f"{github_raw_base}/public/carousels/{date_str}-{slug}/slide-{i:02d}.png"
-                for i in range(1, n + 1)
-            ]
             ig_post_id = ig_publish_carousel(page_token, ig_id, image_urls, caption)
             print(f"✅ Instagram: carosello pubblicato — ID: {ig_post_id}")
         else:
             print("⚠️  Nessun Instagram Business Account collegato. Salto IG.")
+
+        if threads_token:
+            print("\nPubblicazione su Threads...")
+            th_user_id = threads_get_user_id(threads_token)
+            th_caption = caption_threads or caption[:500]
+            th_post_id = threads_publish_carousel(threads_token, th_user_id, image_urls, th_caption)
+            print(f"✅ Threads: carosello pubblicato — ID: {th_post_id}")
+        else:
+            print("ℹ️  THREADS_TOKEN non impostato — salto Threads.")
 
     # Log risultati
     log_path = json_path.with_suffix(".publish_log.json")
@@ -311,8 +378,9 @@ def main():
     log = {
         "date": date_str, "slug": slug, "hook": carousel.get("hook"),
         "slides_count": len(slides),
-        "fb_post_id": fb_post_id or existing.get("fb_post_id"),
-        "ig_post_id": ig_post_id or existing.get("ig_post_id"),
+        "fb_post_id":  fb_post_id  or existing.get("fb_post_id"),
+        "ig_post_id":  ig_post_id  or existing.get("ig_post_id"),
+        "th_post_id":  th_post_id  if threads_token else existing.get("th_post_id"),
         "images": [str(p) for p in image_paths],
     }
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2), encoding="utf-8")

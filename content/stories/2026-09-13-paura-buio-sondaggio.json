@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-13",
+  "slug": "paura-buio-sondaggio",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Hai paura del buio? I Vota: Sì / NO (ma non mentire)",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Hai paura del buio? Vota ora",
+      "subtitle": "Il 73% dei bambini ce l'ha. E tu? Rispondi con onestà"
+    },
+    {
+      "type": "content",
+      "text": "Uno studio su 176 bambini (4-12 anni) ha trovato che il 73% ha paure notturne: sei in buona compagnia"
+    },
+    {
+      "type": "content",
+      "text": "Compare intorno ai 2-3 anni, quando nasce l'immaginazione. Il picco è tra i 3 e i 5 anni"
+    },
+    {
+      "type": "content",
+      "text": "Il cervello impara a immaginare scenari futuri: il buio nasconde ciò che potrebbe esserci, e la mente lo riempie"
+    },
+    {
+      "type": "content",
+      "text": "Le paure notturne aumentano tra 7 e 9 anni e restano stabili fino ai 12: non spariscono subito"
+    },
+    {
+      "type": "content",
+      "text": "In età prescolare il pensiero magico è forte: è difficile separare ciò che è reale da ciò che si immagina"
+    },
+    {
+      "type": "content",
+      "text": "Per circa 1 bambino su 5 la paura disturba davvero il sonno: in quel caso se ne parla con il pediatra"
+    },
+    {
+      "type": "content",
+      "text": "Una lucina notturna e un passaggio graduale dal buio alla luce aiutano più di una spiegazione razionale"
+    },
+    {
+      "type": "content",
+      "text": "E tu, da bambino avevi paura del buio? Vota Sì o No nei commenti: leggiamo tutte le risposte"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

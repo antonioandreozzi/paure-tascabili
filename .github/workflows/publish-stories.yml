@@ -35,9 +35,28 @@ jobs:
           FB_PAGE_ID: "680037628515928"
           PYTHONIOENCODING: "utf-8"
         run: |
+          echo "## Story Publication Log" >> $GITHUB_STEP_SUMMARY
+          echo "**Files:** ${{ steps.find.outputs.files }}" >> $GITHUB_STEP_SUMMARY
           for f in ${{ steps.find.outputs.files }}; do
             echo "=== Pubblicazione: $f ==="
-            python scripts/publish_stories.py "$f"
+            python scripts/publish_stories.py "$f" 2>&1 | tee /tmp/story_output.txt
+            EXIT_CODE=${PIPESTATUS[0]}
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Output: $f" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat /tmp/story_output.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "**Exit code:** $EXIT_CODE" >> $GITHUB_STEP_SUMMARY
+            # Mostra log se esiste
+            LOG_FILE="${f%.json}.publish_log.json"
+            if [ -f "$LOG_FILE" ]; then
+              echo "**Log file trovato:**" >> $GITHUB_STEP_SUMMARY
+              echo '```json' >> $GITHUB_STEP_SUMMARY
+              cat "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+            else
+              echo "**Log file NON trovato: $LOG_FILE**" >> $GITHUB_STEP_SUMMARY
+            fi
           done
 
       - name: Commit log pubblicazione
@@ -45,6 +64,8 @@ jobs:
         run: |
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
-          git add content/stories/*.publish_log.json 2>/dev/null || true
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          find content/stories -name "*.publish_log.json" -exec git add {} \;
+          git status --short
           git diff --staged --quiet || git commit -m "Log Stories pubblicate $(date +%Y-%m-%d)"
-          git push origin main || true
+          git push origin main 2>&1 || echo "Push fallito (non bloccante)"

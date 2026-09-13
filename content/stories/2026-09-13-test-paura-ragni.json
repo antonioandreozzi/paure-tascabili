@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "slug": "test-paura-ragni",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che la paura dei ragni non e' istintiva ma si impara?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Ragni: la paura che si insegna",
+      "subtitle": "La scienza spiega perche' abbiamo paura degli aracnidi"
+    },
+    {
+      "type": "content",
+      "text": "L'aracnofobia colpisce circa il 3-6% della popolazione mondiale, ed e' una delle fobie piu' comuni."
+    },
+    {
+      "type": "content",
+      "text": "I bambini non nascono con la paura dei ragni: uno studio del 2017 (Hoehl et al.) mostro' stress gia' a 6 mesi."
+    },
+    {
+      "type": "content",
+      "text": "Ma quello stress non e' paura: e' allerta evolutiva. La paura concreta si sviluppa attraverso l'osservazione sociale."
+    },
+    {
+      "type": "content",
+      "text": "Se un genitore reagisce con paura a un ragno, il bambino impara che quel ragno e' pericoloso."
+    },
+    {
+      "type": "content",
+      "text": "La terapia di esposizione graduale funziona nell'80-90% dei casi: in poche sessioni, la fobia scompare."
+    },
+    {
+      "type": "content",
+      "text": "In Italia esistono pochissimi ragni pericolosi: solo la Latrodectus tredecimguttatus (malmignatta) e' da evitare."
+    },
+    {
+      "type": "content",
+      "text": "I ragni mangiano zanzare e insetti nocivi: sono alleati, non nemici. La paura e' spesso piu' pericolosa di loro."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

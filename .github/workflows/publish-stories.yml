@@ -44,9 +44,15 @@ jobs:
       - name: Commit e push immagini su GitHub
         if: steps.find.outputs.files != ''
         run: |
+          echo "=== File generati in public/stories/ ==="
+          find public/stories/ -type f 2>/dev/null || echo "(nessun file trovato)"
+          echo "=== File generati in content/stories/ ==="
+          find content/stories/ -name "*.publish_log.json" 2>/dev/null || echo "(nessun log trovato)"
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
-          git add public/stories/ content/stories/*.publish_log.json 2>/dev/null || true
+          git add -f public/stories/ 2>/dev/null || true
+          git add content/stories/*.publish_log.json 2>/dev/null || true
+          git status --short
           git diff --staged --quiet || git commit -m "Immagini Story 9:16 e log FB"
           git push origin main || true
 

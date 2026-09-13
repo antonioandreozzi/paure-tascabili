@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "slug": "test-banshee",
+  "category": "LO SAPEVI CHE...",
+  "hook": "Lo sapevi che la Banshee irlandese non porta la morte ma la annuncia?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "La Banshee: annunciatrice di morte",
+      "subtitle": "Il folklore irlandese e il grido che nessuno vuole sentire"
+    },
+    {
+      "type": "content",
+      "text": "La Banshee (bean sidhe = donna delle fate) e' una figura del folklore irlandese e scozzese."
+    },
+    {
+      "type": "content",
+      "text": "Non uccide: piange e urla nelle notti per annunciare la morte imminente di un membro della famiglia."
+    },
+    {
+      "type": "content",
+      "text": "Appare come vecchia con capelli sciolti e mantello grigio, oppure come bellissima donna in abito bianco."
+    },
+    {
+      "type": "content",
+      "text": "Secondo la tradizione, solo le famiglie di antica discendenza irlandese (con cognomi inizianti per O' o Mac) possono sentirla."
+    },
+    {
+      "type": "content",
+      "text": "Gli psicologi ipotizzano che il mito nasca da donne piangenti professioniste (keening women) presenti ai funerali."
+    },
+    {
+      "type": "content",
+      "text": "Nelle notti di vento, i suoni del vento tra le colline irlandesi possono evocare lamenti umani."
+    },
+    {
+      "type": "content",
+      "text": "La Banshee insegnava alle comunita' rurali ad accettare la morte come parte naturale della vita."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

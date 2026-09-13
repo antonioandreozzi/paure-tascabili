@@ -35,29 +35,23 @@ jobs:
           FB_PAGE_ID: "680037628515928"
           PYTHONIOENCODING: "utf-8"
         run: |
-          echo "## Story Publication Log" >> $GITHUB_STEP_SUMMARY
-          echo "**Files:** ${{ steps.find.outputs.files }}" >> $GITHUB_STEP_SUMMARY
+          LOG_OUT="content/stories/debug_last_run.txt"
+          echo "=== Run $(date -u) ===" > "$LOG_OUT"
+          echo "Files: ${{ steps.find.outputs.files }}" >> "$LOG_OUT"
           for f in ${{ steps.find.outputs.files }}; do
-            echo "=== Pubblicazione: $f ==="
-            python scripts/publish_stories.py "$f" 2>&1 | tee /tmp/story_output.txt
-            EXIT_CODE=${PIPESTATUS[0]}
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### Output: $f" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            cat /tmp/story_output.txt >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "**Exit code:** $EXIT_CODE" >> $GITHUB_STEP_SUMMARY
-            # Mostra log se esiste
+            echo "" >> "$LOG_OUT"
+            echo "--- $f ---" >> "$LOG_OUT"
+            python scripts/publish_stories.py "$f" >> "$LOG_OUT" 2>&1
+            echo "EXIT: $?" >> "$LOG_OUT"
             LOG_FILE="${f%.json}.publish_log.json"
             if [ -f "$LOG_FILE" ]; then
-              echo "**Log file trovato:**" >> $GITHUB_STEP_SUMMARY
-              echo '```json' >> $GITHUB_STEP_SUMMARY
-              cat "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
-              echo '```' >> $GITHUB_STEP_SUMMARY
+              echo "LOG_TROVATO: $LOG_FILE" >> "$LOG_OUT"
+              cat "$LOG_FILE" >> "$LOG_OUT"
             else
-              echo "**Log file NON trovato: $LOG_FILE**" >> $GITHUB_STEP_SUMMARY
+              echo "LOG_NON_TROVATO: $LOG_FILE" >> "$LOG_OUT"
             fi
           done
+          cat "$LOG_OUT"
 
       - name: Commit log pubblicazione
         if: steps.find.outputs.files != ''
@@ -65,7 +59,8 @@ jobs:
           git config user.name "Stories Publisher"
           git config user.email "stories@pauretascabili.it"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git add content/stories/debug_last_run.txt
           find content/stories -name "*.publish_log.json" -exec git add {} \;
           git status --short
           git diff --staged --quiet || git commit -m "Log Stories pubblicate $(date +%Y-%m-%d)"
-          git push origin main 2>&1 || echo "Push fallito (non bloccante)"
+          git push origin main 2>&1

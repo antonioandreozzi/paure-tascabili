@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/anteprime`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/faq`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/contatti`, priority: 0.6, changeFrequency: "yearly" as const },
+    { url: `${baseUrl}/le-stanze`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/leggendario`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
   const blogPages = getAllPosts().map((post) => ({

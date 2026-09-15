@@ -1,0 +1,39 @@
+name: Pubblica Post Facebook Giornaliero
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 08:00 UTC = 10:00 CEST (ora italiana estiva)
+  workflow_dispatch:        # permette di avviarlo manualmente
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Installa dipendenze Python
+        run: pip install requests -q
+
+      - name: Pubblica post Facebook
+        env:
+          FB_PAGE_TOKEN:    ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID:       "680037628515928"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONIOENCODING: "utf-8"
+        run: python scripts/publish_facebook_post.py
+
+      - name: Commit indice aggiornato e log
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "Facebook Publisher"
+          git config user.email "facebook@pauretascabili.it"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git add content/facebook-index.json content/facebook-post-*.log.json
+          git diff --staged --quiet || git commit -m "Post Facebook pubblicato $(date +%Y-%m-%d)"
+          git push origin main && echo "PUSH OK" || echo "PUSH FALLITO (exit $?)"

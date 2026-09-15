@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-15",
+  "slug": "janara-campana-chi-e-perche-fa-paura",
+  "hook": "La Janara campana: chi è e perché fa paura ancora oggi",
+  "slides_count": 10,
+  "fb_post_id": null,
+  "ig_post_id": null,
+  "th_post_id": null,
+  "error": "Pubblicazione non riuscita: graph.facebook.com e graph.threads.net bloccati dalla policy di rete dell'ambiente di esecuzione (403 Forbidden dal proxy egress). Immagini generate correttamente in public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/.",
+  "images": [
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-01.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-02.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-03.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-04.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-05.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-06.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-07.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-08.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-09.png",
+    "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-10.png"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-15",
+  "slug": "quiz-mazapegul-folklore",
+  "category": "QUIZ E INDOVINELLI",
+  "hook": "Quiz: conosci il nome di questa creatura del folklore italiano? I",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Indovina il folletto italiano",
+      "subtitle": "4 indizi per scoprire chi si nasconde nei boschi di Romagna"
+    },
+    {
+      "type": "content",
+      "text": "Indizio 1: piccolissimo, ibrido tra gatto e scimmia, con pelliccia grigia"
+    },
+    {
+      "type": "content",
+      "text": "Indizio 2: porta sempre un cappellino rosso. Senza, perde tutti i suoi poteri magici"
+    },
+    {
+      "type": "content",
+      "text": "Indizio 3: di notte si siede sul petto di chi dorme, causando incubi e fiato corto"
+    },
+    {
+      "type": "content",
+      "text": "Indizio 4: vive nei boschi dell'Appennino forlivese, in Romagna, da secoli"
+    },
+    {
+      "type": "content",
+      "text": "La risposta è il Mazapégul, il folletto dispettoso della tradizione romagnola"
+    },
+    {
+      "type": "content",
+      "text": "Le sue origini risalgono al paganesimo celtico, precedente all'arrivo dei Romani in quelle terre"
+    },
+    {
+      "type": "content",
+      "text": "Per liberarsene si può rubargli il cappello rosso o compiere un gesto che lo disgusta"
+    },
+    {
+      "type": "content",
+      "text": "Varianti simili in Italia: il Fracariol in Veneto, il Linchetto a Lucca. La scienza parla di paralisi del sonno"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

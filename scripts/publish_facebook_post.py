@@ -12,9 +12,10 @@ from pathlib import Path
 from datetime import date
 
 # ── Percorsi ──────────────────────────────────────────────────────────────────
-ROOT       = Path(__file__).parent.parent
-HOOKS_PATH = ROOT / "content" / "facebook-hooks.json"
-INDEX_PATH = ROOT / "content" / "facebook-index.json"
+ROOT        = Path(__file__).parent.parent
+HOOKS_PATH  = ROOT / "content" / "facebook-hooks.json"
+INDEX_PATH  = ROOT / "content" / "facebook-index.json"
+READY_PATH  = ROOT / "content" / "facebook-post-ready.md"
 
 # ── Credenziali ───────────────────────────────────────────────────────────────
 FB_TOKEN   = os.environ["FB_PAGE_TOKEN"]
@@ -43,11 +44,15 @@ hook_id   = hook_obj["id"]
 print(f"Gancio #{hook_id} [{category}]:\n{hook_text}\n")
 
 # ── Formatta il post ───────────────────────────────────────────────────────────
-# Il gancio è già una frase d'apertura completa e potente.
-# Lo pubblichiamo così com'è, con il pallino rosso, come post stand-alone.
-# (In futuro si potrà espandere aggiungendo paragrafi aggiuntivi nel JSON)
-
-post_text = f"🔴 {hook_text}"
+# Se esiste un post già sviluppato dal CCR, lo usa; altrimenti solo il gancio.
+if READY_PATH.exists():
+    post_text = READY_PATH.read_text(encoding="utf-8").strip()
+    use_ready = True
+    print(f"Trovato post sviluppato in {READY_PATH.name} — uso quello.\n")
+else:
+    post_text = f"🔴 {hook_text}"
+    use_ready = False
+    print("Nessun post sviluppato trovato — pubblico solo il gancio.\n")
 
 print(f"Post da pubblicare:\n{post_text}\n")
 
@@ -71,6 +76,11 @@ if "id" not in fb_result:
 
 post_id = fb_result["id"]
 print(f"Post pubblicato! ID: {post_id}")
+
+# ── Rimuove il file ready se usato ───────────────────────────────────────────
+if use_ready:
+    READY_PATH.unlink()
+    print(f"File {READY_PATH.name} rimosso.")
 
 # ── Aggiorna l'indice ─────────────────────────────────────────────────────────
 used = index.get("used_hooks", [])

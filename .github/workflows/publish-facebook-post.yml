@@ -34,5 +34,6 @@ jobs:
           git config user.email "facebook@pauretascabili.it"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git add content/facebook-index.json content/facebook-post-*.log.json
+          git rm --ignore-unmatch content/facebook-post-ready.md
           git diff --staged --quiet || git commit -m "Post Facebook pubblicato $(date +%Y-%m-%d)"
           git push origin main && echo "PUSH OK" || echo "PUSH FALLITO (exit $?)"

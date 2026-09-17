@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-17",
+  "slug": "dietro-le-quinte-processo",
+  "category": "DIETRO LE QUINTE",
+  "hook": "Come nasce un contenuto di Paure Tascabili: il processo completo",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Come nasce un contenuto di Paure Tascabili",
+      "subtitle": "Il processo, passo dopo passo, dietro ogni storia che pubblichiamo"
+    },
+    {
+      "type": "content",
+      "text": "Il metodo non è nuovo: Giuseppe Pitrè, fondatore della folkloristica italiana, raccolse tradizioni siciliane in 25 volumi tra il 1871 e il 1913"
+    },
+    {
+      "type": "content",
+      "text": "Pitrè confrontava versioni diverse della stessa leggenda tra paesi vicini: il metodo comparativo, oggi lo chiameremmo fact-checking"
+    },
+    {
+      "type": "content",
+      "text": "Anche Italo Calvino lavorò così: due anni, dal 1954 al 1956, per raccogliere le Fiabe italiane confrontando fonti ottocentesche regione per regione"
+    },
+    {
+      "type": "content",
+      "text": "Noi seguiamo lo stesso schema: cerchiamo il fatto in almeno 3 fonti, in italiano e in altre lingue, prima di scrivere una riga"
+    },
+    {
+      "type": "content",
+      "text": "Poi verifichiamo: se una leggenda ha varianti regionali, le citiamo. Se un dato psicologico non ha uno studio dietro, lo togliamo"
+    },
+    {
+      "type": "content",
+      "text": "Solo alla fine arriva la scrittura: linguaggio semplice per genitori italiani, zero invenzioni, ogni frase controllata"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

@@ -215,14 +215,29 @@ def ig_publish_carousel(page_token, ig_user_id, image_urls, caption):
     if "id" not in carousel:
         raise RuntimeError(f"Container carosello IG fallito: {carousel}")
 
-    # 3. Pubblica
-    result = requests.post(
-        f"https://graph.facebook.com/v26.0/{ig_user_id}/media_publish",
-        data={"creation_id": carousel["id"], "access_token": page_token}
-    ).json()
-    if "id" not in result:
+    # 3. Attendi che il container sia pronto (status_code FINISHED) prima di pubblicare
+    creation_id = carousel["id"]
+    for _ in range(15):
+        status = requests.get(
+            f"https://graph.facebook.com/v26.0/{creation_id}",
+            params={"fields": "status_code", "access_token": page_token}
+        ).json()
+        if status.get("status_code") == "FINISHED":
+            break
+        time.sleep(2)
+
+    # 4. Pubblica (con un ritentativo se il media non è ancora pronto)
+    for attempt in range(3):
+        result = requests.post(
+            f"https://graph.facebook.com/v26.0/{ig_user_id}/media_publish",
+            data={"creation_id": creation_id, "access_token": page_token}
+        ).json()
+        if "id" in result:
+            return result["id"]
+        if result.get("error", {}).get("code") == 9007 and attempt < 2:
+            time.sleep(5)
+            continue
         raise RuntimeError(f"Pubblicazione IG fallita: {result}")
-    return result["id"]
 
 # ── Threads API ───────────────────────────────────────────────────────────────
 THREADS_BASE = "https://graph.threads.net/v1.0"

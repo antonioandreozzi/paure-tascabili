@@ -1,0 +1,40 @@
+name: Pubblica su Instagram e Threads (manuale)
+
+on:
+  workflow_dispatch:
+    inputs:
+      carousel_path:
+        description: 'Path al file JSON del carosello'
+        required: true
+        default: 'content/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installa dipendenze Python
+        run: pip install pillow requests -q
+
+      - name: Pubblica su Instagram e Threads (usando immagini già su GitHub)
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: "680037628515928"
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          GITHUB_RAW_BASE: "https://raw.githubusercontent.com/antonioandreozzi/paure-tascabili/main"
+          PUBLISH_MODE: "ig-only"
+        run: python scripts/publish_to_meta.py "${{ github.event.inputs.carousel_path }}"
+
+      - name: Commit log pubblicazione
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "Carousel Publisher"
+          git config user.email "carousel@pauretascabili.it"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git add content/carousels/*.publish_log.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Log IG/Threads pubblicati $(date +%Y-%m-%d)"
+          git push origin main && echo "PUSH OK" || echo "PUSH FALLITO"

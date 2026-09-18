@@ -3,10 +3,10 @@
   "slug": "janara-campana-chi-e-perche-fa-paura",
   "hook": "La Janara campana: chi è e perché fa paura ancora oggi",
   "slides_count": 10,
-  "fb_post_id": null,
+  "fb_post_id": "680037628515928_122187851444853578",
   "ig_post_id": null,
   "th_post_id": null,
-  "error": "Pubblicazione non riuscita: graph.facebook.com e graph.threads.net bloccati dalla policy di rete dell'ambiente di esecuzione (403 Forbidden dal proxy egress). Immagini generate correttamente in public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/.",
+  "note": "Facebook pubblicato automaticamente dal workflow GitHub Actions (run 34951022220) il 2026-09-15. Instagram e Threads non ancora pubblicati: la didascalia era di 2276 caratteri, oltre il limite di 2200 di Instagram (errore 36004). Didascalia corretta a 2076 caratteri; pubblicazione IG+Threads da ripetere.",
   "images": [
     "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-01.png",
     "public/carousels/2026-09-15-janara-campana-chi-e-perche-fa-paura/slide-02.png",

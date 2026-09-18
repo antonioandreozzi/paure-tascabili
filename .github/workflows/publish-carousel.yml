@@ -10,6 +10,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,7 +23,7 @@ jobs:
       - name: Trova caroselli nuovi
         id: find
         run: |
-          NEW_JSON=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/carousels/*.json' | grep -v used-hooks.json || true)
+          NEW_JSON=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'content/carousels/*.json' | grep -vE '(used-hooks\.json|\.publish_log\.json)$' || true)
           echo "files=$NEW_JSON" >> "$GITHUB_OUTPUT"
           if [ -z "$NEW_JSON" ]; then
             echo "Nessun nuovo carosello JSON trovato."
@@ -44,9 +46,12 @@ jobs:
 
       - name: Commit e push immagini su GitHub
         if: steps.find.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "Carousel Publisher"
           git config user.email "carousel@pauretascabili.it"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git add public/carousels/ content/carousels/*.publish_log.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Immagini carosello 4:5 generate da GitHub Actions"
           git push origin main || true
@@ -71,9 +76,12 @@ jobs:
 
       - name: Aggiorna log con IG post ID
         if: steps.find.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "Carousel Publisher"
           git config user.email "carousel@pauretascabili.it"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git add content/carousels/*.publish_log.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Log aggiornato con IG post ID"
           git push origin main || true

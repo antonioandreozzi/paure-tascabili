@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-19",
+  "slug": "paura-del-buio-guida-genitori",
+  "hook": "Come rispondere a 'ho paura del buio': la guida definitiva",
+  "slides_count": 10,
+  "fb_post_id": null,
+  "ig_post_id": null,
+  "th_post_id": null,
+  "images": [
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-01.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-02.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-03.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-04.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-05.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-06.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-07.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-08.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-09.png",
+    "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-10.png"
+  ],
+  "publish_error": "Tutte le chiamate a graph.facebook.com sono state bloccate dalla policy di rete dell'ambiente remoto (proxy: 403 Forbidden, connect_rejected / organization policy). Immagini generate correttamente in locale ma nessuna pubblicazione è avvenuta su Facebook, Instagram o Threads."
+}

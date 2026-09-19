@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come rispondere a 'ho paura del buio': la guida definitiva — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Prevalenza e fascia d'età (2-6 anni, picco 4-6, fino al 73% tra 4-12 anni): https://parentingscience.com/afraid-of-the-dark/
+    + https://www.mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/
+  - Causa: immaginazione vivida, difficoltà a distinguere fantasia e realtà: https://parentingscience.com/afraid-of-the-dark/
+    + https://www.microbiologiaitalia.it/psicologia/la-paura-del-buio-nei-bambini/
+  - Validazione emotiva, evitare frasi minimizzanti ("non c'è niente da temere"): https://psicoterapiascientifica.it/paure-bambini/
+    + https://www.uppa.it/paura-del-buio/
+  - Rischio dei rituali di controllo (guardare sotto il letto) e principio di evitamento nell'ansia: https://parentingscience.com/afraid-of-the-dark/
+  - Lucina notturna e routine come strategie efficaci: https://www.amicopediatra.it/crescita/come-aiutare-i-bambini-a-superare-la-paura-del-buio_genitorialita_eta-prescolare_psicologia/
+    + https://www.mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/
+  - Storie della buonanotte come strumento rassicurante (bibliotherapy): https://www.sciencedirect.com/science/article/abs/pii/S0887618514001790
+  - Quando rivolgersi a un pediatra/psicologo dell'età evolutiva: https://www.meyer.it/index.php/newsletter/settembre-2024/5226-la-paura-del-buio
+    + https://www.mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    font-size:26px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:54px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:32px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:48px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 19/09/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">Come rispondere a<br>'ho paura del buio':<br>la guida definitiva</h2>
+          <p class="cover-subtitle">Guida pratica e autorevole<br>per accompagnare ogni bambino oltre l'ombra</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Un fenomeno universale -->
+        <!-- Fonte: parentingscience.com/afraid-of-the-dark/; mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">1 · Un fenomeno comune</div>
+          <p class="content-text">La paura del buio è tra le più comuni dell'infanzia: fino al <strong>73%</strong> dei bambini tra 4 e 12 anni la racconta, secondo le ricerche sul sonno infantile.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Il picco naturale -->
+        <!-- Fonte: parentingscience.com/afraid-of-the-dark/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">2 · Il picco naturale</div>
+          <p class="content-text">Il picco arriva verso i <strong>4-6 anni</strong>, quando la fantasia è più vivida. Con la crescita, la mente impara a distinguere meglio realtà e immaginazione, e la paura svanisce da sola.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — La vera causa -->
+        <!-- Fonte: parentingscience.com/afraid-of-the-dark/; microbiologiaitalia.it/psicologia/la-paura-del-buio-nei-bambini/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">3 · La vera causa</div>
+          <p class="content-text">La causa reale è un'<strong>immaginazione fertile</strong>, ancora incapace di separare del tutto fantasia e realtà. Ombre e rumori diventano mostri, mentre il cervello impara piano piano.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Valida l'emozione -->
+        <!-- Fonte: psicoterapiascientifica.it/paure-bambini/; uppa.it/paura-del-buio/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">4 · Valida l'emozione</div>
+          <p class="content-text">Accogli sempre l'emozione: un <strong>'capisco che hai paura'</strong> vale più di un distante 'sei ormai grande'. Gli esperti confermano che la vicinanza emotiva resta la prima medicina.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Attenzione ai rituali -->
+        <!-- Fonte: parentingscience.com/afraid-of-the-dark/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">5 · Attenzione ai rituali</div>
+          <p class="content-text">I controlli rituali vanno usati con attenzione: guardare <strong>sotto il letto</strong> per 'provare' l'assenza dei mostri rischia di confermare proprio quella paura, invece di calmarla davvero.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — La lucina giusta -->
+        <!-- Fonte: amicopediatra.it/crescita/come-aiutare-i-bambini-a-superare-la-paura-del-buio; mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">6 · La lucina giusta</div>
+          <p class="content-text">Una <strong>lucina notturna</strong> regala sicurezza immediata: la luce soffusa riduce l'ansia e aiuta il cervello a percepire la stanza come territorio familiare, sera dopo sera.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Storie alleate -->
+        <!-- Fonte: sciencedirect.com/science/article/abs/pii/S0887618514001790 -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">7 · Storie alleate</div>
+          <p class="content-text">Le <strong>storie della buonanotte</strong> diventano alleate preziose: racconti di coraggio e folklore trasformano il buio in un luogo da esplorare, mai da temere.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Quando chiedere aiuto -->
+        <!-- Fonte: meyer.it/index.php/newsletter/settembre-2024/5226-la-paura-del-buio; mghclaycenter.org/parenting-concerns/fear-of-the-dark-16-ways-to-help-your-child/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">8 · Quando chiedere aiuto</div>
+          <p class="content-text">Rivolgiti a un <strong>pediatra o psicologo infantile</strong> quando la paura resta intensa oltre i 7-8 anni, disturba gravemente il sonno o si accompagna ad altre ansie quotidiane.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per averlo sempre pronto nelle notti difficili.<br><br>Condividilo con chi cresce un bambino e cerca risposte vere.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

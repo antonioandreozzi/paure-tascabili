@@ -3,7 +3,7 @@
   "slug": "paura-del-buio-guida-genitori",
   "hook": "Come rispondere a 'ho paura del buio': la guida definitiva",
   "slides_count": 10,
-  "fb_post_id": null,
+  "fb_post_id": "680037628515928_122188336442853578",
   "ig_post_id": null,
   "th_post_id": null,
   "images": [
@@ -17,6 +17,5 @@
     "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-08.png",
     "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-09.png",
     "public/carousels/2026-09-19-paura-del-buio-guida-genitori/slide-10.png"
-  ],
-  "publish_error": "Tutte le chiamate a graph.facebook.com sono state bloccate dalla policy di rete dell'ambiente remoto (proxy: 403 Forbidden, connect_rejected / organization policy). Immagini generate correttamente in locale ma nessuna pubblicazione è avvenuta su Facebook, Instagram o Threads."
+  ]
 }

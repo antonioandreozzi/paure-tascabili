@@ -37,3 +37,40 @@ export function getPostSlugs(): string[] {
     .filter((f) => f.endsWith(".json"))
     .map((f) => f.replace(".json", ""));
 }
+
+export interface Category {
+  name: string;
+  slug: string;
+  count: number;
+}
+
+export function slugifyCategory(category: string): string {
+  return category
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+export function getAllCategories(): Category[] {
+  const categories = new Map<string, Category>();
+  for (const post of getAllPosts()) {
+    const slug = slugifyCategory(post.category);
+    const existing = categories.get(slug);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      categories.set(slug, { name: post.category, slug, count: 1 });
+    }
+  }
+  return Array.from(categories.values()).sort((a, b) => b.count - a.count);
+}
+
+export function getCategoryBySlug(categorySlug: string): Category | null {
+  return getAllCategories().find((c) => c.slug === categorySlug) ?? null;
+}
+
+export function getPostsByCategory(categorySlug: string): BlogPost[] {
+  return getAllPosts().filter((post) => slugifyCategory(post.category) === categorySlug);
+}

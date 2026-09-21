@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import GrainOverlay from "@/components/shared/GrainOverlay";
+import PostCard from "@/components/blog/PostCard";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -72,63 +72,7 @@ export default function BlogPage() {
             ) : (
               <ul className="flex flex-col gap-8" role="list">
                 {posts.map((post) => (
-                  <li key={post.slug}>
-                    <Link href={`/blog/${post.slug}`} className="block group">
-                      <article
-                        className="p-8 rounded-sm transition-all duration-200 group-hover:border-[rgba(139,26,26,0.5)]"
-                        style={{
-                          background: "var(--bg-card)",
-                          border: "1px solid rgba(139,26,26,0.2)",
-                        }}
-                      >
-                        <div className="flex items-center gap-4 mb-4">
-                          <span
-                            className="font-cinzel text-[10px] tracking-[0.3em] uppercase px-3 py-1 rounded-sm"
-                            style={{
-                              background: "rgba(139,26,26,0.15)",
-                              color: "var(--accent-blood)",
-                              border: "1px solid rgba(139,26,26,0.3)",
-                            }}
-                          >
-                            {post.category}
-                          </span>
-                          <time
-                            dateTime={post.publishedAt}
-                            className="font-cinzel text-[10px] tracking-wider uppercase"
-                            style={{ color: "var(--accent-ghost)", opacity: 0.5 }}
-                          >
-                            {new Date(post.publishedAt).toLocaleDateString("it-IT", {
-                              day: "numeric",
-                              month: "long",
-                              year: "numeric",
-                            })}
-                          </time>
-                        </div>
-                        <h2
-                          className="font-cinzel font-bold mb-3 group-hover:text-[var(--accent-blood)] transition-colors"
-                          style={{
-                            fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
-                            color: "var(--accent-moon)",
-                            lineHeight: 1.3,
-                          }}
-                        >
-                          {post.title}
-                        </h2>
-                        <p
-                          className="font-crimson text-lg leading-relaxed"
-                          style={{ color: "var(--accent-ghost)", opacity: 0.8 }}
-                        >
-                          {post.excerpt}
-                        </p>
-                        <span
-                          className="inline-block mt-5 font-cinzel text-xs tracking-widest uppercase"
-                          style={{ color: "var(--accent-blood)" }}
-                        >
-                          Leggi l&apos;articolo →
-                        </span>
-                      </article>
-                    </Link>
-                  </li>
+                  <PostCard key={post.slug} post={post} />
                 ))}
               </ul>
             )}

@@ -5,7 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import GrainOverlay from "@/components/shared/GrainOverlay";
-import { getPost, getPostSlugs } from "@/lib/blog";
+import { getPost, getPostSlugs, slugifyCategory } from "@/lib/blog";
 
 export async function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
@@ -92,8 +92,9 @@ export default async function BlogPostPage({
               >
                 ← Blog
               </Link>
-              <span
-                className="font-cinzel text-[10px] tracking-[0.3em] uppercase px-3 py-1 rounded-sm"
+              <Link
+                href={`/blog/categoria/${slugifyCategory(post.category)}`}
+                className="font-cinzel text-[10px] tracking-[0.3em] uppercase px-3 py-1 rounded-sm transition-colors hover:opacity-80"
                 style={{
                   background: "rgba(139,26,26,0.15)",
                   color: "var(--accent-blood)",
@@ -101,7 +102,7 @@ export default async function BlogPostPage({
                 }}
               >
                 {post.category}
-              </span>
+              </Link>
               <time
                 dateTime={post.publishedAt}
                 className="font-cinzel text-[10px] tracking-wider uppercase"

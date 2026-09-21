@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import GrainOverlay from "@/components/shared/GrainOverlay";
 import PostCard from "@/components/blog/PostCard";
-import { getAllPosts } from "@/lib/blog";
+import { getAllCategories, getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog — Paure Tascabili",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts();
+  const categories = getAllCategories();
 
   return (
     <>
@@ -51,6 +53,25 @@ export default function BlogPage() {
             >
               Folklore, leggende e creature del Sud Italia. Storie per chi vuole capire davvero il mistero.
             </p>
+            {categories.length > 0 && (
+              <ul className="flex flex-wrap gap-3 mt-8" role="list" aria-label="Categorie del blog">
+                {categories.map((category) => (
+                  <li key={category.slug}>
+                    <Link
+                      href={`/blog/categoria/${category.slug}`}
+                      className="font-cinzel text-[10px] tracking-[0.3em] uppercase px-4 py-2 rounded-sm transition-colors hover:opacity-80"
+                      style={{
+                        background: "rgba(139,26,26,0.15)",
+                        color: "var(--accent-blood)",
+                        border: "1px solid rgba(139,26,26,0.3)",
+                      }}
+                    >
+                      {category.name} ({category.count})
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </section>
 

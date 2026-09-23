@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-23",
+  "slug": "creatura-folklore-piu-spaventosa",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Qual è la creatura del folklore italiano che ti spaventa di più?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Qual è il mostro del folklore che ti spaventa di più?",
+      "subtitle": "Vota tra sei creature italiane e scopri perché fanno paura"
+    },
+    {
+      "type": "content",
+      "text": "Il Babau non ha una forma definita: è proprio l'assenza di forma a renderlo, per gli psicologi, il più temuto dai bambini"
+    },
+    {
+      "type": "content",
+      "text": "La Janara è la strega di Benevento: nella leggenda si riunisce con le altre streghe sotto il noce, di notte, per il sabba"
+    },
+    {
+      "type": "content",
+      "text": "Il Mazapegul è uno spiritello con il cappello rosso, tipico della Romagna: dispettoso di notte, ma a volte cura gli animali"
+    },
+    {
+      "type": "content",
+      "text": "Il Krampus, metà uomo e metà capra, accompagna San Nicola sulle Alpi: punisce i bambini cattivi invece di premiarli"
+    },
+    {
+      "type": "content",
+      "text": "La Marrabbecca è una vecchia senza testa che, nella tradizione siciliana, vive nelle cisterne d'acqua piovana"
+    },
+    {
+      "type": "content",
+      "text": "L'Ammuntadore, in Sardegna, si siede sul petto di chi dorme: descrive quella che oggi chiamiamo paralisi del sonno"
+    },
+    {
+      "type": "content",
+      "text": "Gli psicologi lo confermano: più un mostro è ambiguo e senza forma definita, più il cervello lo percepisce come minaccioso"
+    },
+    {
+      "type": "content",
+      "text": "E tu, quale di queste sei creature ti fa più paura? Scrivilo nei commenti: leggiamo ogni risposta"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

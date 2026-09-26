@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 errori da evitare quando tuo figlio ha un incubo — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Abbraccio/contatto fisico più efficace delle parole subito dopo l'incubo; raggiungere la stanza con una luce soffusa e atteggiamento sereno:
+    https://www.babysleep.com/it/sleep-advice/how-can-i-help-my-little-one-with-nightmares/ + https://www.babysleep.com/it/sleep-advice/my-child-is-having-nightmares-what-can-i-do/
+  - Accogliere il racconto del sogno senza minimizzare, la paura resta reale per il bambino:
+    https://ilariacichetti.com/bambini/come-aiutare-i-bambini-ad-affrontare-gli-incubi/ + https://www.centropsiche.it/incubi-nei-bambini.html
+  - Errore diffuso: controllare l'armadio/dietro la porta conferma la paura invece di calmarla; riparlare dell'incubo di giorno per distinguere sogno e realtà:
+    https://www.ospedalebambinogesu.it/incubi-e-terrori-notturni-90514/ + https://www.nostrofiglio.it/bambino/salute/pavor-nocturnus-e-incubi-nei-bambini-come-riconoscere-le-differenze-e-cosa-fare
+  - Differenza incubo (sonno REM, seconda parte della notte, ricordo vivido) vs terrore notturno/pavor nocturnus (sonno non-REM, prima parte della notte, amnesia dell'episodio, bambino confuso):
+    https://psiche.santagostino.it/i-terrori-notturni-comprendere-il-pavor-nocturnus-e-le-parasonnie/ + https://sonnomed.it/incubi-in-bambini/
+  - Quando consultare il pediatra: incubi quasi ogni notte, difficoltà a calmarsi, impatto sul comportamento diurno o sull'andare a dormire:
+    https://www.nostrofiglio.it/neonato/nanna/incubi-o-terrori-notturni-nei-bambini-come-riconoscerli-e-cosa-fare
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    font-size:26px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:50px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:32px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:46px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 26/09/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">5 errori da evitare<br>quando tuo figlio<br>ha un incubo</h2>
+          <p class="cover-subtitle">La guida per reagire con calma,<br>senza confondere sogno e realtà</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Il contatto fisico prima di tutto -->
+        <!-- Fonte: babysleep.com/it/sleep-advice/how-can-i-help-my-little-one-with-nightmares/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">1 · Il contatto fisico prima di tutto</div>
+          <p class="content-text">Dopo un incubo, un <strong>abbraccio caldo</strong> calma il bambino più di mille parole: il contatto fisico resta il gesto più efficace nei primi istanti di paura.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Raggiungilo con una luce soffusa -->
+        <!-- Fonte: babysleep.com/it/sleep-advice/my-child-is-having-nightmares-what-can-i-do/; nestlebaby.it/incubi-notturni-bambino -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">2 · Raggiungilo con una luce soffusa</div>
+          <p class="content-text">Accendi una <strong>luce soffusa</strong>, raggiungi la sua stanza e mostrati sereno: la tua calma diventa subito il rifugio più sicuro per lui.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — Ascolta la paura sul serio -->
+        <!-- Fonte: ilariacichetti.com/bambini/come-aiutare-i-bambini-ad-affrontare-gli-incubi/; centropsiche.it/incubi-nei-bambini.html -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">3 · Ascolta la paura sul serio</div>
+          <p class="content-text">Accogli il racconto del sogno con attenzione: la <strong>paura resta reale</strong> per lui, anche quando il pericolo vive solo nell'immaginazione.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Evita di cercare il mostro -->
+        <!-- Fonte: ospedalebambinogesu.it/incubi-e-terrori-notturni-90514/; nostrofiglio.it/bambino/salute/pavor-nocturnus-e-incubi-nei-bambini-come-riconoscere-le-differenze-e-cosa-fare -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">4 · Evita di cercare il mostro</div>
+          <p class="content-text">Un errore diffuso: <strong>controllare l'armadio</strong> o dietro la porta. Meglio spiegare che i sogni restano immagini della mente, sempre lontane dalla realtà.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Riparlane con calma di giorno -->
+        <!-- Fonte: nostrofiglio.it/bambino/salute/pavor-nocturnus-e-incubi-nei-bambini-come-riconoscere-le-differenze-e-cosa-fare -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">5 · Riparlane con calma di giorno</div>
+          <p class="content-text">Nelle ore diurne, ritorna sull'incubo con serenità: aiuta il bambino a <strong>distinguere il sogno dalla realtà</strong>, lontano dal buio della notte.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Incubo o terrore notturno? -->
+        <!-- Fonte: psiche.santagostino.it/i-terrori-notturni-comprendere-il-pavor-nocturnus-e-le-parasonnie/; sonnomed.it/incubi-in-bambini/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">6 · Incubo o terrore notturno?</div>
+          <p class="content-text">Distingui i due fenomeni: l'incubo arriva nella <strong>seconda parte della notte</strong> e resta impresso nella memoria; il terrore notturno lascia il bambino confuso e senza ricordi.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Resta presente durante il terrore notturno -->
+        <!-- Fonte: psiche.santagostino.it/i-terrori-notturni-comprendere-il-pavor-nocturnus-e-le-parasonnie/ -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">7 · Resta presente, con pazienza</div>
+          <p class="content-text">Durante un terrore notturno, <strong>resta seduto vicino</strong> con pazienza: proteggilo da eventuali cadute e lascia che il corpo ritrovi la calma da solo.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Quando parlarne al pediatra -->
+        <!-- Fonte: nostrofiglio.it/neonato/nanna/incubi-o-terrori-notturni-nei-bambini-come-riconoscerli-e-cosa-fare -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">8 · Quando parlarne al pediatra</div>
+          <p class="content-text">Rivolgiti al <strong>pediatra</strong> quando gli incubi tornano quasi ogni notte o quando la paura del buio inizia a pesare sulle giornate del bambino.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questa guida per ritrovarla ogni volta che serve.<br><br>Condividila con chi cresce un bambino.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

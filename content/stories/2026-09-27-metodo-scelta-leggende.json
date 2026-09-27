@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-27",
+  "slug": "metodo-scelta-leggende",
+  "category": "DIETRO LE QUINTE",
+  "hook": "Come scelgo quale leggenda italiana raccontare ogni settimana",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Come scelgo le leggende della settimana",
+      "subtitle": "Il criterio (vero) dietro ogni fiaba che trovate qui"
+    },
+    {
+      "type": "content",
+      "text": "Non invento le storie: seguo il metodo di chi ha catalogato il folklore italiano da fine '800 in poi"
+    },
+    {
+      "type": "content",
+      "text": "Giuseppe Pitrè, tra il 1870 e il 1913, pubblicò 25 volumi sulle tradizioni popolari siciliane: 400 sono le fiabe raccolte"
+    },
+    {
+      "type": "content",
+      "text": "Italo Calvino nel 1956 scelse 200 fiabe da quasi tutte le regioni d'Italia per il libro 'Fiabe italiane'"
+    },
+    {
+      "type": "content",
+      "text": "Escluse solo Valle d'Aosta (immaginario troppo francese) e Umbria, coperta poi da un libro dedicato nel 1989"
+    },
+    {
+      "type": "content",
+      "text": "Per capire se una leggenda ha varianti in altre regioni uso l'indice Aarne-Thompson-Uther, il catalogo internazionale delle fiabe"
+    },
+    {
+      "type": "content",
+      "text": "Il mio criterio: alterno tipo di racconto (mostro, rito, leggenda vera) e regione, evitando di ripetere le stesse zone"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

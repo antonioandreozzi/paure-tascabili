@@ -1,0 +1,11 @@
+🔴 Hai mai usato un rimedio della nonna che stranamente ha funzionato?
+
+🔴 In tutta Italia, fino a pochi decenni fa, curarsi non voleva dire solo andare dal medico. Nelle campagne e nei paesi si viveva accanto a un sapere antico fatto di erbe, gesti e piccoli rituali tramandati di madre in figlia. L'antropologo Ernesto De Martino lo raccontò bene in "Sud e magia" (1959), il libro nato dalle sue spedizioni etnografiche in Lucania del 1952: per i contadini del Sud questa "bassa magia cerimoniale" non era superstizione fine a sé stessa, ma un modo concreto per affrontare la paura e la malattia in un mondo dove il medico spesso non arrivava mai.
+
+🔴 Uno dei rimedi più diffusi, soprattutto al Sud, era il rito dell'olio e dell'acqua contro il malocchio: si versano tre gocce d'olio in un piatto d'acqua recitando una preghiera, e se le gocce invece di restare compatte si allargano e si sciolgono, per la tradizione il malocchio è confermato — e va "tagliato" con un gesto simbolico di forbici o coltello. A tramandare il rito erano quasi sempre donne anziane, che sceglievano con cura a chi lasciare il "segreto".
+
+🔴 Non tutto era solo scongiuro contro le disgrazie. Contro il fuoco di Sant'Antonio — quello che oggi chiamiamo herpes zoster — in molte zone dell'Appennino esistevano i "segnatori": uomini e donne che per tre mattine di fila, a digiuno insieme al malato, toccavano la zona colpita con le dita o con un'immaginetta del santo, recitando formule segrete per "chiudere" il fuoco prima che potesse "abbracciare" il corpo. E poi c'erano i rimedi più semplici, come i suffumigi con acqua calda, bicarbonato o menta per liberare il naso: la vecchia "farmacia del prato" che, un po' di sollievo, in fondo lo dava davvero.
+
+🔴 E tu? C'è un rimedio di famiglia che ti hanno insegnato da piccolo e che ancora oggi, senza sapere bene il perché, continui a usare? Raccontacelo nei commenti.
+
+— Paure Tascabili | pauretascabili.com

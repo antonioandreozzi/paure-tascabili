@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-29",
+  "slug": "bella-mbriana-spirito-casa",
+  "hook": "La Bella 'Mbriana napoletana: 5 curiosità sullo spirito buono di casa",
+  "slides_count": 10,
+  "fb_post_id": null,
+  "ig_post_id": null,
+  "th_post_id": null,
+  "publish_error": "Rete dell'ambiente cloud: accesso a graph.facebook.com negato dalla policy di rete del container (proxy 403, containment escape). Le 10 immagini sono state generate correttamente; nessuna chiamata all'API Meta e' andata a buon fine. Richiede intervento umano: aggiungere graph.facebook.com (e graph.threads.net) ai domini consentiti dell'ambiente, poi rilanciare PASS 6.",
+  "images": [
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-01.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-02.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-03.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-04.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-05.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-06.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-07.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-08.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-09.png",
+    "public/carousels/2026-09-29-bella-mbriana-spirito-casa/slide-10.png"
+  ]
+}

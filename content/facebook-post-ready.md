@@ -1,0 +1,11 @@
+🔴 Secondo te i bambini vedono cose che gli adulti non riescono più a vedere?
+
+🔴 Nel folklore del Sud Italia c'è una figura che sembra fatta apposta per rispondere a questa domanda: il monachicchio. È lo spirito di un bambino morto prima di ricevere il battesimo, e la tradizione vuole che si manifesti soprattutto ai più piccoli — quasi mai agli adulti. Ne parlano da generazioni le campagne lucane, e lo stesso Carlo Levi lo racconta in "Cristo si è fermato a Eboli", segno di quanto questa credenza fosse radicata nella vita quotidiana del Sud.
+
+🔴 A Grassano, in provincia di Matera, si tramanda che il monachicchio abbia un aspetto gentile e porti in testa un cappellino rosso, chiamato "u cuppulicchi". Appare ai bambini di giorno come di notte, e passa il tempo a giocare e rincorrersi con loro, come farebbe un compagno di giochi qualsiasi — solo che nessun genitore lo vede mai arrivare, né andare via.
+
+🔴 C'è anche un dettaglio che rende questa leggenda ancora più inquietante: si dice che chi riesce a strappargli il cappellino dalla testa, tra il tintinnio di monete d'oro nascoste, possa costringerlo a rivelare tesori nascosti pur di riaverlo indietro. Le sue radici affondano nelle antiche credenze romane sui Lari e i Penati, gli spiriti protettori della casa e dei defunti, poi trasformati nell'immaginario popolare cristiano.
+
+🔴 E tu? Da bambino avevi un "amico immaginario" che nessun adulto riusciva a vedere, o in famiglia si racconta ancora di qualcuno che giocava con presenze che nessun altro notava? Raccontacelo nei commenti.
+
+— Paure Tascabili | pauretascabili.com

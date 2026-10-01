@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-01",
+  "slug": "invia-genitore-bambino-pauroso",
+  "category": "INVITI ALL'AZIONE",
+  "hook": "Invia questo a un genitore che ha un bambino pauroso",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Manda questo a chi ha un bambino pauroso",
+      "subtitle": "5 fatti veri sulle paure infantili, utili a ogni genitore"
+    },
+    {
+      "type": "content",
+      "text": "Quasi tutti i bambini passano per fasi di paura tra i 2 e gli 8 anni: buio, mostri, temporali, animali. È normale, non un problema."
+    },
+    {
+      "type": "content",
+      "text": "Le paure cambiano con l'età: 2-4 anni animali e rumori forti, dopo i 3 mostri e fantasmi, dopo i 6 anni pericoli reali come malattie."
+    },
+    {
+      "type": "content",
+      "text": "Il motivo: fino a 5-6 anni i bambini fanno fatica a distinguere realtà e fantasia, per questo i mostri sembrano veri."
+    },
+    {
+      "type": "content",
+      "text": "Dire 'non devi avere paura' spesso peggiora le cose: il bambino si sente giudicato invece che capito e rassicurato."
+    },
+    {
+      "type": "content",
+      "text": "Uno studio del 2024 su Developmental Science mostra che la sola presenza di un genitore riduce l'attività dell'amigdala, l'area della paura."
+    },
+    {
+      "type": "content",
+      "text": "Cosa aiuta davvero: ascoltare la paura senza sminuirla, dire 'capisco, fa paura' invece di negarla o deriderla."
+    },
+    {
+      "type": "content",
+      "text": "Buona notizia: la maggior parte delle paure infantili si risolve da sola entro i 7-8 anni, crescendo."
+    },
+    {
+      "type": "content",
+      "text": "Conosci un genitore alle prese con un figlio pauroso? Inoltragli questi fatti: potrebbero aiutarlo già stasera."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

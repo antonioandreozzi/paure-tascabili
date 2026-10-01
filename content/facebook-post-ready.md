@@ -1,0 +1,11 @@
+🔴 Nel tuo paese c'è ancora qualcuno che sa fare il rito contro il malocchio?
+
+🔴 In molte case del Sud Italia, fino a non troppi anni fa, bastava un piatto fondo, un po' d'acqua e tre gocce d'olio per scoprire la verità. Erano quasi sempre le donne più anziane del paese, depositarie di un sapere tramandato in segreto, a intingere il dito nell'olio e lasciarlo cadere nell'acqua recitando preghiere sottovoce. Se le gocce si allargavano in modo irregolare invece di restare compatte, il malocchio c'era davvero, e il rito veniva ripetuto — spesso tagliando simbolicamente l'olio con le forbici — finché le gocce non tornavano piccole e separate.
+
+🔴 Non è solo una superstizione da raccontare ai bambini: è un pezzo di cultura studiato seriamente dall'antropologia italiana. Ernesto de Martino, negli anni Cinquanta, girò i paesi della Lucania per il suo celebre saggio "Sud e magia" (1959), documentando come la "fascinazione" — in dialetto fascinatura o affascino — fosse vissuta come una forza occulta capace di togliere autonomia a chi ne era colpito, senza alcun conflitto con la fede cattolica: in diversi paesi lucani le formule si intrecciavano a un numero preciso di Ave Maria e Padre Nostro.
+
+🔴 Ogni regione ha il suo nome e il suo gesto. A Napoli si parla di "uocchie sicche", l'occhio secco che inaridisce tutto ciò che guarda, e per proteggersi ci si affida al corno — meglio se di corallo rosso — appeso al collo o alla porta di casa. Altrove basta un pugno di sale grosso gettato sulla soglia. Ma il rituale dell'olio nell'acqua resta uno dei più diffusi e riconoscibili in tutto il Meridione.
+
+🔴 Nella tua famiglia qualcuno conosceva questa formula — magari una nonna o una zia che non l'ha mai detta ad alta voce davanti a tutti? Raccontacelo nei commenti: vogliamo raccogliere le versioni che si sono tramandate paese per paese, prima che si perdano del tutto.
+
+— Paure Tascabili | pauretascabili.com

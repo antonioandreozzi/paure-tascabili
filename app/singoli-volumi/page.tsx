@@ -9,7 +9,7 @@ import CTAButton from "@/components/shared/CTAButton";
 export const metadata: Metadata = {
   title: "Singoli Volumi",
   description:
-    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti, Vendetta nel Pollaio e Non Guardare nel Pozzo. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
+    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti, Vendetta nel Pollaio, Il Gioco ha Preso Papà e Non Guardare nel Pozzo. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
   alternates: { canonical: "https://www.pauretascabili.com/singoli-volumi" },
 };
 
@@ -25,6 +25,13 @@ const temi2 = [
   { title: "Fiducia e Segreti", desc: "Zio Remo sa qualcosa. Ma perché non parla?" },
   { title: "Istinto di Sopravvivenza", desc: "Leo e Giulia devono capire in fretta, prima che sia troppo tardi." },
   { title: "Identità", desc: "Quando la tua voce non sembra più solo la tua, chi sei davvero?" },
+];
+
+const temi3 = [
+  { title: "Comunicazione Padre-Figlio", desc: "La distanza emotiva tra Marco e suo padre — difficile da attraversare quanto quattro livelli di gioco." },
+  { title: "Videogiochi e Realtà", desc: "Il corridoio di casa diventa un labirinto digitale. La realtà si confonde con lo schermo." },
+  { title: "Coraggio nelle Parole", desc: "In questo gioco non si combatte con le armi. Le parole giuste sono l'unica arma che conta." },
+  { title: "Famiglia", desc: "Il Boss Finale non è un mostro. È suo padre. E Marco ha già perso una vita." },
 ];
 
 const temi4 = [
@@ -284,6 +291,123 @@ export default function SingoliVolumiPage() {
                   aria-label="Acquista Vendetta nel Pollaio su Amazon"
                 >
                   🐔 Scopri la Vendetta!
+                </CTAButton>
+              </div>
+            </article>
+
+            {/* ── Vol. 3 ── */}
+            <article
+              className="grid lg:grid-cols-5 gap-12 items-start p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              {/* Cover */}
+              <div className="lg:col-span-2 flex justify-center lg:sticky lg:top-32">
+                <div
+                  className="relative w-56 h-72 lg:w-64 lg:h-80 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #1a1208 0%, #0f0a04 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/gioco-preso-papa-cover.jpg"
+                    alt="Copertina de Il Gioco ha Preso Papà — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="256px"
+                  />
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="lg:col-span-3 flex flex-col gap-8">
+                <div>
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-2" style={{ color: "var(--accent-blood)" }}>
+                    Vol. 3
+                  </span>
+                  <h2 className="font-cinzel font-black text-3xl" style={{ color: "var(--accent-moon)" }}>
+                    Il Gioco ha Preso Papà
+                  </h2>
+                  <p className="font-crimson text-base mt-2" style={{ color: "var(--accent-gold)" }}>
+                    James Valentino · Paure Tascabili
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  <p>
+                    Il terzo volume della collana <strong style={{ color: "var(--accent-moon)" }}>Paure Tascabili</strong> porta
+                    Marco in un incubo fatto di livelli, vite contate e parole da ritrovare. Un horror
+                    che parla di distanza, di solitudine e di quanto sia difficile — e importante —
+                    trovare le parole giuste con chi ami.
+                  </p>
+                  <p>
+                    Capitoli brevi, un colpo di scena dietro l&apos;altro e un finale che non
+                    dimenticherai. Per chi ama i videogiochi, le avventure e le storie che
+                    tengono svegli fino all&apos;ultima pagina.
+                  </p>
+                </div>
+
+                <div
+                  className="relative p-8 rounded-sm"
+                  style={{ background: "var(--bg-void)", border: "1px solid rgba(139,26,26,0.2)" }}
+                >
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-4" style={{ color: "var(--accent-blood)" }}>
+                    Sinossi
+                  </span>
+                  <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                    Marco ha undici anni, una sedia da gaming rossa e nera, e un papà che non c&apos;è
+                    mai abbastanza. Quando suo padre stacca il router nel mezzo del livello 47, nasce
+                    il litigio più brutto della loro vita. Ma quella notte qualcosa di strano succede
+                    nella casa di Marco. Il corridoio non è più il corridoio. Le pareti sono di pietra.
+                    La nebbia è arancione. E dal soffitto scende un cartello:{" "}
+                    <em style={{ color: "var(--accent-blood)" }}>HAI 3 VITE. USALE BENE.</em>{" "}
+                    Per tornare nella sua stanza Marco deve attraversare quattro livelli. Ma in questo
+                    gioco non si combatte con le armi — si combatte con le parole. E il Boss Finale
+                    non è un drago. È suo padre. E Marco ha già perso una vita.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Temi Principali
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {temi3.map((tema) => (
+                      <div
+                        key={tema.title}
+                        className="flex flex-col gap-1 p-4 rounded-sm"
+                        style={{ background: "var(--bg-void)", border: "1px solid rgba(184,134,11,0.2)" }}
+                      >
+                        <span className="font-cinzel font-bold text-sm" style={{ color: "var(--accent-moon)" }}>
+                          🎮 {tema.title}
+                        </span>
+                        <span className="font-crimson text-base" style={{ color: "var(--accent-ghost)" }}>
+                          {tema.desc}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Horror", "Avventura", "Videogiochi"].map((tag) => (
+                    <span key={tag} className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(139,26,26,0.2)", color: "var(--accent-blood)", border: "1px solid rgba(139,26,26,0.3)" }}>
+                      {tag}
+                    </span>
+                  ))}
+                  <span className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(184,134,11,0.15)", color: "var(--accent-gold)", border: "1px solid rgba(184,134,11,0.3)" }}>
+                    8-14 anni
+                  </span>
+                </div>
+
+                <CTAButton
+                  href="https://www.amazon.it/dp/B0H2QDCJCM/"
+                  variant="primary"
+                  external
+                  aria-label="Acquista Il Gioco ha Preso Papà su Amazon"
+                >
+                  🎮 Inizia il Gioco!
                 </CTAButton>
               </div>
             </article>

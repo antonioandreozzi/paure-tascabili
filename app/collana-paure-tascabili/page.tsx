@@ -222,6 +222,59 @@ export default function CollanaPaureTascabiliPage() {
               </div>
             </article>
 
+            {/* Vol. 3 */}
+            <article
+              className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              <div className="lg:col-span-2 flex justify-center">
+                <div
+                  className="relative w-48 h-64 lg:w-56 lg:h-72 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #1a1208 0%, #0f0a04 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/gioco-preso-papa-cover.jpg"
+                    alt="Copertina de Il Gioco ha Preso Papà — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="224px"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 flex flex-col gap-4">
+                <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                  Volume 3
+                </span>
+                <h3 className="font-cinzel font-black text-2xl" style={{ color: "var(--accent-moon)" }}>
+                  Il Gioco ha Preso Papà
+                </h3>
+                <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  Marco ha undici anni e un papà che non c&apos;è mai abbastanza. Una notte il
+                  corridoio di casa si trasforma in un videogioco. Quattro livelli da completare,
+                  tre vite a disposizione. Ma il Boss Finale non è un mostro:{" "}
+                  <em style={{ color: "var(--accent-blood)" }}>è suo padre.</em>
+                </p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <CTAButton
+                    href="https://www.amazon.it/dp/B0H2QDCJCM/"
+                    variant="primary"
+                    external
+                    aria-label="Acquista Il Gioco ha Preso Papà su Amazon"
+                  >
+                    🎮 Acquista Ora
+                  </CTAButton>
+                  <CTAButton href="/singoli-volumi" variant="secondary">
+                    Scopri di Più
+                  </CTAButton>
+                </div>
+              </div>
+            </article>
+
             {/* Vol. 4 */}
             <article
               className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"

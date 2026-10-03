@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-03",
+  "slug": "babau-paura-infanzia",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Da bambino avevi paura del Babau? Dimmi la verità",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Avevi paura del Babau da piccolo?",
+      "subtitle": "Il mostro che i genitori italiani evocano da generazioni"
+    },
+    {
+      "type": "content",
+      "text": "Il Babau è il mostro generico del folklore italiano, usato per convincere i bambini a dormire la sera."
+    },
+    {
+      "type": "content",
+      "text": "Ha tanti nomi regionali: Bobò, Barabao, Maramao, Baubau, Mau Mau. Stessa paura, dialetti diversi."
+    },
+    {
+      "type": "content",
+      "text": "Sulla sua origine non c'è certezza: l'ipotesi più diffusa lo fa nascere dal verso del cane, raddoppiato come onomatopea."
+    },
+    {
+      "type": "content",
+      "text": "Altri lo collegano al timore dei Saraceni tra il IX e il X secolo, ma resta un'ipotesi, non una prova storica."
+    },
+    {
+      "type": "content",
+      "text": "A Cuneo esiste il Barabiciu Cutela: naso enorme, denti aguzzi, coltello e occhi di brace. Mette i bambini cattivi in un sacco."
+    },
+    {
+      "type": "content",
+      "text": "La paura del buio è la più comune tra i 2 e i 6 anni: non è il buio in sé, ma la separazione da chi li protegge."
+    },
+    {
+      "type": "content",
+      "text": "La psicologia oggi lo sconsiglia: i bambini piccoli pensano in modo magico, e il Babau rischia di diventare reale per loro."
+    },
+    {
+      "type": "content",
+      "text": "E tu? Il Babau ti ha fatto dormire prima, o ti ha regalato qualche incubo in più? Raccontacelo nei commenti."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

@@ -82,12 +82,27 @@ if use_ready:
     READY_PATH.unlink()
     print(f"File {READY_PATH.name} rimosso.")
 
-# ── Aggiorna l'indice ─────────────────────────────────────────────────────────
+# ── Aggiorna l'indice (alterna le categorie, non solo l'id) ───────────────────
 used = index.get("used_hooks", [])
 used.append(hook_id)
 
-next_hook_id = next_id + 1
-if next_hook_id > index["total_hooks"]:
+categories_order = list(dict.fromkeys(h["category"] for h in flat))
+cat_index = categories_order.index(category)
+
+def lowest_unused_in(cat):
+    ids = sorted(h["id"] for h in flat if h["category"] == cat and h["id"] not in used)
+    return ids[0] if ids else None
+
+next_hook_id = None
+for step in range(1, len(categories_order) + 1):
+    candidate_cat = categories_order[(cat_index + step) % len(categories_order)]
+    candidate_id  = lowest_unused_in(candidate_cat)
+    if candidate_id is not None:
+        next_hook_id = candidate_id
+        break
+
+if next_hook_id is None:
+    used = []
     next_hook_id = 1
     print("Ciclo completato — ricomincia dal gancio #1")
 

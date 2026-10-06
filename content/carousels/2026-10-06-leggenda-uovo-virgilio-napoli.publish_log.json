@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-06",
+  "slug": "leggenda-uovo-virgilio-napoli",
+  "hook": "La leggenda dell'Uovo di Virgilio: il segreto che protegge Napoli da secoli",
+  "slides_count": 10,
+  "fb_post_id": null,
+  "ig_post_id": null,
+  "th_post_id": null,
+  "error": "Pubblicazione bloccata: la policy di rete dell'ambiente nega l'accesso in uscita a graph.facebook.com (403 dal proxy di egress). Nessun tentativo di pubblicazione ha raggiunto le API Meta/Threads. Immagini generate correttamente e caricate su GitHub.",
+  "images": [
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-01.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-02.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-03.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-04.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-05.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-06.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-07.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-08.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-09.png",
+    "public/carousels/2026-10-06-leggenda-uovo-virgilio-napoli/slide-10.png"
+  ]
+}

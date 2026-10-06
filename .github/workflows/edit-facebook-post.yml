@@ -1,0 +1,41 @@
+name: Modifica Post Facebook Esistente
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "ID del post Facebook da modificare (es. 680037628515928_122190787382853578)"
+        required: true
+
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Installa dipendenze Python
+        run: pip install requests -q
+
+      - name: Modifica post Facebook
+        env:
+          FB_PAGE_TOKEN:    ${{ secrets.FB_PAGE_TOKEN }}
+          FB_POST_ID:       ${{ inputs.post_id }}
+          PYTHONIOENCODING: "utf-8"
+        run: python scripts/edit_facebook_post.py
+
+      - name: Commit log aggiornato
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "Facebook Publisher"
+          git config user.email "facebook@pauretascabili.it"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          git add content/facebook-post-*.log.json
+          git rm --ignore-unmatch content/facebook-post-fix.md
+          git diff --staged --quiet || git commit -m "Modifica post Facebook esistente (ID ${{ inputs.post_id }})"
+          git push origin main && echo "PUSH OK" || echo "PUSH FALLITO (exit $?)"

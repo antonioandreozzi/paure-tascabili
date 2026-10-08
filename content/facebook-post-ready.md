@@ -1,0 +1,11 @@
+🔴 QUIZ: Nella tradizione del Sud Italia, qual era il modo più sicuro per proteggersi dalla Janara di notte? A) appendere uno specchio alla porta B) lasciare un mucchio di sale sulla soglia C) tenere una scopa capovolta D) accendere una candela verde. Risposta nei commenti — poi vi spiego perché!
+
+🔴 La Janara è la strega per eccellenza del folklore campano, nata nelle campagne attorno a Benevento e diffusa presto anche nell'area napoletana. Sul nome esistono due ipotesi: per alcuni deriverebbe da "Dianara", sacerdotessa di Diana, la dea romana della caccia e della luna un tempo venerata proprio a Benevento; per altri risalirebbe al latino "ianua", porta — non a caso ogni racconto su di lei ruota attorno alle soglie di casa, perché è lì che si credeva passasse per entrare.
+
+🔴 E qui la risposta al quiz è doppia: la tradizione non ha mai scelto solo tra sale e scopa, li ha usati entrambi come difesa. Davanti alla porta si poneva una scopa di miglio capovolta, oppure un sacchetto di sale sulla soglia. Il meccanismo raccontato dai nonni era sempre lo stesso: la Janara, costretta da una sorta di coazione a contare, si fermava a contare una per una le setole della scopa o i granelli di sale, e non poteva smettere finché non sorgeva l'alba — quando la luce, sua nemica, la obbligava a fuggire.
+
+🔴 Lo stesso rimedio proteggeva anche le stalle: si narrava che la Janara entrasse di notte per prendere una giumenta e cavalcarla fino al mattino, così sacchi di sale e scope venivano lasciati anche davanti ai box dei cavalli. Il protomedico beneventano Pietro Piperno, in un suo scritto del 1639, fece risalire queste credenze addirittura al VII secolo, quando Benevento era capitale di un ducato longobardo — segno di quanto questa paura fosse radicata nella cultura locale, anche se, va detto, molte delle fonti disponibili oggi sono divulgative più che accademiche.
+
+🔴 E voi, nella vostra famiglia, qual è la versione che vi hanno raccontato: il sale o la scopa? O magari ne conoscete un'altra, tramandata diversa di paese in paese? Scrivetecela nei commenti.
+
+— Paure Tascabili | pauretascabili.com

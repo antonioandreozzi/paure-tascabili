@@ -50,9 +50,12 @@ if READY_PATH.exists():
     use_ready = True
     print(f"Trovato post sviluppato in {READY_PATH.name} — uso quello.\n")
 else:
-    post_text = f"🔴 {hook_text}"
-    use_ready = False
-    print("Nessun post sviluppato trovato — pubblico solo il gancio.\n")
+    print(
+        f"ERRORE: {READY_PATH.name} non trovato per il gancio #{hook_id}.\n"
+        "Il CCR di ricerca non ha completato il lavoro oggi.\n"
+        "Pubblicazione bloccata per evitare un post incompleto."
+    )
+    sys.exit(1)
 
 print(f"Post da pubblicare:\n{post_text}\n")
 

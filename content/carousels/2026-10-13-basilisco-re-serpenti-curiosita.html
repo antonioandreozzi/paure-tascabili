@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lo sapevi? Il Basilisco terrorizzava già l'antichità — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Etimologia "basilisco" dal greco basilískos, "piccolo re": fonti divulgative su mitologia classica
+    del basilisco come "re dei serpenti" dall'aspetto di rettile con testa di gallo.
+  - Origine del mito nella Pharsalia di Lucano: il Basilisco nasce dall'ultima goccia di sangue caduta
+    dalla testa di Medusa mentre Perseo vola sopra i deserti d'Africa.
+  - Prima descrizione scritta nella Naturalis Historia di Plinio il Vecchio (libro VIII), ripresa poi
+    nei bestiari medievali dove il basilisco diventa un ibrido gallo-serpente.
+  - Leggenda medievale della nascita da un uovo senza tuorlo deposto da un vecchio gallo e covato da
+    un rospo (tradizione dei bestiari medievali europei).
+  - La donnola come unico animale temuto dal Basilisco secondo Lucano: mangia la ruta per restare
+    immune al veleno e lo insegue fino alla tana.
+  - Motivo leggendario dello specchio usato per sconfiggere il Basilisco rivoltandogli contro il
+    proprio sguardo letale (tradizione folklorica europea, es. leggenda del basilisco di Varsavia).
+  - Evoluzione del mito: la descrizione più antica di Nicandro di Colofone attribuiva poteri limitati
+    al basilisco; sguardo, fiato e sibilo letali furono aggiunti nelle trascrizioni successive.
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-size:24px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:40px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:28px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:44px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 13/10/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">Lo sapevi? Il Basilisco<br>terrorizzava già l'antichità</h2>
+          <p class="cover-subtitle">7 curiosità sul leggendario<br>re dei serpenti</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Il nome -->
+        <!-- Fonte: etimologia "basilisco" dal greco basilískos, "piccolo re" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il nome</div>
+          <p class="content-text">Il nome Basilisco deriva dal greco <strong>basilískos</strong>, "piccolo re": per questo la leggenda lo incorona sovrano assoluto di tutti i serpenti, temuto in ogni angolo del Mediterraneo antico.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Origine del mito -->
+        <!-- Fonte: Lucano, Pharsalia — origine dalla testa di Medusa e Perseo sui deserti d'Africa -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Origine del mito</div>
+          <p class="content-text">Secondo il poeta latino <strong>Lucano</strong>, il Basilisco nasce da una goccia di sangue caduta dalla testa di Medusa, mentre Perseo vola sopra i deserti d'Africa.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — La prima fonte -->
+        <!-- Fonte: Plinio il Vecchio, Naturalis Historia, libro VIII -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La prima fonte</div>
+          <p class="content-text"><strong>Plinio il Vecchio</strong> descrive per primo questa creatura nella sua Naturalis Historia, nel libro dedicato agli animali: da lì la leggenda conquista l'intero Medioevo europeo.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Il potere leggendario -->
+        <!-- Fonte: tradizione classica dello sguardo pietrificante del basilisco -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il potere leggendario</div>
+          <p class="content-text">La leggenda attribuisce al Basilisco un potere assoluto: uno <strong>sguardo</strong> capace di pietrificare qualunque essere vivente, rendendolo la creatura più temuta dei bestiari antichi.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Nascita nei bestiari -->
+        <!-- Fonte: leggenda medievale della nascita da uovo senza tuorlo covato da un rospo -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Nascita nei bestiari</div>
+          <p class="content-text">Nel Medioevo i bestiari raccontano una nascita sorprendente: un <strong>uovo senza tuorlo</strong>, deposto da un vecchio gallo e covato da un rospo paziente nel fango.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Il suo unico rivale -->
+        <!-- Fonte: Lucano — la donnola come unico animale immune al veleno del basilisco -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il suo unico rivale</div>
+          <p class="content-text">La <strong>donnola</strong> resta l'unica creatura capace di sfidarlo: secondo Lucano mangia la ruta per restare immune al veleno, poi lo insegue fino alla sua tana.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Come si sconfigge -->
+        <!-- Fonte: motivo folklorico dello specchio che rivolta contro il basilisco il proprio sguardo -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Come si sconfigge</div>
+          <p class="content-text">Le leggende europee tramandano un trucco geniale per sconfiggerlo: uno <strong>specchio</strong>, capace di rimandargli addosso il suo stesso sguardo letale.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — L'evoluzione del mito -->
+        <!-- Fonte: Nicandro di Colofone, poteri limitati nella descrizione più antica -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">L'evoluzione del mito</div>
+          <p class="content-text">Il primo racconto greco di <strong>Nicandro</strong> gli attribuisce poteri limitati: sguardo, fiato e sibilo mortali arrivano solo con le trascrizioni e le leggende successive.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per avere sempre a portata di mano le curiosità più sorprendenti del folklore.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

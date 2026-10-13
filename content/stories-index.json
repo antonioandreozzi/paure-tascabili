@@ -1,5 +1,5 @@
 {
-  "next_hook_id": 30,
+  "next_hook_id": 31,
   "total_hooks": 1000,
   "used_hooks": [
     1,
@@ -30,6 +30,7 @@
     26,
     27,
     28,
-    29
+    29,
+    30
   ]
 }

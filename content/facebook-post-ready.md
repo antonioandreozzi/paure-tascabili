@@ -1,0 +1,11 @@
+🔴 Il 2 novembre nel Sud Italia non è un giorno di tristezza. È il giorno in cui i morti tornano a casa. Si prepara la tavola per loro. Si lascia il fuoco acceso. Si mettono le loro scarpe davanti alla porta. Non è superstizione — è ospitalità.
+
+🔴 La data non è casuale: si deve alla riforma dell'abbazia di Cluny, nel X secolo, che fissò al 2 novembre la Commemorazione dei Defunti, da celebrare subito dopo Ognissanti. Nelle campagne del Sud questa ricorrenza liturgica si è intrecciata con credenze molto più antiche, legate al passaggio delle anime tra i due mondi. A Foggia, ancora oggi, molte famiglie lasciano la tavola imbandita per tutta la notte con i piatti e i dolci preferiti dai propri cari, e tengono la porta di casa leggermente aperta: un gesto pensato per accogliere chi, per una notte, torna a varcare la soglia.
+
+🔴 Non lontano da lì, a Orsara di Puglia, nella notte tra l'1 e il 2 novembre si spengono le luci pubbliche e si accendono centinaia di falò per le strade, nel rito conosciuto come "fuoc acost e cocce priatorje": il fuoco è inteso come mezzo di purificazione per le anime del Purgatorio, guidate verso casa da lanterne intagliate nelle zucche. Sempre a Foggia, i bambini mettono fuori la "calza dei morti", che la tradizione vuole riempita durante la notte non da Babbo Natale o dalla Befana, ma dai defunti stessi.
+
+🔴 In Sicilia la festa prende un altro volto: ai bambini si raccontava che, se si fossero comportati bene e avessero pregato per le anime dei propri cari, questi sarebbero tornati con doni e dolci — i "pupi di zuccaro" e la frutta martorana. Il folklorista Giuseppe Pitrè raccolse a Palermo invocazioni popolari recitate proprio in questa notte, come "Armi santi, armi santi, io sono uno e voi siete tanti": la paura dei morti, in queste tradizioni, non era mai fine a se stessa, ma un modo per mantenere viva la memoria di chi non c'è più.
+
+🔴 Nella vostra famiglia si tramandano ancora gesti simili per il 2 novembre — una tavola lasciata pronta, un lume acceso, un racconto sentito da bambini? Raccontatecelo nei commenti: sono proprio questi piccoli rituali, spesso dimenticati, a custodire la memoria di un Sud che non ha mai avuto paura di parlare con i propri morti.
+
+— Paure Tascabili | pauretascabili.com

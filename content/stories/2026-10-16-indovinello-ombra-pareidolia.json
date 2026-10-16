@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16",
+  "slug": "indovinello-ombra-pareidolia",
+  "category": "QUIZ E INDOVINELLI",
+  "hook": "Indovinello: mi temono di notte, mi cercano di giorno. Cosa sono?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Indovinello: temuto di notte, cercato di giorno",
+      "subtitle": "Prova a rispondere prima di scoprire la soluzione"
+    },
+    {
+      "type": "content",
+      "text": "Mi temono di notte, mi cercano di giorno. Cosa sono? Pensaci un attimo prima di continuare."
+    },
+    {
+      "type": "content",
+      "text": "Indizio: non ha vita, ma ti segue sempre. Compare col sole e scompare col buio totale."
+    },
+    {
+      "type": "content",
+      "text": "La risposta è l'ombra. Di notte può sembrare una minaccia, di giorno la cerchiamo per ripararci dal sole."
+    },
+    {
+      "type": "content",
+      "text": "Uno studio su 176 bambini (Muris) trova paure notturne nel 73% dei casi tra 4 e 12 anni, già frequenti a 4-6 anni."
+    },
+    {
+      "type": "content",
+      "text": "Il fenomeno si chiama pareidolia: il cervello riconosce forme familiari, specie volti, in ombre e sagome ambigue."
+    },
+    {
+      "type": "content",
+      "text": "Uno studio del 2015 (NTT, Giappone): il 77% delle persone vede volti in macchie casuali, più spesso se di umore negativo."
+    },
+    {
+      "type": "content",
+      "text": "Nel 1914 lo psicologo G. Stanley Hall catalogò 138 tipi di paura, gettando le basi dello studio scientifico delle fobie."
+    },
+    {
+      "type": "content",
+      "text": "Di giorno la stessa ombra diventa utile: ci ripara dal sole e dal caldo, da nemica ad alleata in poche ore."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

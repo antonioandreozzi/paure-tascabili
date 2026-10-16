@@ -175,7 +175,7 @@ export default function GrandiDeiPage() {
                   }}
                 >
                   <Image
-                    src="/thor-martello-rubato-cover.png"
+                    src="/thor-martello-rubato-cover.webp"
                     alt="Copertina di Thor e il Martello Rubato — James Valentino, Grandi Dei del Grande Nord"
                     fill
                     className="object-contain p-2"

@@ -12,6 +12,7 @@ const navLinks = [
     href: "#",
     children: [
       { label: "Collana Paure Tascabili", href: "/collana-paure-tascabili" },
+      { label: "Grandi Dei del Grande Nord", href: "/grandi-dei-del-grande-nord" },
       { label: "Singoli Volumi", href: "/singoli-volumi" },
     ],
   },

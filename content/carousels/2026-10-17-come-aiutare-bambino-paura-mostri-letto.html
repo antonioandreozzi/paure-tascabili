@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come aiutare un bambino a superare la paura dei mostri sotto il letto — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Pike County Courier (2011): il clinical psychologist Dr. Richard Sherman spiega che la paura dei
+    mostri immaginari è molto comune tra i 3 e i 6 anni e consiglia di prenderla sul serio, oltre a
+    suggerire di dare al bambino una torcia per ispezionare il nascondiglio del mostro.
+  - Jamaica Observer, "Taming the monster under the bed": consiglia una routine della buonanotte
+    leggera e serena, lontana da libri o attività spaventose, e di mostrare la fonte reale di un
+    rumore o di un'ombra piuttosto che limitarsi a rassicurare a parole; suggerisce di parlare delle
+    paure durante il giorno.
+  - Fatherly, "Monster Mash" (ricercatore Gray): la paura di base è probabilmente innata, ma la forma
+    specifica del mostro nasce da ciò che il bambino vede e sente nell'ambiente che lo circonda.
+  - Fonti italiane divulgative (PianetaMamma, NostroFiglio, Famigros): la paura dei mostri e del buio
+    è un'esperienza comune nell'infanzia; deridere il bambino ("non esagerare") è controproducente;
+    mostrare la cameretta illuminata e poi spenta aiuta a dimostrare che nulla è cambiato; routine
+    rassicuranti, respirazione e gioco tranquillo calmano il bambino spaventato; controllare cosa
+    guarda il bambino (cartoni, storie) riduce l'alimentazione delle paure.
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-size:24px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:40px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:28px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:44px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 17/10/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">Come aiutare un bambino a superare<br>la paura dei mostri sotto il letto</h2>
+          <p class="cover-subtitle">Guida in 8 mosse, tra psicologia<br>e tradizione campana</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Un passaggio naturale -->
+        <!-- Fonte: Pike County Courier, Dr. Richard Sherman — paura comune tra i 3 e i 6 anni -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Un passaggio naturale</div>
+          <p class="content-text">Tra i 3 e i 6 anni, la paura dei mostri immaginari resta tra le esperienze più comuni dell'infanzia: un passaggio naturale della crescita emotiva, mai un difetto del carattere.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Prendila sul serio -->
+        <!-- Fonte: Pike County Courier — Dr. Richard Sherman, clinical psychologist -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Prendila sul serio</div>
+          <p class="content-text">Lo psicologo clinico <strong>Richard Sherman</strong> consiglia di accogliere questa paura con serietà, perché il bambino vive il mostro come una minaccia reale, degna di ascolto e rispetto.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — La torcia coraggiosa -->
+        <!-- Fonte: Pike County Courier — torcia per ispezionare il nascondiglio del mostro -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La torcia coraggiosa</div>
+          <p class="content-text">Una <strong>torcia</strong> tutta sua trasforma il bambino da vittima a investigatore: illuminare insieme il nascondiglio del mostro restituisce il controllo della stanza e del momento.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — La prova diretta -->
+        <!-- Fonte: Jamaica Observer — mostrare la fonte reale di un rumore o di un'ombra -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La prova diretta</div>
+          <p class="content-text">Mostrare la fonte reale di un <strong>rumore</strong> o di un'ombra funziona meglio di mille rassicurazioni a parole: la prova diretta convince dove la frase "tranquillo" resta vuota.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Una routine leggera -->
+        <!-- Fonte: Jamaica Observer — routine della buonanotte serena, lontana da attività spaventose -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Una routine leggera</div>
+          <p class="content-text">Una <strong>buonanotte serena</strong> nasce da una routine leggera: storie dolci, luci calde, attività tranquille, lontano da schermi e racconti capaci di agitare la fantasia.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Parlarne di giorno -->
+        <!-- Fonte: Jamaica Observer — discutere le paure durante il giorno, non solo a letto -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Parlarne di giorno</div>
+          <p class="content-text">Parlare delle <strong>paure di giorno</strong>, con calma e curiosità, prepara la mente del bambino ad affrontare la notte con più sicurezza e meno sorprese.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Da dove nasce la forma -->
+        <!-- Fonte: Fatherly, ricercatore Gray — paura innata, forma specifica dall'esperienza -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Da dove nasce la forma</div>
+          <p class="content-text">La paura di base nasce istintiva, ma la <strong>forma del mostro</strong>, peloso o verde con gli occhi rossi, arriva da ciò che il bambino guarda e ascolta ogni giorno.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Accogliere, mai derisione -->
+        <!-- Fonte: fonti italiane divulgative (PianetaMamma, NostroFiglio) — evitare la derisione -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Accogliere, mai derisione</div>
+          <p class="content-text">Accogliere l'emozione vale sempre più che sminuirla: frasi come "sei grande, supera questa sciocchezza" allontanano il bambino, mentre un <strong>abbraccio</strong> lo avvicina.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questa guida per le notti che richiedono più coraggio, e condividila con chi cresce un bambino pieno di immaginazione.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

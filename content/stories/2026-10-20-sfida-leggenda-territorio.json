@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-20",
+  "slug": "sfida-leggenda-territorio",
+  "category": "CHALLENGE E SFIDE",
+  "hook": "Sfida: trova la leggenda del tuo territorio e condividila nei commenti",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Qual è la leggenda del tuo paese?",
+      "subtitle": "La sfida di oggi: raccontacela nei commenti"
+    },
+    {
+      "type": "content",
+      "text": "In Lombardia e Romagna si racconta della Borda, creatura delle paludi: compare ancora in antiche ninne nanne per bambini."
+    },
+    {
+      "type": "content",
+      "text": "In Molise si narra delle fattucchiere dell'Alto Molise e della Mal'Ombra, spirito che si credeva abitasse le case."
+    },
+    {
+      "type": "content",
+      "text": "In Abruzzo una ricerca universitaria (2007-2017) ha raccolto decine di leggende orali in dialetto, prima che si perdessero."
+    },
+    {
+      "type": "content",
+      "text": "Queste leggende non sono invenzioni casuali: spesso nascono dal territorio stesso, dai nomi dei luoghi e dalla sua storia."
+    },
+    {
+      "type": "content",
+      "text": "Raccontare la leggenda del proprio paese rafforza il senso di appartenenza a quel luogo, dicono gli studi di identità territoriale."
+    },
+    {
+      "type": "content",
+      "text": "LA SFIDA: chiedi a un nonno, un genitore o un vicino quale creatura o storia spaventava i bambini nel tuo paese da piccoli."
+    },
+    {
+      "type": "content",
+      "text": "Scrivi il nome della leggenda e la regione nei commenti. Raccoglieremo le più interessanti per raccontarle qui."
+    },
+    {
+      "type": "content",
+      "text": "Molte di queste storie si trasmettono solo a voce: senza chi le racconta, rischiano di sparire per sempre."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

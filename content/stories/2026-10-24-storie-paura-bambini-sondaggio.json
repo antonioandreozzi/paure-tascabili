@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-24",
+  "slug": "storie-paura-bambini-sondaggio",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Leggi storie di paura ai tuoi figli? Sì / NO",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Storie di paura ai bambini: sì o no?",
+      "subtitle": "Vota e scopri cosa dice la psicologia infantile"
+    },
+    {
+      "type": "content",
+      "text": "Nel 1976 lo psicologo Bruno Bettelheim scrisse 'Il mondo incantato': le fiabe aiutano i bambini ad affrontare le paure indirettamente."
+    },
+    {
+      "type": "content",
+      "text": "Per gli psicologi infantili la chiave non è la paura in sé, ma il finale: il personaggio deve superarla, non restarne travolto."
+    },
+    {
+      "type": "content",
+      "text": "Leggere dal vivo conta: il bambino legge le emozioni vere sul volto di chi gli racconta la storia, cosa che lo schermo non offre."
+    },
+    {
+      "type": "content",
+      "text": "Uno studio del 2023 (Merrill-Palmer Quarterly, Conrad e colleghi) mostra che il modo in cui un libro descrive un animale cambia la paura dei bambini."
+    },
+    {
+      "type": "content",
+      "text": "I bambini a cui il libro dava informazioni positive su un serpente si avvicinavano più spesso a toccarlo, rispetto a chi riceveva info negative."
+    },
+    {
+      "type": "content",
+      "text": "Non c'è un'età fissa: gli esperti di psicologia evolutiva dicono che conta la sensibilità del singolo bambino, non un numero preciso."
+    },
+    {
+      "type": "content",
+      "text": "Regola pratica: il bambino deve poter fermare la storia quando vuole. Poter controllare il racconto rende l'esperienza sicura."
+    },
+    {
+      "type": "content",
+      "text": "E tu? Racconti storie di paura ai tuoi figli o preferisci evitarle? Rispondi al sondaggio qui nelle Stories!"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

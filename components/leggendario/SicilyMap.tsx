@@ -93,7 +93,7 @@ export default function SicilyMap() {
   return (
     <div className="flex flex-col items-center gap-8 w-full">
       <div
-        className="relative w-full max-w-5xl rounded-sm overflow-hidden"
+        className="relative w-full max-w-6xl rounded-sm overflow-hidden"
         style={{
           border: "1px solid rgba(184,134,11,0.35)",
           boxShadow: "0 0 60px rgba(61,43,79,0.3), 0 30px 80px rgba(0,0,0,0.6)",

@@ -4,11 +4,12 @@ import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import GrainOverlay from "@/components/shared/GrainOverlay";
 import LegendaryMap from "@/components/leggendario/LegendaryMap";
+import SicilyMap from "@/components/leggendario/SicilyMap";
 
 export const metadata: Metadata = {
   title: "Il Leggendario",
   description:
-    "Il Leggendario di Paure Tascabili: una mappa interattiva della Campania con 42 creature e luoghi leggendari di Caserta e Napoli, svelati uno al mese.",
+    "Il Leggendario di Paure Tascabili: mappe interattive di Campania e Sicilia con creature e luoghi leggendari del Sud Italia, svelati uno al mese.",
   alternates: { canonical: "https://www.pauretascabili.com/leggendario" },
 };
 
@@ -16,6 +17,9 @@ const TOTAL_CASERTA = 21;
 const TOTAL_NAPOLI = 21;
 const DISPONIBILI_CASERTA = 0;
 const DISPONIBILI_NAPOLI = 1;
+
+const TOTAL_SICILIA = 9;
+const DISPONIBILI_SICILIA = 1;
 
 export default function LeggendarioPage() {
   return (
@@ -57,7 +61,7 @@ export default function LeggendarioPage() {
               IL LEGGENDARIO
             </h1>
             <p className="mt-6 font-crimson text-xl italic max-w-2xl" style={{ color: "var(--accent-ghost)" }}>
-              42 luoghi. 42 creature. Caserta e Napoli nascondono più di quanto raccontano.
+              42 luoghi. 42 creature. Caserta e Napoli nascondono più di quanto raccontano. E la Sicilia sta aprendo i propri segreti.
             </p>
           </div>
         </section>
@@ -139,6 +143,67 @@ export default function LeggendarioPage() {
           </div>
         </section>
 
+        {/* Sicily intro + completion indicator */}
+        <section className="relative section-padding" style={{ background: "var(--bg-void)" }}>
+          <GrainOverlay />
+          <div className="relative z-10 max-w-3xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
+            <span
+              className="font-cinzel text-xs tracking-[0.4em] uppercase"
+              style={{ color: "var(--accent-blood)" }}
+            >
+              Il Sud si Espande
+            </span>
+            <h2 className="font-cinzel font-bold text-2xl sm:text-3xl" style={{ color: "var(--accent-moon)" }}>
+              Sicilia — L&apos;Isola dei Ritorni
+            </h2>
+            <p className="font-crimson text-xl leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+              In Sicilia le leggende non parlano di mostri lontani. Parlano di chi hai amato.
+              Ognissanti ad Agrigento è il primo segreto svelato: la notte in cui i morti tornano
+              a tavola, e i vivi devono sapere come accoglierli.
+            </p>
+
+            <div className="w-full flex flex-col items-center gap-6">
+              <div className="w-full max-w-md flex flex-col gap-2">
+                <div className="flex justify-between items-center">
+                  <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Sicilia
+                  </span>
+                  <span className="font-cinzel text-xs tracking-[0.2em] uppercase" style={{ color: "var(--accent-gold)" }}>
+                    {DISPONIBILI_SICILIA} di {TOTAL_SICILIA} province
+                  </span>
+                </div>
+                <div
+                  className="w-full h-3 rounded-full overflow-hidden"
+                  style={{ background: "var(--bg-card)", border: "1px solid rgba(184,134,11,0.3)" }}
+                >
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${(DISPONIBILI_SICILIA / TOTAL_SICILIA) * 100}%`,
+                      background: "linear-gradient(to right, var(--accent-blood), var(--accent-gold))",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-gold)" }}>
+                {DISPONIBILI_SICILIA} di {TOTAL_SICILIA} province svelate · Sicilia
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* Sicily Map */}
+        <section className="relative section-padding" style={{ background: "var(--bg-dark)" }}>
+          <GrainOverlay />
+          <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
+            <SicilyMap />
+            <p className="font-crimson italic text-base text-center max-w-xl" style={{ color: "var(--accent-ghost)", opacity: 0.7 }}>
+              Passa il mouse su un punto per scoprirne il nome. Clicca per saperne di più.
+            </p>
+          </div>
+        </section>
+
         {/* Future expansion teaser */}
         <section className="relative section-padding" style={{ background: "var(--bg-void)" }}>
           <GrainOverlay />
@@ -153,9 +218,9 @@ export default function LeggendarioPage() {
               Una Mappa che Crescerà
             </h2>
             <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
-              Il Leggendario non finisce qui. Anno dopo anno, la mappa si espanderà verso nuove province —
-              Avellino, Benevento, Salerno — fino ad abbracciare tutto il Sud Italia, in quello che
-              diventerà l&apos;Atlante delle Paure Italiane.
+              Il Leggendario non finisce qui. Campania e Sicilia sono solo l&apos;inizio. Anno dopo anno
+              la mappa si espanderà verso Avellino, Benevento, Salerno e le altre province del Sud,
+              fino a diventare l&apos;Atlante delle Paure Italiane.
             </p>
           </div>
         </section>

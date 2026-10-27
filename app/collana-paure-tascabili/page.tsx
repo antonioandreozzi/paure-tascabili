@@ -9,7 +9,7 @@ import CTAButton from "@/components/shared/CTAButton";
 export const metadata: Metadata = {
   title: "Collana Paure Tascabili",
   description:
-    "Collana Paure Tascabili di Antonio Andreozzi: racconti horror per ragazzi dagli 8 ai 12 anni. Scopri Il Quaderno degli Incubi Incompleti e i prossimi volumi della serie.",
+    "Collana Paure Tascabili di James Valentino: 5 volumi di horror e avventura per ragazzi dagli 8 ai 14 anni. Dal Quaderno degli Incubi Incompleti a Benvenuto tra i Morti.",
   alternates: { canonical: "https://www.pauretascabili.com/collana-paure-tascabili" },
 };
 
@@ -320,6 +320,60 @@ export default function CollanaPaureTascabiliPage() {
                     aria-label="Acquista Non Guardare nel Pozzo su Amazon"
                   >
                     🕳️ Acquista Ora
+                  </CTAButton>
+                  <CTAButton href="/singoli-volumi" variant="secondary">
+                    Scopri di Più
+                  </CTAButton>
+                </div>
+              </div>
+            </article>
+
+            {/* Vol. 5 */}
+            <article
+              className="grid lg:grid-cols-5 gap-10 items-center p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              <div className="lg:col-span-2 flex justify-center">
+                <div
+                  className="relative w-48 h-64 lg:w-56 lg:h-72 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #0a0818 0%, #060410 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/benvenuto-tra-i-morti-cover.webp"
+                    alt="Copertina di Benvenuto tra i Morti — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="224px"
+                  />
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 flex flex-col gap-4">
+                <span className="font-cinzel text-xs tracking-[0.3em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                  Volume 5
+                </span>
+                <h3 className="font-cinzel font-black text-2xl" style={{ color: "var(--accent-moon)" }}>
+                  Benvenuto tra i Morti
+                </h3>
+                <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  Matteo non voleva passare il primo novembre in Sicilia. Ma sua nonna Carmela
+                  apparecchia la tavola con più sedie di quante siano le persone vive. La notte
+                  di Ognissanti, i cancelli del cimitero si aprono da soli. E uno dei morti
+                  conosce il nome di Matteo.{" "}
+                  <em style={{ color: "var(--accent-blood)" }}>È suo padre.</em>
+                </p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <CTAButton
+                    href="https://www.amazon.it/dp/B0HPGLGQKJ"
+                    variant="primary"
+                    external
+                    aria-label="Acquista Benvenuto tra i Morti su Amazon"
+                  >
+                    👻 Acquista Ora
                   </CTAButton>
                   <CTAButton href="/singoli-volumi" variant="secondary">
                     Scopri di Più

@@ -9,7 +9,7 @@ import CTAButton from "@/components/shared/CTAButton";
 export const metadata: Metadata = {
   title: "Singoli Volumi",
   description:
-    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti, Vendetta nel Pollaio, Il Gioco ha Preso Papà e Non Guardare nel Pozzo. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
+    "I volumi della collana Paure Tascabili di James Valentino: Il Quaderno degli Incubi Incompleti, Vendetta nel Pollaio, Il Gioco ha Preso Papà, Non Guardare nel Pozzo e Benvenuto tra i Morti. Libri horror e avventura per ragazzi dagli 8 ai 14 anni.",
   alternates: { canonical: "https://www.pauretascabili.com/singoli-volumi" },
 };
 
@@ -39,6 +39,13 @@ const temi4 = [
   { title: "Coraggio nell'Ignoto", desc: "Sofia deve scendere nel buio. Prima che sia troppo tardi per lei e la sua famiglia." },
   { title: "Legami Familiari", desc: "Un fratellino di sette anni che ruba ogni scena. La famiglia come ancora nel terrore." },
   { title: "Responsabilità", desc: "Sofia ha fatto arrabbiare il Munaciello. Deve fare i conti con le conseguenze." },
+];
+
+const temi5 = [
+  { title: "Folklore Siciliano", desc: "La tradizione di Ognissanti ad Agrigento: i morti che tornano a tavola è una festa vera, non un'invenzione." },
+  { title: "Elaborazione del Lutto", desc: "Matteo non ha mai detto addio a suo padre. Stanotte deve farlo." },
+  { title: "Radici e Identità", desc: "Un ragazzo di Milano in Sicilia: capire da dove vieni per capire chi sei." },
+  { title: "Confine tra Vivi e Morti", desc: "In questo libro i morti non fanno paura. Sono lì per finire qualcosa di incompiuto." },
 ];
 
 export default function SingoliVolumiPage() {
@@ -523,6 +530,121 @@ export default function SingoliVolumiPage() {
                   aria-label="Acquista Non Guardare nel Pozzo su Amazon"
                 >
                   🕳️ Scendi nel Buio!
+                </CTAButton>
+              </div>
+            </article>
+
+            {/* ── Vol. 5 ── */}
+            <article
+              className="grid lg:grid-cols-5 gap-12 items-start p-10 rounded-sm"
+              style={{ background: "var(--bg-card)", border: "1px solid rgba(139,26,26,0.2)", boxShadow: "0 0 60px rgba(139,26,26,0.15)" }}
+            >
+              {/* Cover */}
+              <div className="lg:col-span-2 flex justify-center lg:sticky lg:top-32">
+                <div
+                  className="relative w-56 h-72 lg:w-64 lg:h-80 rounded-sm overflow-hidden flex items-center justify-center p-4"
+                  style={{
+                    background: "radial-gradient(ellipse 90% 80% at 50% 30%, #0a0818 0%, #060410 100%)",
+                    border: "1px solid rgba(184,134,11,0.3)",
+                    boxShadow: "0 0 40px rgba(139,26,26,0.4), -10px 10px 40px rgba(0,0,0,0.6)",
+                  }}
+                >
+                  <Image
+                    src="/benvenuto-tra-i-morti-cover.webp"
+                    alt="Copertina di Benvenuto tra i Morti — James Valentino"
+                    fill
+                    className="object-contain p-2"
+                    sizes="256px"
+                  />
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="lg:col-span-3 flex flex-col gap-8">
+                <div>
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-2" style={{ color: "var(--accent-blood)" }}>
+                    Vol. 5
+                  </span>
+                  <h2 className="font-cinzel font-black text-3xl" style={{ color: "var(--accent-moon)" }}>
+                    Benvenuto tra i Morti
+                  </h2>
+                  <p className="font-crimson text-base mt-2" style={{ color: "var(--accent-gold)" }}>
+                    James Valentino · Paure Tascabili
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                  <p>
+                    Il quinto volume della collana <strong style={{ color: "var(--accent-moon)" }}>Paure Tascabili</strong> porta
+                    Matteo in Sicilia, ad Agrigento, per la notte di Ognissanti. Una storia horror radicata
+                    nel folklore siciliano vero, dove il soprannaturale nasce da una tradizione che esiste
+                    ancora oggi.
+                  </p>
+                  <p>
+                    Atmosfere dense e lente che costruiscono paura senza urlare — il tipo di paura che
+                    resta anche dopo aver chiuso il libro. Un finale che risponde a tutto. E che lascia
+                    una sola, ultima domanda aperta.
+                  </p>
+                </div>
+
+                <div
+                  className="relative p-8 rounded-sm"
+                  style={{ background: "var(--bg-void)", border: "1px solid rgba(139,26,26,0.2)" }}
+                >
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase block mb-4" style={{ color: "var(--accent-blood)" }}>
+                    Sinossi
+                  </span>
+                  <p className="font-crimson text-lg leading-relaxed" style={{ color: "var(--accent-ghost)" }}>
+                    Matteo non voleva passare il primo novembre in Sicilia. Voleva stare a Milano con i
+                    suoi amici, non in quella casa vecchia che odora di cera e di tempo fermo. Ma sua
+                    nonna Carmela non lascia scelta — e apparecchia la tavola con più sedie di quante
+                    siano le persone vive. La notte di Ognissanti, la nebbia entra dai vicoli come se
+                    fosse viva. I cancelli del cimitero si aprono da soli. E uno dei morti conosce il
+                    nome di Matteo.{" "}
+                    <em style={{ color: "var(--accent-blood)" }}>È suo padre. E ha qualcosa da dirgli.</em>
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <span className="font-cinzel text-xs tracking-[0.4em] uppercase" style={{ color: "var(--accent-blood)" }}>
+                    Temi Principali
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {temi5.map((tema) => (
+                      <div
+                        key={tema.title}
+                        className="flex flex-col gap-1 p-4 rounded-sm"
+                        style={{ background: "var(--bg-void)", border: "1px solid rgba(184,134,11,0.2)" }}
+                      >
+                        <span className="font-cinzel font-bold text-sm" style={{ color: "var(--accent-moon)" }}>
+                          👻 {tema.title}
+                        </span>
+                        <span className="font-crimson text-base" style={{ color: "var(--accent-ghost)" }}>
+                          {tema.desc}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {["Horror", "Folklore", "Ognissanti"].map((tag) => (
+                    <span key={tag} className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(139,26,26,0.2)", color: "var(--accent-blood)", border: "1px solid rgba(139,26,26,0.3)" }}>
+                      {tag}
+                    </span>
+                  ))}
+                  <span className="font-cinzel text-xs tracking-widest uppercase px-3 py-1 rounded-sm" style={{ background: "rgba(184,134,11,0.15)", color: "var(--accent-gold)", border: "1px solid rgba(184,134,11,0.3)" }}>
+                    9-14 anni
+                  </span>
+                </div>
+
+                <CTAButton
+                  href="https://www.amazon.it/dp/B0HPGLGQKJ"
+                  variant="primary"
+                  external
+                  aria-label="Acquista Benvenuto tra i Morti su Amazon"
+                >
+                  👻 Apri la Porta!
                 </CTAButton>
               </div>
             </article>

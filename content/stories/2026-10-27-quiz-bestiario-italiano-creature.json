@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27",
+  "slug": "quiz-bestiario-italiano-creature",
+  "category": "QUIZ E INDOVINELLI",
+  "hook": "Quiz: sai quante creature ha il bestiario italiano ufficiale?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Quiz: quante creature ha il bestiario italiano?",
+      "subtitle": "La risposta non è un numero. È più sorprendente."
+    },
+    {
+      "type": "content",
+      "text": "Quasi tutti pensano che esista un elenco ufficiale delle creature del folklore italiano, con un numero preciso. Non è così."
+    },
+    {
+      "type": "content",
+      "text": "Nessun ente ha mai contato tutte le creature del folklore italiano: un bestiario ufficiale con un numero preciso non esiste."
+    },
+    {
+      "type": "content",
+      "text": "Nel 2024 il CAI di Milano ha lanciato la Mappa del Folklore Italiano, un progetto per raccogliere miti e creature regione per regione."
+    },
+    {
+      "type": "content",
+      "text": "A Napoli vive il Munaciello: spirito con cappuccio che abita pozzi e acquedotti. Cappuccio rosso porta fortuna, nero sfortuna."
+    },
+    {
+      "type": "content",
+      "text": "In Val di Fiemme (Trentino) il Salvanel è un piccolo elfo vestito di rosso: protegge il bosco ma ruba il latte ai pastori."
+    },
+    {
+      "type": "content",
+      "text": "In Romagna il Mazapégul è un elfo notturno con berretto rosso: se gli togli il cappello, perde tutti i suoi poteri."
+    },
+    {
+      "type": "content",
+      "text": "Nel Salento il Laurieddhu abita le stalle: di notte intreccia la criniera e la coda dei cavalli mentre dormono."
+    },
+    {
+      "type": "content",
+      "text": "Centinaia di creature, una per valle: la tradizione orale ne ha create tante quante le comunità che le raccontavano."
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

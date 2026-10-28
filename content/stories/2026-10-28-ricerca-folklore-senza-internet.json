@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-28",
+  "slug": "ricerca-folklore-senza-internet",
+  "category": "DIETRO LE QUINTE",
+  "hook": "Come faccio ricerca sul folklore italiano senza internet",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Come faccio ricerca sul folklore",
+      "subtitle": "Niente Google: biblioteche, archivi, libri veri"
+    },
+    {
+      "type": "content",
+      "text": "Molto folklore italiano non è online. Nasce da libri di biblioteca e archivi regionali, non da internet"
+    },
+    {
+      "type": "content",
+      "text": "Il pioniere fu Giuseppe Pitrè: nell'800 viaggiò in carrozza per la Sicilia raccogliendo fiabe a voce, paese per paese"
+    },
+    {
+      "type": "content",
+      "text": "Tra 1871 e 1913 pubblicò 25 volumi: la Biblioteca delle tradizioni popolari siciliane. Ancora oggi fonte primaria"
+    },
+    {
+      "type": "content",
+      "text": "Con Salomone Marino fondò l'Archivio per lo Studio delle Tradizioni Popolari, una delle prime riviste italiane sul folklore"
+    },
+    {
+      "type": "content",
+      "text": "Si chiama demologia: usa archivi, documenti e musei, non il web. Molti archivi orali italiani non hanno un catalogo digitale"
+    },
+    {
+      "type": "content",
+      "text": "Per questa pagina uso libri di folklore regionale e bibliografie accademiche come 'Oltre il folklore' (Clemente, Mugnaini, 2001)"
+    },
+    {
+      "type": "content",
+      "text": "Ogni leggenda cambia da paese a paese: confronto più fonti regionali prima di scriverla, come faceva Pitrè trascrivendo il dialetto"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

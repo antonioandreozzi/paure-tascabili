@@ -1,0 +1,11 @@
+🔴 Giordano Bruno non era calabrese — è un errore che gira spesso, nato dalla confusione con un altro filosofo del Sud. Era nolano, nato nel 1548 a Nola, allora nel Regno di Napoli. Bruciato vivo a Roma nel 1600. Ma prima di morire aveva sviluppato una filosofia che mescolava cosmologia, magia ermetica e memoria artificiale. Non era solo un martire della scienza — era il prodotto di una cultura meridionale che pensava in modo radicalmente diverso.
+
+🔴 Battezzato Filippo, figlio di un soldato di nome Giovanni Bruno e di Fraulissa Savolino, prese il nome di Giordano entrando nell'ordine dei frati Domenicani. Di quella Nola in cui crebbe si sa poco, ma è lì che si forma il nucleo di un pensiero che più tardi scandalizzerà l'Europa intera: l'idea di un universo infinito, senza un centro, che continua a crearsi all'infinito. La teorizzò in modo compiuto nel suo "De l'infinito, universo e mondi" del 1584, anni prima del rogo.
+
+🔴 Ma Bruno non era solo un cosmologo in anticipo sui tempi. A Parigi, nei primi anni '80 del Cinquecento, scrisse due trattati sull'arte della memoria, il "De umbris idearum" e il "Cantus Circaeus", in cui la memorizzazione diventava quasi un rito: un sistema di immagini mentali che affondava le radici nella tradizione ermetica, quella che faceva risalire la vera sapienza a Ermete Trismegisto. Per questo la storica Frances Yates lo ha definito "il Mago della Memoria" — nei suoi libri, ricordare e fare magia si confondevano.
+
+🔴 La confusione con la Calabria, in realtà, nasce da un'altra storia vera: quella di Tommaso Campanella, nato a Stilo nel 1568, anche lui frate domenicano, anche lui perseguitato — ma imprigionato per quasi 27 anni invece che bruciato, e autore della celebre utopia "La città del sole". Due destini diversi, due filosofi meridionali che per il loro tempo pensavano troppo in grande: uno finito sul rogo a Campo de' Fiori il 17 febbraio 1600, condannato come eretico impenitente soprattutto per le sue posizioni teologiche, l'altro sopravvissuto al carcere spagnolo di Napoli per raccontarlo.
+
+🔴 Conoscevate già questa confusione tra Bruno e Campanella? O per voi, fino a oggi, Giordano Bruno era "quello calabrese"? Raccontatecelo nei commenti.
+
+— Paure Tascabili | pauretascabili.com

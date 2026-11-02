@@ -1,0 +1,11 @@
+🔴 Nelle campagne del Cilento, fino agli anni '60, esiste documentazione di un rito di protezione dei raccolti che coinvolgeva l'intera comunità, durava tre giorni, e non aveva nulla di cristiano nella sua struttura originale. Il prete locale partecipava. Sapeva cosa stava facendo.
+
+🔴 Non è un caso isolato, ed è proprio questo il punto. A Vatolla, frazione di Perdifumo, nel cuore del Cilento, si tiene ancora oggi un rito legato alla semina invernale della celebre cipolla locale: si accendono tre falò nei campi, non solo per scaldare i contadini durante il lavoro, ma come gesto simbolico di rinnovamento della luce per la terra. L'iniziativa, oggi promossa dalla Regione Campania, affonda le radici in una tradizione popolare che la comunità ha mantenuto viva accompagnandola con canti contadini tramandati di generazione in generazione.
+
+🔴 Poco più a sud, nella frazione di Cosentini di Montecorice, il carnevale si chiude il martedì grasso con un copione che sembra uscito da un rituale ben più antico del cattolicesimo: la "morte" del fantoccio Carnuluvaro, un lamento funebre recitato dalla comunità, e infine il rogo in piazza. Il fuoco che consuma l'inverno per lasciare spazio a una stagione fertile è lo stesso linguaggio simbolico che si ritrova in decine di tradizioni agrarie del Mezzogiorno.
+
+🔴 Gli studiosi di demoantropologia che hanno lavorato sul Sud Italia parlano apertamente di questa sovrapposizione: molti culti devozionali sopravvissuti fino al Novecento conservano tracce di riti italici e greco-romani, incorporati in forme religiose cristiane senza mai sciogliersi del tutto in esse. Dopo il Concilio di Trento la Chiesa riconobbe ufficialmente il ruolo dei santi come intercessori e protettori dei raccolti dalla grandine — un compromesso che, nei paesi di campagna, lasciò ai parroci un margine enorme per tollerare, e a volte accompagnare, pratiche che venivano da molto più lontano della dottrina.
+
+🔴 Quanti di questi riti si sono persi perché nessuno li ha scritti, e quanti sopravvivono ancora oggi sotto forma di sagra, festa di paese o processione, senza che nessuno ricordi più cosa significassero davvero? Raccontaci se nel tuo paese esiste ancora un rito legato ai campi o alle stagioni di cui si è dimenticato il senso originario.
+
+— Paure Tascabili | pauretascabili.com

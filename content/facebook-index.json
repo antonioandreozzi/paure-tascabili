@@ -1,5 +1,5 @@
 {
-  "next_hook_id": 403,
+  "next_hook_id": 453,
   "total_hooks": 500,
   "used_hooks": [
     1,
@@ -54,6 +54,7 @@
     203,
     252,
     303,
-    353
+    353,
+    403
   ]
 }

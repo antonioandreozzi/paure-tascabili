@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-03",
+  "slug": "leggende-italiane-sondaggio",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Qual è la leggenda italiana che conosci meglio?",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Qual è la leggenda che conosci meglio?",
+      "subtitle": "4 figure del folklore italiano, da nord a sud"
+    },
+    {
+      "type": "content",
+      "text": "La Befana porta regali nella notte dell'Epifania, tra il 5 e il 6 gennaio. Le sue origini restano ancora discusse dagli storici"
+    },
+    {
+      "type": "content",
+      "text": "A Napoli si racconta del Munaciello: secondo una teoria nacque dai \"pozzari\", che pulivano i pozzi entrando nelle case dai cunicoli"
+    },
+    {
+      "type": "content",
+      "text": "In Alto Adige e Trentino, il 5 dicembre il Krampus accompagna San Nicolò: lui premia i bambini buoni, il Krampus sgrida i cattivi"
+    },
+    {
+      "type": "content",
+      "text": "L'Uomo Nero, o Babau, compare nelle ninne nanne in tutta Italia: una figura senza volto definito, diffusa anche nel resto d'Europa"
+    },
+    {
+      "type": "content",
+      "text": "Befana, Munaciello, Krampus o Uomo Nero: quale ti hanno raccontato da bambino? Scrivilo nei commenti!"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

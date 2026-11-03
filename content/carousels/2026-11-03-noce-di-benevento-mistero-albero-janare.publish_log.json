@@ -6,6 +6,7 @@
   "fb_post_id": "680037628515928_122194939934853578",
   "ig_post_id": null,
   "th_post_id": null,
+  "publish_note": "Il tentativo di pubblicazione da questa sessione cloud e' stato bloccato dalla policy di rete dell'ambiente (graph.facebook.com non raggiungibile, 403 dal proxy di egress). La pubblicazione su Facebook e' avvenuta tramite il workflow GitHub Actions 'publish-carousel.yml', che ha rigenerato le immagini e pubblicato con successo (fb_post_id sopra). Instagram e Threads risultano ancora da verificare.",
   "images": [
     "public/carousels/2026-11-03-noce-di-benevento-mistero-albero-janare/slide-01.png",
     "public/carousels/2026-11-03-noce-di-benevento-mistero-albero-janare/slide-02.png",

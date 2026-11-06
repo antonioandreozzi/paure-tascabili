@@ -1,0 +1,11 @@
+🔴 Lo sapevi che in alcune zone della Calabria fino al Novecento esistevano guaritori specializzati esclusivamente nel rito contro il malocchio — e venivano pagati in natura, mai in denaro?
+
+🔴 In molti paesi calabresi questa figura esisteva davvero, e non è solo leggenda da cortile: studi recenti di storia della medicina popolare (tra cui una ricerca accademica dedicata proprio alla medicina popolare calabrese del Novecento) raccontano di guaritori e guaritrici — spesso donne, chiamate in dialetto "magare" — specializzati nel riconoscere e togliere il malocchio. Il loro sapere non si studiava sui libri: si riceveva come un dono, quasi sempre dentro la famiglia, trasmesso a una persona scelta con cura, a volte proprio nella notte di Natale.
+
+🔴 Il rito più diffuso in tutto il Sud Italia per diagnosticare il malocchio era la cosiddetta "prova dell'olio": si versavano gocce d'olio in un piatto d'acqua, e il modo in cui si comportavano — se restavano rotonde o si allargavano a macchia — diceva se c'era davvero una fattura in corso. Il rito si ripeteva, tra formule recitate sottovoce e segni di croce, finché la goccia non tornava tonda, segno che il malocchio se n'era andato. Gli studi etnografici sul Sud Italia, a partire dalle ricerche di Ernesto de Martino, documentano proprio questa pratica come il cuore della cosiddetta "fascinatura".
+
+🔴 E qui arriva la parte più curiosa, confermata da più fonti sulla tradizione calabrese e meridionale: il guaritore non chiedeva mai denaro. Al massimo si accettava un caffè o si offriva una candela in chiesa. Il motivo aveva una logica tutta sua: regalare qualcosa di prezioso come l'olio senza nulla in cambio equivaleva, simbolicamente, a privarsi di un pezzo della propria fortuna — per questo in molte zone si usava comunque far passare una moneta, giusto per trasformare il dono in una finta compravendita. Farsi pagare in denaro vero, invece, si credeva potesse rovinare l'efficacia del rito, o peggio, far tornare il male su chi lo aveva tolto.
+
+🔴 Nella vostra famiglia qualcuno faceva ancora qualcosa di simile — la prova dell'olio, le formule sottovoce, il rifiuto dei soldi? Raccontatecelo nei commenti: sono proprio questi ricordi di casa a tenere viva una tradizione che altrimenti rischia di sparire per sempre.
+
+— Paure Tascabili | pauretascabili.com

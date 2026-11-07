@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come aiutare un bambino che ha paura dei temporali — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Mayo Clinic News Network, "Thunderphobia: Mayo experts offer tips to help children conquer severe
+    weather fears" — lo psicologo clinico Dr. Stephen Whiteside consiglia di non liquidare la paura del
+    bambino come sciocca; dismissing an emotion tende ad avere l'effetto opposto.
+  - Mayo Clinic News Network, "Helping kids weather the stress of storms" / "Mayo Clinic Q&A: Your
+    child's storm anxiety" — i bambini prendono spunto dalla calma dei genitori; spiegare il temporale
+    in termini adatti all'età riduce la paura; consiglio di un "kit del temporale" con torcia, pupazzo,
+    matite e giochi silenziosi; attenzione all'ansia anticipatoria legata al controllo ossessivo delle
+    app meteo; cercare aiuto professionale se la paura persiste nel tempo o disturba il sonno.
+  - APA (American Psychological Association), materiale collegato a Julia Martin Burch — minimizzare
+    un'emozione infantile tende a rinforzarla invece di ridurla; utile insegnare tecniche di respirazione
+    e consapevolezza (mindfulness) per calmare il corpo prima della mente.
+  - Children's Dayton, "How can I help my child's anxiety about storms and bad weather?" — suggerisce
+    di creare un ambiente sicuro e confortevole, chiudere tende per ridurre lampi e rumori, mantenere
+    una routine stabile anche nei giorni di maltempo.
+  - Fonti divulgative multiple (Puroclean, Children's Lighthouse, FBFS) — il gioco di contare i secondi
+    tra lampo e tuono per stimare la distanza del temporale è una tecnica diffusa per restituire ai
+    bambini un senso di controllo sull'evento.
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-size:24px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:40px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:28px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:44px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 07/11/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">Come aiutare un bambino<br>che ha paura dei temporali</h2>
+          <p class="cover-subtitle">Guida pratica in 8 passi,<br>tra psicologia e calma condivisa</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Accogli la paura -->
+        <!-- Fonte: Mayo Clinic News Network / APA (Julia Martin Burch) — prendere sul serio l'emozione, mai sminuirla -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Accogli la paura</div>
+          <p class="content-text">Accogli la paura come reale e importante: gli psicologi della <strong>Mayo Clinic</strong> invitano a prendere sul serio l'emozione del bambino, mai a sminuirla. Sentirsi capiti resta sempre il primo passo verso la calma.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — La calma si trasmette -->
+        <!-- Fonte: Mayo Clinic — i bambini prendono spunto dalla calma dei genitori -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La calma si trasmette</div>
+          <p class="content-text">Resta tu per primo sereno: i bambini leggono le emozioni dei genitori come una <strong>bussola</strong>. La tua calma durante il temporale diventa, per lui, il segnale più rassicurante di tutti.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — La scienza del temporale -->
+        <!-- Fonte: Mayo Clinic — spiegare il fenomeno in termini adatti all'età riduce la paura -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La scienza del temporale</div>
+          <p class="content-text">Racconta la scienza del temporale con parole semplici: <strong>luce e suono</strong> nascono insieme, ma viaggiano a velocità diverse. Capire il fenomeno trasforma il mistero spaventoso in qualcosa di familiare.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Il kit del temporale -->
+        <!-- Fonte: Mayo Clinic / Children's Dayton — kit con torcia, pupazzo, matite, giochi silenziosi -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il kit del temporale</div>
+          <p class="content-text">Prepara insieme un <strong>kit del temporale</strong>: una torcia, il pupazzo preferito, matite colorate e un gioco silenzioso. Avere qualcosa da fare con le mani distoglie l'attenzione e regala sicurezza.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Il gioco dei secondi -->
+        <!-- Fonte: Puroclean, Children's Lighthouse, FBFS — contare i secondi tra lampo e tuono -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il gioco dei secondi</div>
+          <p class="content-text">Trasforma la paura in gioco: conta insieme i <strong>secondi</strong> tra il lampo e il tuono per stimare la distanza del temporale. Questo piccolo rituale restituisce al bambino un senso di controllo reale.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Un respiro condiviso -->
+        <!-- Fonte: APA (Julia Martin Burch) — respirazione e mindfulness calmano il corpo prima della mente -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Un respiro condiviso</div>
+          <p class="content-text">Insegna un <strong>respiro</strong> lento e profondo da fare insieme: quattro secondi per inspirare, sei per espirare. La calma del corpo aiuta sempre a placare anche la mente più agitata.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Lontano dalle app meteo -->
+        <!-- Fonte: Mayo Clinic — ansia anticipatoria legata al controllo ossessivo delle previsioni -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Lontano dalle app meteo</div>
+          <p class="content-text">Tieni lontane le <strong>app meteo</strong> dagli occhi ansiosi: il controllo ossessivo delle previsioni alimenta l'attesa spaventosa. Mantieni la routine quotidiana serena anche nei giorni dal cielo incerto.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Quando chiedere aiuto -->
+        <!-- Fonte: Mayo Clinic / Children's Dayton — cercare aiuto professionale se la paura persiste -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Quando chiedere aiuto</div>
+          <p class="content-text">Rivolgiti a un <strong>professionista</strong> se la paura persiste nel tempo, disturba il sonno o compare dopo un evento spaventoso vissuto dal bambino: cercare aiuto resta sempre un gesto di forza.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per riaverlo a portata di mano la prossima notte di temporale, e condividilo con chi conosce un bambino che teme il cielo che rimbomba.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

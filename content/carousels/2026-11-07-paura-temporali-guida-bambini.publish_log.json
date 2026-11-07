@@ -4,8 +4,9 @@
   "hook": "Come aiutare un bambino che ha paura dei temporali: guida pratica in 8 passi",
   "slides_count": 10,
   "fb_post_id": "680037628515928_122195485556853578",
-  "ig_post_id": null,
-  "th_post_id": null,
+  "ig_post_id": "17882729736630651",
+  "th_post_id": "18109876871246235",
+  "publish_note": "Facebook e Instagram pubblicati automaticamente dal workflow 'publish-carousel.yml'. Il primo tentativo su Threads e' fallito (container scaduto/non valido); ripubblicato con successo tramite il workflow manuale 'publish-threads-only.yml'.",
   "images": [
     "public/carousels/2026-11-07-paura-temporali-guida-bambini/slide-01.png",
     "public/carousels/2026-11-07-paura-temporali-guida-bambini/slide-02.png",

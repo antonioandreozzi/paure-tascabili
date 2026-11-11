@@ -1,0 +1,11 @@
+🔴 Le grotte di Castellana, in Puglia, scendono fino a 70 metri sotto il livello del suolo. Furono scoperte "ufficialmente" solo nel 1938. Ma i locali le conoscevano da sempre — e nel folklore locale avevano un nome diverso da quello scientifico, e un significato molto più preciso.
+
+🔴 La data esatta è il 23 gennaio 1938. Lo speleologo Franco Anelli, insieme al collega pugliese Vito Matarrese, aveva già passato giorni a esplorare altre cavità della zona, rivelatesi troppo piccole, prima di calarsi con le corde in una voragine profonda circa 60 metri che i contadini del posto conoscevano già da tempo. Fu lì che la "scoperta scientifica" prese il nome che oggi troviamo nei libri e nelle guide turistiche.
+
+🔴 Per chi viveva in quelle campagne, però, quella voragine non era una novità da scoprire: aveva già un nome, "la Grave", lo stesso che si usa ancora oggi nelle fonti ufficiali. Non è un'invenzione folkloristica: nel dialetto della Murgia pugliese "grave" indica proprio un grande abisso, una voragine carsica aperta nella roccia calcarea dal crollo di una cavità sotterranea — lo stesso termine che dà il nome a Gravina in Puglia, intera città costruita sull'orlo di una sua "grave". Un nome concreto, pratico, che descriveva esattamente ciò che la gente vedeva, molto prima che la scienza arrivasse a dargli un'etichetta.
+
+🔴 Solo l'anno dopo, nel 1939, Matarrese tornò ad esplorare più a fondo e raggiunse quella che oggi è nota come Grotta Bianca, ricca di formazioni di alabastro e considerata tra le più spettacolari del mondo. L'intero sistema si estende per oltre 3 chilometri, con punti che toccano i 122 metri di profondità. Il paese stesso, nel 1950, cambiò nome da Castellana a Castellana Grotte — proprio per quella voragine che i suoi abitanti sapevano essere lì da sempre.
+
+🔴 Quante altre "scoperte ufficiali" vicino a te erano in realtà cose che i vecchi conoscevano da sempre, con un nome tutto loro? Raccontacelo nei commenti.
+
+— Paure Tascabili | pauretascabili.com

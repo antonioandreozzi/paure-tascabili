@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-13",
+  "slug": "mostro-preferito-bambini",
+  "category": "DOMANDE E SONDAGGI",
+  "hook": "Tuo figlio ha un mostro preferito? Scrivilo nei commenti",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Tuo figlio ha un mostro preferito? Ecco perché",
+      "subtitle": "La scienza spiega perché amano le creature spaventose"
+    },
+    {
+      "type": "content",
+      "text": "Lo psicologo Bruno Bettelheim scriveva che le fiabe con mostri aiutano i bambini a vincere le proprie paure interiori."
+    },
+    {
+      "type": "content",
+      "text": "Stephanie Carlson (Università del Minnesota) spiega che giocare con i mostri allena i bambini ad affrontare paure reali."
+    },
+    {
+      "type": "content",
+      "text": "La psicologa Vanessa LoBue (Rutgers) nota che i bambini trovano i mostri più divertenti che spaventosi: paura ed eccitazione sono emozioni vicine."
+    },
+    {
+      "type": "content",
+      "text": "Uno studio 2024 dell'Università di Aarhus, su 1.600 famiglie, trova che il 93% dei bambini ama una forma di paura 'ricreativa'."
+    },
+    {
+      "type": "content",
+      "text": "La psicologa Helen Dodd avverte: la paura è divertente solo se il bambino resta al comando del gioco, scegliendo quando fermarsi."
+    },
+    {
+      "type": "content",
+      "text": "Dal 'ho paura del mostro' al 'sono io il mostro' nei giochi di travestimento: così i bambini addomesticano le proprie paure."
+    },
+    {
+      "type": "content",
+      "text": "E il tuo bambino? Ha un mostro preferito, da un libro o un cartone? Raccontacelo nei commenti!"
+    },
+    {
+      "type": "cta",
+      "text": "Seguici su @pauretascabili_libri per scoprire le leggende del folklore italiano ogni giorno"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+🔴 La notte di San Silvestro nel folklore del Sud aveva regole precise su cosa buttare fuori dalla finestra. Non solo le cose vecchie — le cose che portavano con sé qualcosa che non si voleva nell'anno nuovo. Il gesto era preciso. La lista di cosa buttare era condivisa.
+
+🔴 A Napoli e in gran parte della Campania, a mezzanotte del 31 dicembre si lanciavano dalle finestre piatti sbreccati, bicchieri incrinati, cocci e persino pezzi di mobili vecchi. Non era un atto di follia collettiva, ma un rito con un significato chiaro: liberarsi fisicamente di ciò che apparteneva all'anno che finiva, per fare spazio al nuovo che arrivava. Un'usanza simile si ritrovava anche nei quartieri popolari della Sicilia, dove si tendeva a disfarsi di tutte le cose vecchie proprio in quella notte.
+
+🔴 Il principio dietro il rito era quello della purificazione per sostituzione: via gli oggetti rotti, sbeccati, inutili — simboli delle disgrazie, dei dispiaceri e della sfortuna accumulata — per non portarli con sé nei dodici mesi successivi. Un'usanza simile, ma distinta, era già stata documentata a Roma a fine Ottocento dal folklorista Giggi Zanazzo, che raccontava di tre brocche d'acqua gettate dalla finestra all'arrivo dell'anno nuovo: un gesto diverso nella forma, ma legato alla stessa idea di congedo e rinnovamento.
+
+🔴 Oggi quella pioggia di cocci sui marciapiedi è quasi scomparsa, soprattutto per motivi di sicurezza: molti comuni l'hanno vietata e nei centri più piccoli resta, quando sopravvive, un gesto solo simbolico, confinato dentro casa. Ma il principio che la sosteneva — chiudere i conti con l'anno vecchio buttando via ciò che lo rappresenta — è rimasto, ed è lo stesso che oggi si ritrova, in forma più innocua, nei riti scaramantici di fine anno diffusi in tutta Italia.
+
+🔴 E voi? Nella vostra famiglia o nel vostro paese si butta ancora qualcosa fuori dalla finestra (o almeno fuori di casa) l'ultima notte dell'anno? Raccontatecelo nei commenti — vogliamo sapere quali usanze resistono ancora.
+
+— Paure Tascabili | pauretascabili.com

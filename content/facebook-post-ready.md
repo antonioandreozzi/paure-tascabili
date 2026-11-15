@@ -1,0 +1,11 @@
+🔴 Hai mai sentito parlare della "mano morta" — il rito che si faceva per guarire certe malattie?
+
+🔴 Nei grandi archivi della tradizione popolare italiana il nome esatto non emerge in questa forma precisa, ma la credenza che gli sta dietro — l'idea che il contatto con la morte possa guarire i vivi — è reale, documentata e sorprendentemente diffusa in tutta Europa. In Inghilterra, fino all'abolizione delle esecuzioni pubbliche nel 1868, si credeva che il tocco della mano di un uomo appena impiccato potesse curare gonfiori e tumefazioni, in particolare il gozzo: alcune raccolte di folklore britannico di inizio Novecento riportano ancora la formula, che prevedeva di far scorrere la mano del morto sul collo del malato.
+
+🔴 In Italia la stessa logica — che a guarire non sia la medicina ma il contatto — prende forme diverse ma altrettanto radicate. Già nel 1896 l'etnografo siciliano Giuseppe Pitrè la raccolse nella sua "Medicina popolare siciliana", un intero sistema di cure fondate su tocchi, formule segrete e oggetti sacri, tramandato oralmente di generazione in generazione. Nei paesi della Sicilia si ricordava ancora il ciraulu, guaritore itinerante che si diceva discendente di San Paolo: per neutralizzare il morso di una vipera gli bastava la propria saliva, o il semplice tocco della mano sulla ferita, accompagnato da scongiuri segreti trasmessi solo di padre in figlio.
+
+🔴 Lo storico delle religioni Ernesto De Martino, nel suo "Sud e Magia" del 1959, documentò come queste pratiche — a metà tra magia, religione e medicina — fossero ancora vive nelle campagne del Mezzogiorno nel pieno del Novecento. Il corpo, vivo o morto, era considerato un canale capace di assorbire il male o restituire salute, secondo chi lo toccava e come. È lo stesso principio che si nasconde, in fondo, dietro ogni "mano morta" di cui si continua a sentir parlare nei racconti dei nonni.
+
+🔴 E voi? Avete mai sentito, in famiglia o nel vostro paese, di un rito di guarigione legato al tocco — quello di un guaritore, di un oggetto sacro, o persino di una mano che non apparteneva più a un vivo? Raccontatecelo nei commenti: ogni angolo d'Italia custodisce la sua versione di questa paura tascabile.
+
+— Paure Tascabili | pauretascabili.com

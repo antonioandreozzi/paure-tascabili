@@ -1,0 +1,40 @@
+{
+  "seeds": [
+    {
+      "id": 1,
+      "tag": "infanzia / horror",
+      "raw_text": "Quando guardavo film horror. Ho cominciato molto presto, verso i sei anni.",
+      "used": false
+    },
+    {
+      "id": 2,
+      "tag": "infanzia / paura del buio",
+      "raw_text": "Quando cercavo di addormentarmi e guardavo il corridoio buio.",
+      "used": false
+    },
+    {
+      "id": 3,
+      "tag": "infanzia / abitudini",
+      "raw_text": "Non ho mai dormito con la luce accesa.",
+      "used": false
+    },
+    {
+      "id": 4,
+      "tag": "infanzia / abitudini",
+      "raw_text": "Non ho dormito con nessuno.",
+      "used": false
+    },
+    {
+      "id": 5,
+      "tag": "origini / scrittura",
+      "raw_text": "Nessuno mi raccontava le storie di paura. Le scrivevo già da piccolo, e me le raccontavo.",
+      "used": false
+    },
+    {
+      "id": 6,
+      "tag": "famiglia / rituali",
+      "raw_text": "Ho visto fare il malocchio da mia nonna, con un po' d'acqua nel piatto e l'olio. Verificato: si chiama \"la prova dell'olio\", rito diagnostico del malocchio diffuso nel Sud Italia (fonte: Ernesto De Martino, \"Sud e Magia\", e fonti etnografiche concordanti su balarm.it ed eroicafenice.com). Piatto con acqua, gocce d'olio d'oliva (tradizionalmente tre) versate da una donna anziana recitando formule segrete orali; se le gocce restano separate non c'è malocchio, se si allargano o formano un 'occhio' la diagnosi è positiva.",
+      "used": false
+    }
+  ]
+}

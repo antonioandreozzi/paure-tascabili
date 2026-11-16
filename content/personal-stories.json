@@ -3,7 +3,7 @@
     {
       "id": 1,
       "tag": "infanzia / horror",
-      "raw_text": "Quando guardavo film horror. Ho cominciato molto presto, verso i sei anni.",
+      "raw_text": "Quando guardavo film horror. Ho cominciato molto presto, verso i sei anni, perché mi appassionavano. Non ricorda titoli precisi: nel post non vanno inventati film specifici, resta sul fascino generico e sull'età.",
       "used": false
     },
     {
@@ -34,6 +34,18 @@
       "id": 6,
       "tag": "famiglia / rituali",
       "raw_text": "Ho visto fare il malocchio da mia nonna, con un po' d'acqua nel piatto e l'olio. Verificato: si chiama \"la prova dell'olio\", rito diagnostico del malocchio diffuso nel Sud Italia (fonte: Ernesto De Martino, \"Sud e Magia\", e fonti etnografiche concordanti su balarm.it ed eroicafenice.com). Piatto con acqua, gocce d'olio d'oliva (tradizionalmente tre) versate da una donna anziana recitando formule segrete orali; se le gocce restano separate non c'è malocchio, se si allargano o formano un 'occhio' la diagnosi è positiva.",
+      "used": false
+    },
+    {
+      "id": 7,
+      "tag": "perché Paure Tascabili / crescita personale",
+      "raw_text": "Ho scoperto che attraverso le paure è possibile scoprire anche sé stessi — i propri traumi — e provare a dargli un nome e lavorarci su.",
+      "used": false
+    },
+    {
+      "id": 8,
+      "tag": "perché Paure Tascabili / missione verso i lettori",
+      "raw_text": "Vorrei far scoprire ai lettori, sia piccoli che grandi, che attraverso le storie di paura e le grandi tradizioni popolari è possibile immedesimarsi nelle emozioni e nelle paure degli altri, e quindi crescere.",
       "used": false
     }
   ]

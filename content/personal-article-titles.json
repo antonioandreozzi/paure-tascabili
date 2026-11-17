@@ -1,0 +1,24 @@
+{
+  "description": "Titoli per articoli personali che Antonio Andreozzi scrive di persona (il testo NON viene generato da nessuna routine automatica — solo il titolo e il cluster di appartenenza). Ogni giovedì la routine 'Articolo personale Paure Tascabili' propone il prossimo titolo libero (used:false) più eventuali nuove alternative, e aspetta che Antonio scelga/confermi prima di segnarlo used.",
+  "titles": [
+    { "id": 1, "cluster": "balbuzie / coraggio di parlare", "titolo": "Come ho superato la balbuzie", "used": false },
+    { "id": 2, "cluster": "lezioni di vita", "titolo": "Le lezioni che mi hanno cambiato la vita", "used": false },
+    { "id": 3, "cluster": "genitori-figli", "titolo": "Il rapporto tra genitori e figli", "used": false },
+    { "id": 4, "cluster": "sicurezza in sé", "titolo": "Come diventare sicuri di sé", "used": false },
+    { "id": 5, "cluster": "balbuzie / coraggio di parlare", "titolo": "Perché ho smesso di avere paura del giudizio degli altri", "used": false },
+    { "id": 6, "cluster": "balbuzie / coraggio di parlare", "titolo": "La prima volta che ho avuto il coraggio di mostrarmi in video", "used": false },
+    { "id": 7, "cluster": "balbuzie / coraggio di parlare", "titolo": "Dalla voce che si bloccava alla voce che oggi scrive storie", "used": false },
+    { "id": 8, "cluster": "lezioni di vita", "titolo": "L'errore che rifarei comunque", "used": false },
+    { "id": 9, "cluster": "lezioni di vita", "titolo": "Cosa risponderei al me stesso di 10 anni fa", "used": false },
+    { "id": 10, "cluster": "lezioni di vita", "titolo": "Il fallimento che non ti racconto mai (e cosa mi ha insegnato)", "used": false },
+    { "id": 11, "cluster": "genitori-figli", "titolo": "Cosa mi hanno insegnato i miei genitori senza dirmelo mai", "used": false },
+    { "id": 12, "cluster": "genitori-figli", "titolo": "Il bambino che ero e l'adulto che sono diventato", "used": false },
+    { "id": 13, "cluster": "genitori-figli", "titolo": "Cosa vorrei che un figlio imparasse dalla paura", "used": false },
+    { "id": 14, "cluster": "sicurezza in sé", "titolo": "Come ho imparato a fidarmi di me stesso", "used": false },
+    { "id": 15, "cluster": "sicurezza in sé", "titolo": "Perché non ho più paura di raccontare le mie paure", "used": false },
+    { "id": 16, "cluster": "sicurezza in sé", "titolo": "La persona che ha creduto in me quando io non ci credevo", "used": false },
+    { "id": 17, "cluster": "origine Paure Tascabili", "titolo": "Il giorno in cui ho capito che le mie paure potevano aiutare altri bambini", "used": false },
+    { "id": 18, "cluster": "origine Paure Tascabili", "titolo": "Perché ho scelto il folklore italiano e non l'horror americano", "used": false },
+    { "id": 19, "cluster": "origine Paure Tascabili", "titolo": "Il momento in cui ho quasi chiuso tutto", "used": false }
+  ]
+}

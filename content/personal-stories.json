@@ -4,31 +4,31 @@
       "id": 1,
       "tag": "infanzia / horror",
       "raw_text": "Quando guardavo film horror. Ho cominciato molto presto, verso i sei anni, perché mi appassionavano. Non ricorda titoli precisi: nel post non vanno inventati film specifici, resta sul fascino generico e sull'età.",
-      "used": false
+      "used": true
     },
     {
       "id": 2,
       "tag": "infanzia / paura del buio",
       "raw_text": "Quando cercavo di addormentarmi e guardavo il corridoio buio.",
-      "used": false
+      "used": true
     },
     {
       "id": 3,
       "tag": "infanzia / abitudini",
       "raw_text": "Non ho mai dormito con la luce accesa.",
-      "used": false
+      "used": true
     },
     {
       "id": 4,
       "tag": "infanzia / abitudini",
       "raw_text": "Non ho dormito con nessuno.",
-      "used": false
+      "used": true
     },
     {
       "id": 5,
       "tag": "origini / scrittura",
       "raw_text": "Nessuno mi raccontava le storie di paura. Le scrivevo già da piccolo, e me le raccontavo.",
-      "used": false
+      "used": true
     },
     {
       "id": 6,

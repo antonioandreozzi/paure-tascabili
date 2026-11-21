@@ -3,9 +3,11 @@
   "slug": "5-amuleti-tradizione-campana-malocchio",
   "hook": "5 amuleti della tradizione popolare campana contro il malocchio: storia e segreti",
   "slides_count": 10,
-  "fb_post_id": "680037628515928_122197255424853578",
-  "ig_post_id": null,
+  "fb_post_id": "680037628515928_122197253270853578",
+  "ig_post_id": "17964738014996687",
   "th_post_id": null,
+  "duplicate_publish_warning": "Il workflow GitHub Actions 'Pubblica Carosello su Meta' (publish-carousel.yml) si attiva automaticamente al push di questo JSON e ha pubblicato un SECONDO post duplicato su Facebook (680037628515928_122197255424853578) e su Instagram (18081313760742812), indipendentemente dalla pubblicazione manuale eseguita da questa sessione. Il tentativo Threads del workflow è fallito per token scaduto (vedi th_publish_error).",
+  "th_publish_error": "GitHub Actions run 44888558182: Threads token expired on 2026-11-12 (OAuthException code 190) — nessun post Threads pubblicato per questo carosello.",
   "images": [
     "public/carousels/2026-11-21-5-amuleti-tradizione-campana-malocchio/slide-01.png",
     "public/carousels/2026-11-21-5-amuleti-tradizione-campana-malocchio/slide-02.png",

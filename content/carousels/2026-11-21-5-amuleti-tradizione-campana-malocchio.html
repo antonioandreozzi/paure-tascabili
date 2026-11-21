@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 amuleti campani contro il malocchio — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Cornetto napoletano, diffusione in Campania: sondaggio 2012 su giocatori di casinò online
+    citato da Geopop, "Perché il cornetto napoletano porta fortuna" (geopop.it) — 57% dei
+    campani intervistati dichiara di affidarsi all'oggetto, percentuale più alta in Italia.
+  - Regole tradizionali del corno (colore rosso, manifattura a mano, dono obbligato, rito di
+    attivazione sul palmo sinistro): Napolike, "Il corno napoletano: storia, origini e mito
+    del più famoso portafortuna" (napolike.it); Eroica Fenice, "Corno napoletano: il talismano
+    che protegge dalla iella" (eroicafenice.com).
+  - Ipotesi sull'origine (dio Priapo, fertilità, mito del corno dell'abbondanza di Amaltea):
+    Greenme, "Cornetto napoletano: origini, simbologia e storia" (greenme.it); Wikipedia,
+    voce "Cornicello". Le fonti presentano teorie discordanti, qui riportate come ipotesi.
+  - Andrea De Jorio e il trattato "La mimica degli antichi investigata nel gestire napoletano"
+    (1832): Wikipedia, voce "Andrea De Jorio"; Il Foglio, "L'oro di Napoli" (ilfoglio.it);
+    edizione critica di Adam Kendon, "Gesture in Naples and Gesture in Classical Antiquity" (2000).
+  - Usanze di protezione della culla nel Sud Italia (sacchetti con immaginette sacre, collane
+    d'ambra, conchiglie forate, corna appese): Balarm, "U figghiu sputatu: quei rituali di
+    nascita usati nel vecchio mondo contadino siciliano" (balarm.it).
+  - Definizione popolare del malocchio come energia trasmessa da uno sguardo invidioso:
+    Eroica Fenice, "Oggetti contro il malocchio: quello che devi sapere" (eroicafenice.com).
+  - Funzione psicologica degli amuleti nella gestione dell'ansia e dell'incertezza (effetto
+    legato al senso di controllo): sintesi da Eroica Fenice, art. cit., che riporta studi
+    sull'effetto psicologico degli oggetti scaramantici.
+  - Persistenza del corno rosso nell'artigianato orafo di San Gregorio Armeno, Napoli:
+    Napolike, art. cit.; Eroica Fenice, "Le 9 superstizioni napoletane più famose".
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-size:24px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:40px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:28px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:44px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 21/11/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">5 amuleti della tradizione popolare campana contro il malocchio: storia e segreti</h2>
+          <p class="cover-subtitle">Dal corno rosso al gesto delle corna:<br>la magia di protezione che attraversa i secoli</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Il cornetto napoletano -->
+        <!-- Fonte: Geopop, "Perché il cornetto napoletano porta fortuna" (sondaggio 2012) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Cornetto Napoletano</div>
+          <p class="content-text">Il <strong>cornetto napoletano</strong> resta l'amuleto più amato in Campania: una ricerca del 2012 su giocatori italiani racconta che il 57% degli intervistati campani si affida a questo oggetto, percentuale più alta della penisola.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Le regole del corno -->
+        <!-- Fonte: Napolike, "Il corno napoletano: storia, origini e mito"; Eroica Fenice, "Corno napoletano: il talismano che protegge dalla iella" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Le Regole Della Tradizione</div>
+          <p class="content-text">La tradizione custodisce regole precise: corno <strong>rosso</strong> come il sangue, lavorato a mano, arrivato sempre in dono. Chi lo regala punge il palmo sinistro di chi lo riceve, per attivarne la forza magica.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — Le origini -->
+        <!-- Fonte: Greenme, "Cornetto napoletano: origini, simbologia e storia"; Wikipedia, voce "Cornicello" (ipotesi discordanti) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Ipotesi Sull'Origine</div>
+          <p class="content-text">Le ipotesi sull'origine restano affascinanti: alcuni studiosi collegano il corno al dio <strong>Priapo</strong> e alla fertilità, altri risalgono al mito greco del corno dell'abbondanza di Amaltea, la capra che nutrì Zeus bambino.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Andrea De Jorio -->
+        <!-- Fonte: Wikipedia, voce "Andrea De Jorio"; Il Foglio, "L'oro di Napoli"; ed. critica Adam Kendon (2000) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Gesto Delle Corna</div>
+          <p class="content-text">Nel 1832 il canonico <strong>Andrea De Jorio</strong> raccoglie per primo il gesto delle corna nel suo trattato sui gesti napoletani: un'opera che oggi gli studiosi di tutto il mondo studiano come pionieristica ricerca etnografica.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — La culla protetta -->
+        <!-- Fonte: Balarm, "U figghiu sputatu: quei rituali di nascita usati nel vecchio mondo contadino siciliano" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La Culla Protetta</div>
+          <p class="content-text">Nel Sud Italia, le <strong>culle</strong> custodivano sacchetti con immaginette sacre, collanine d'ambra, conchiglie forate e piccoli corni rossi: un rituale condiviso da Campania e Sicilia per proteggere il sonno dei più piccoli.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Il significato del malocchio -->
+        <!-- Fonte: Eroica Fenice, "Oggetti contro il malocchio: quello che devi sapere" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Cos'è Il Malocchio</div>
+          <p class="content-text">La credenza popolare racconta il <strong>malocchio</strong> come energia negativa trasmessa da uno sguardo carico di invidia o ammirazione eccessiva: una spiegazione antica per un disagio che le famiglie cercavano sempre di curare insieme.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Il valore psicologico -->
+        <!-- Fonte: Eroica Fenice, art. cit., sintesi sull'effetto psicologico degli amuleti -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Valore Psicologico</div>
+          <p class="content-text">La <strong>psicologia</strong> moderna riconosce agli amuleti un valore reale: stringere un oggetto simbolico aiuta a gestire ansia e incertezza, regalando un senso di controllo che accompagna la crescita emotiva di grandi e piccoli.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Una tradizione viva -->
+        <!-- Fonte: Napolike, art. cit.; Eroica Fenice, "Le 9 superstizioni napoletane più famose" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Una Tradizione Viva</div>
+          <p class="content-text">Oggi il corno rosso vive ancora nelle vetrine orafe di <strong>San Gregorio Armeno</strong> a Napoli, tra presepi e statuette: la tradizione popolare campana resta viva, custodita con orgoglio di generazione in generazione.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per custodire sempre con te i segreti della tradizione campana.<br><br>Condividi con chi ama il folklore italiano.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

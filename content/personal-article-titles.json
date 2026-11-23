@@ -1,7 +1,7 @@
 {
   "description": "Titoli per articoli personali che Antonio Andreozzi scrive di persona (il testo NON viene generato da nessuna routine automatica — solo il titolo e il cluster di appartenenza). Ogni giovedì la routine 'Articolo personale Paure Tascabili' propone il prossimo titolo libero (used:false) più eventuali nuove alternative, e aspetta che Antonio scelga/confermi prima di segnarlo used.",
   "titles": [
-    { "id": 1, "cluster": "balbuzie / coraggio di parlare", "titolo": "Come ho superato la balbuzie", "used": false },
+    { "id": 1, "cluster": "balbuzie / coraggio di parlare", "titolo": "Come ho superato la balbuzie", "used": true, "pillar": true, "nota": "Scelto da Antonio il 23/11/2026 come articolo pillar. Da scrivere insieme mercoledì." },
     { "id": 2, "cluster": "lezioni di vita", "titolo": "Le lezioni che mi hanno cambiato la vita", "used": false },
     { "id": 3, "cluster": "genitori-figli", "titolo": "Il rapporto tra genitori e figli", "used": false },
     { "id": 4, "cluster": "sicurezza in sé", "titolo": "Come diventare sicuri di sé", "used": false },

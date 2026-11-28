@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 rimedi popolari contro gli incubi dei bambini — Paure Tascabili</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!--
+  FONTI UTILIZZATE PER LA RICERCA (PASS 2):
+  - Prevalenza degli incubi infantili (fino al 75% dei bambini sotto i nove anni,
+    tendenza naturale ad attenuarsi con la crescita): Sleep Foundation, "Nightmares
+    in Children" (sleepfoundation.org); fonte italiana divulgativa su incubi e sonno
+    infantile (quotidiano.net, "Aiuto mamma, ho gli incubi").
+  - Il ferro di cavallo come oggetto apotropaico appeso o custodito in casa contro
+    spiriti e malocchio nella tradizione del Sud Italia: Balarm, "Ferro di cavallo,
+    dita incrociate e ombrelli chiusi in casa: sconfiggere il malocchio in Sicilia"
+    (balarm.it).
+  - Il sale grosso in un bicchiere d'acqua sotto il letto come rito popolare per
+    assorbire le energie negative della notte: pratica di scaramanzia diffusa nella
+    cultura popolare italiana, riportata da fonti divulgative sulle superstizioni
+    partenopee (eroicafenice.com, "Riti scaramantici napoletani").
+  - Il cornetto rosso napoletano come amuleto contro l'invidia e il malocchio,
+    tradizionalmente legato ai bambini fin dalla culla: Geopop, "Perché il cornetto
+    napoletano porta fortuna" (geopop.it); Eroica Fenice, "Oggetti contro il
+    malocchio: quello che devi sapere" (eroicafenice.com).
+  - Le ninne nanne napoletane come rituale di protezione, con la figura del Mammone
+    studiata in chiave di ninna nanna magica: Mastriani e Scala, "Si vene 'o
+    Mammone", rivista ATeM (atem-journal.com, 2025).
+  - La rassicurazione calma come rimedio più efficace per gli incubi occasionali
+    nei bambini: Patient.info, "Nightmare disorder" (patient.info); Sleep
+    Foundation, "Nightmares in Children" (sleepfoundation.org).
+  - L'importanza di una routine serale stabile e di un sonno regolare per ridurre
+    la frequenza degli incubi: Sleep Foundation, art. cit.; PBS Parents, "How to
+    Help Kids With Nightmares" (pbs.org).
+  - La tecnica del "nuovo finale" (image rehearsal therapy), che prevede di
+    raccontare l'incubo insieme e immaginare una conclusione serena: Sleep
+    Foundation, art. cit.; Patient.info, art. cit.
+-->
+<style>
+  :root{
+    --void: #0A0A0F;
+    --red: #8B1A1A;
+    --gold: #D4AF37;
+    --cream: #E8D5B0;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0;
+    background:#1a1a1a;
+    color: var(--cream);
+    font-family: 'Crimson Pro', serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 48px;
+    min-height:100vh;
+  }
+  h1.page-title{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:1.1rem;
+    letter-spacing:.04em;
+    text-align:center;
+    margin:0 0 18px;
+  }
+  .carousel-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+  }
+  .stage{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .slide-viewport{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    overflow:hidden;
+    position:relative;
+    border-radius:4px;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+  }
+  .slide-track{
+    display:flex;
+    height:100%;
+    transition: transform .45s cubic-bezier(.65,0,.35,1);
+  }
+  .slide-frame{
+    width:540px;
+    height:675px;
+    max-width:88vw;
+    max-height:110vw;
+    flex-shrink:0;
+    overflow:hidden;
+    position:relative;
+  }
+  .slide{
+    width:1080px;
+    height:1350px;
+    position:absolute;
+    top:0; left:0;
+    transform: scale(.5);
+    transform-origin: top left;
+    background: var(--void);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:110px 100px;
+    text-align:center;
+  }
+  @media (max-width: 620px){
+    .slide{ transform: scale(calc(88vw / 1080)); }
+  }
+  .slide::before{
+    content:"";
+    position:absolute;
+    top:18px; left:18px; right:18px; bottom:18px;
+    border:3px solid var(--red);
+    pointer-events:none;
+  }
+  .slide::after{
+    content:"";
+    position:absolute;
+    left:48px; right:48px; top:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .rule-bottom{
+    position:absolute;
+    left:48px; right:48px; bottom:150px;
+    border-top:2px solid var(--gold);
+    pointer-events:none;
+  }
+  .slide-num{
+    position:absolute;
+    top:56px; right:88px;
+    font-family:'Crimson Pro', serif;
+    font-size:32px;
+    color: var(--gold);
+  }
+  .logo{
+    position:absolute;
+    bottom:40px; right:56px;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:.06em;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    color: var(--red);
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-size:24px;
+    margin-bottom:28px;
+  }
+  .cover-title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    color: var(--cream);
+    font-size:40px;
+    line-height:1.3;
+    margin:0 0 36px;
+  }
+  .cover-subtitle{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:28px;
+    line-height:1.5;
+    font-style:normal;
+  }
+  .content-text{
+    font-family:'Crimson Pro', serif;
+    font-weight:500;
+    color: var(--cream);
+    font-size:44px;
+    line-height:1.55;
+  }
+  .content-text strong{
+    color: var(--gold);
+    font-weight:600;
+  }
+  .cta-text{
+    font-family:'Cinzel', serif;
+    color: var(--gold);
+    font-size:40px;
+    line-height:1.6;
+  }
+  .ornament{
+    font-family:'Cinzel Decorative', serif;
+    color: var(--red);
+    font-size:44px;
+    margin-bottom:24px;
+  }
+  .nav-arrow{
+    background: var(--red);
+    color: var(--cream);
+    border:none;
+    width:52px; height:52px;
+    border-radius:50%;
+    font-size:26px;
+    cursor:pointer;
+    font-family:'Cinzel', serif;
+    line-height:1;
+    flex-shrink:0;
+  }
+  .nav-arrow:hover{ background: var(--gold); color: var(--void); }
+  .dots{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:540px;
+  }
+  .dot{
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#4a4a4a;
+    cursor:pointer;
+    border:none;
+    padding:0;
+  }
+  .dot.active{ background: var(--gold); }
+  .caption-note{
+    color:#888;
+    font-size:.85rem;
+    max-width:540px;
+    text-align:center;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">PAURE TASCABILI — Carosello del 28/11/2026</h1>
+
+<div class="carousel-wrapper">
+  <div class="stage">
+    <button class="nav-arrow" onclick="go(-1)" aria-label="Slide precedente">‹</button>
+
+    <div class="slide-viewport">
+      <div class="slide-track" id="track">
+
+        <!-- SLIDE 1 — COVER -->
+        <div class="slide-frame"><div class="slide" data-type="cover">
+          <div class="ornament">✦</div>
+          <h2 class="cover-title">7 rimedi popolari contro gli incubi dei bambini</h2>
+          <p class="cover-subtitle">Tradizione campana e scienza a confronto</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 2 — Prevalenza -->
+        <!-- Fonte: Sleep Foundation, "Nightmares in Children"; quotidiano.net -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Un Fenomeno Diffuso</div>
+          <p class="content-text">Gli incubi restano frequenti in <strong>3 bambini su 4</strong> sotto i nove anni d'età: un passaggio naturale della crescita, destinato ad attenuarsi con il tempo, dicono gli esperti del sonno.</p>
+          <div class="slide-num">2/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 3 — Ferro di cavallo -->
+        <!-- Fonte: Balarm, "Ferro di cavallo, dita incrociate e ombrelli chiusi in casa" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Ferro Protettore</div>
+          <p class="content-text">Nel Sud Italia il <strong>ferro di cavallo</strong> viene appeso sopra il letto o custodito sotto il materasso: un gesto antico, tramandato dalle famiglie contadine per vegliare sul sonno sereno.</p>
+          <div class="slide-num">3/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 4 — Sale grosso -->
+        <!-- Fonte: Eroica Fenice, "Riti scaramantici napoletani" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Sale Che Veglia</div>
+          <p class="content-text">Un bicchiere d'acqua con <strong>sale grosso</strong>, lasciato sotto il letto per tutta la notte, resta un rito popolare diffuso: il sale, secondo la tradizione, assorbe le energie pesanti della notte.</p>
+          <div class="slide-num">4/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 5 — Cornetto rosso -->
+        <!-- Fonte: Geopop, "Perché il cornetto napoletano porta fortuna"; Eroica Fenice, "Oggetti contro il malocchio" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Lo Scudo Napoletano</div>
+          <p class="content-text">Il <strong>cornetto rosso</strong>, simbolo partenopeo per eccellenza, accompagna da secoli i bambini come amuleto contro l'invidia e le energie negative, spesso appeso sopra la culla fin dai primi mesi.</p>
+          <div class="slide-num">5/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 6 — Ninne nanne / Mammone -->
+        <!-- Fonte: Mastriani e Scala, "Si vene 'o Mammone", rivista ATeM (2025) -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Il Potere Della Ninna Nanna</div>
+          <p class="content-text">Studiose come Mastriani e Scala mostrano che le <strong>ninne nanne napoletane</strong>, pur evocando figure come il Mammone, restano sempre accompagnate da gesti di affetto e protezione verso il bambino.</p>
+          <div class="slide-num">6/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 7 — Rassicurazione -->
+        <!-- Fonte: Patient.info, "Nightmare disorder"; Sleep Foundation, "Nightmares in Children" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">La Conferma Della Scienza</div>
+          <p class="content-text">La ricerca sul sonno conferma: la <strong>rassicurazione calma</strong> resta il rimedio più efficace per gli incubi occasionali, molto più utile di qualsiasi spiegazione razionale data a mente fredda.</p>
+          <div class="slide-num">7/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 8 — Routine serale -->
+        <!-- Fonte: Sleep Foundation, art. cit.; PBS Parents, "How to Help Kids With Nightmares" -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Una Routine Che Protegge</div>
+          <p class="content-text">Una <strong>routine serale stabile</strong> e orari di sonno regolari riducono gli incubi: i bambini riposati, spiegano gli esperti, vivono sogni più sereni e si svegliano con maggiore tranquillità.</p>
+          <div class="slide-num">8/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 9 — Nuovo finale (image rehearsal) -->
+        <!-- Fonte: Sleep Foundation, art. cit.; Patient.info, art. cit. -->
+        <div class="slide-frame"><div class="slide" data-type="content">
+          <div class="eyebrow">Riscrivere Il Sogno</div>
+          <p class="content-text">La tecnica del <strong>"nuovo finale"</strong>, validata dagli studi clinici, invita a raccontare insieme l'incubo e immaginare una conclusione serena: un esercizio che aiuta la mente a rilassarsi prima di dormire.</p>
+          <div class="slide-num">9/10</div>
+          <div class="rule-bottom"></div>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+        <!-- SLIDE 10 — CTA -->
+        <div class="slide-frame"><div class="slide" data-type="cta">
+          <div class="ornament">✦</div>
+          <p class="cta-text">Salva questo carosello per avere sempre a portata di mano i rimedi della tradizione campana.<br><br>Condividi con chi cresce un bambino pieno di fantasia.<br><br>Seguici su @pauretascabili</p>
+          <div class="logo">Paure Tascabili</div>
+        </div></div>
+
+      </div>
+    </div>
+
+    <button class="nav-arrow" onclick="go(1)" aria-label="Slide successiva">›</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+  <p class="caption-note">Usa le frecce o clicca gli indicatori per scorrere le 10 slide (1080×1350px, visualizzate a 540×675px)</p>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const frames = document.querySelectorAll('.slide-frame');
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  frames.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Vai alla slide ' + (i+1));
+    dot.onclick = () => { current = i; render(); };
+    dotsContainer.appendChild(dot);
+  });
+
+  function render(){
+    const frameWidth = frames[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${current * frameWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function go(delta){
+    current = Math.max(0, Math.min(frames.length - 1, current + delta));
+    render();
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+
+  window.addEventListener('resize', render);
+  render();
+</script>
+
+</body>
+</html>

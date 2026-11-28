@@ -3,9 +3,11 @@
   "slug": "7-rimedi-incubi-bambini-tradizione-scienza",
   "hook": "7 rimedi popolari contro gli incubi dei bambini: tradizione campana e scienza a confronto",
   "slides_count": 10,
-  "fb_post_id": "680037628515928_122198198570853578",
-  "ig_post_id": null,
+  "fb_post_id": "680037628515928_122198196902853578",
+  "ig_post_id": "18128212120900690",
   "th_post_id": null,
+  "duplicate_publish_warning": "Il workflow GitHub Actions 'Pubblica Carosello su Meta' (publish-carousel.yml) si è attivato automaticamente al push del JSON e ha pubblicato un SECONDO post duplicato su Facebook (680037628515928_122198198570853578), indipendentemente dalla pubblicazione manuale eseguita da questa sessione. Stesso problema già documentato nei log del 2026-11-21 e del 2026-11-24: il workflow automatico non è mai stato disattivato e la duplicazione si ripete a ogni carosello pubblicato manualmente.",
+  "th_publish_error": "THREADS_TOKEN non impostato in questa sessione. Nessun post Threads pubblicato per questo carosello. Il th_post_id risulta null per tutti i caroselli dal 2026-11-03 in poi (8 caroselli consecutivi) — coerente con il token Threads segnalato come scaduto il 2026-11-12 nel log del 2026-11-24.",
   "images": [
     "public/carousels/2026-11-28-7-rimedi-incubi-bambini-tradizione-scienza/slide-01.png",
     "public/carousels/2026-11-28-7-rimedi-incubi-bambini-tradizione-scienza/slide-02.png",
